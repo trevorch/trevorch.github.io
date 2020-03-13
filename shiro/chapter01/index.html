@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.67.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chapter01 &middot; Trevorch</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://trevorch.github.io/"><h1>Trevorch</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://trevorch.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Chapter01</h1>
+  <time datetime=2020-03-13T12:59:50&#43;0800 class="post-date">Fri, Mar 13, 2020</time>
+  <p>新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下：</p>
+<pre><code>[users]
+cdm=111111
+chendm=111111
+</code></pre><blockquote>
+<p>在build.gradle中添加以下依赖：</p>
+</blockquote>
+<pre><code>compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.5.1'
+compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+</code></pre><blockquote>
+<p>新建ShiroTest类，代码如下：</p>
+</blockquote>
+<pre><code>public class ShiroTest {
+    @Test
+    public void test() {
+        //1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager
+        Factory&lt;SecurityManager&gt; factory = new IniSecurityManagerFactory(&quot;classpath:shiro.ini&quot;);
+        //2、得到SecurityManager实例 并绑定给SecurityUtils
+        org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance();
+        SecurityUtils.setSecurityManager(securityManager);
+        //3、得到Subject及创建用户名/密码身份验证Token（即用户身份/凭证）
+        Subject subject = SecurityUtils.getSubject();
+        UsernamePasswordToken token = new UsernamePasswordToken(&quot;zhang&quot;, &quot;123&quot;);
+
+        try {
+            //4、登录，即身份验证
+            subject.login(token);
+        } catch (AuthenticationException e) {
+            //5、身份验证失败
+        }
+
+        Assert.assertEquals(true, subject.isAuthenticated()); //断言用户已经登录
+
+        //6、退出
+        subject.logout();
+    }
+}
+</code></pre>
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "trevorch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

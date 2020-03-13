@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Trevorch</title>
+  <title>Shiros &middot; Trevorch</title>
   <meta name="description" content="" />
 
   
@@ -24,7 +24,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="https://trevorch.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Trevorch" />
+  <link href="https://trevorch.github.io/shiro/index.xml" rel="alternate" type="application/rss+xml" title="Trevorch" />
   
 </head>
 
@@ -50,23 +50,11 @@
 </aside>
 
     <main class="content container">
-    <div class="posts">
-<article class="post">
-  <h1 class="post-title">
-    <a href="https://trevorch.github.io/shiro/chapter01/">Chapter01</a>
-  </h1>
-  <time datetime="2020-03-13T12:59:50&#43;0800" class="post-date">Fri, Mar 13, 2020</time>
-  新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下：
-[users] cdm=111111 chendm=111111  在build.gradle中添加以下依赖：
- compile group: 'commons-logging', name: 'commons-logging', version: '1.2' compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.5.1' compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'  新建ShiroTest类，代码如下：
- public class ShiroTest { @Test public void test() { //1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager Factory&lt;SecurityManager&gt; factory = new IniSecurityManagerFactory(&quot;classpath:shiro.ini&quot;); //2、得到SecurityManager实例 并绑定给SecurityUtils org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance(); SecurityUtils.setSecurityManager(securityManager); //3、得到Subject及创建用户名/密码身份验证Token（即用户身份/凭证） Subject subject = SecurityUtils.getSubject(); UsernamePasswordToken token = new UsernamePasswordToken(&quot;zhang&quot;, &quot;123&quot;); try { //4、登录，即身份验证 subject.login(token); } catch (AuthenticationException e) { //5、身份验证失败 } Assert.
-  
-  <div class="read-more-link">
-    <a href="/shiro/chapter01/">Read More…</a>
-  </div>
-  
-</article>
-</div>
+    <ul class="posts">
+<li>
+    <span><a href="https://trevorch.github.io/shiro/chapter01/">Chapter01</a> <time class="pull-right post-list" datetime="2020-03-13T12:59:50&#43;0800">Fri, Mar 13, 2020</time></span>
+  </li>
+</ul>
     </main>
 
     
