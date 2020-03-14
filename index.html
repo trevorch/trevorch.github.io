@@ -1,76 +1,139 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<!doctype html>
+<html lang="zh-cn">
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.67.0" />
+	<meta name="generator" content="Hugo 0.67.0" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Trevorch</title>
-  <meta name="description" content="" />
+    <title>Trevorch | </title>
+    <meta property="og:title" content="Trevorch | ">
+    <meta property="og:type" content="website">
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:url" content="https://trevorch.github.io/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-  
-  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://trevorch.github.io/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="https://trevorch.github.io/index.xml" title="Trevorch" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
 
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
-
-  
-  <link href="https://trevorch.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Trevorch" />
-  
+    
+    
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://trevorch.github.io/"><h1>Trevorch</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <h1>
+                        <a id="logo" href="https://trevorch.github.io/">
+                            Trevorch
+                        </a>
+                    </h1>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://trevorch.github.io/">首页</a>
+                    
+                </nav>
+            </div>
+        </div>
     </div>
+</header>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://trevorch.github.io/">Home</a> </li>
-        
-      </ul>
-    </nav>
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
 
-    <p>&copy; 2020. All rights reserved. </p>
-  </div>
-</aside>
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    
 
-    <main class="content container">
-    <div class="posts">
-<article class="post">
-  <h1 class="post-title">
-    <a href="https://trevorch.github.io/shiro/chapter01/">Chapter01</a>
-  </h1>
-  <time datetime="2020-03-13T12:59:50&#43;0800" class="post-date">Fri, Mar 13, 2020</time>
-  新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下：
-[users] cdm=111111 chendm=111111  在build.gradle中添加以下依赖：
- compile group: 'commons-logging', name: 'commons-logging', version: '1.2' compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.5.1' compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'  新建ShiroTest类，代码如下：
- public class ShiroTest { @Test public void test() { //1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager Factory&lt;SecurityManager&gt; factory = new IniSecurityManagerFactory(&quot;classpath:shiro.ini&quot;); //2、得到SecurityManager实例 并绑定给SecurityUtils org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance(); SecurityUtils.setSecurityManager(securityManager); //3、得到Subject及创建用户名/密码身份验证Token（即用户身份/凭证） Subject subject = SecurityUtils.getSubject(); UsernamePasswordToken token = new UsernamePasswordToken(&quot;zhang&quot;, &quot;123&quot;); try { //4、登录，即身份验证 subject.login(token); } catch (AuthenticationException e) { //5、身份验证失败 } Assert.
-  
-  <div class="read-more-link">
-    <a href="/shiro/chapter01/">Read More…</a>
-  </div>
-  
-</article>
+
+
+
+
 </div>
-    </main>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://trevorch.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+</ul>
+    </section>
 
     
-      
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
     
-  </body>
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://trevorch.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://trevorch.github.io/">Trevorch By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+</body>
+
 </html>

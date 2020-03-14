@@ -18,9 +18,9 @@
       
       <guid>https://trevorch.github.io/shiro/chapter01/</guid>
       <description>新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下：
-[users] cdm=111111 chendm=111111  在build.gradle中添加以下依赖：
+ [users] cdm=111111 chendm=111111  在build.gradle中添加以下依赖：
  compile group: &#39;commons-logging&#39;, name: &#39;commons-logging&#39;, version: &#39;1.2&#39; compile group: &#39;org.apache.shiro&#39;, name: &#39;shiro-core&#39;, version: &#39;1.5.1&#39; compile group: &#39;org.slf4j&#39;, name: &#39;slf4j-simple&#39;, version: &#39;1.7.30&#39;  新建ShiroTest类，代码如下：
- public class ShiroTest { @Test public void test() { //1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager Factory&amp;lt;SecurityManager&amp;gt; factory = new IniSecurityManagerFactory(&amp;quot;classpath:shiro.ini&amp;quot;); //2、得到SecurityManager实例 并绑定给SecurityUtils org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance(); SecurityUtils.setSecurityManager(securityManager); //3、得到Subject及创建用户名/密码身份验证Token（即用户身份/凭证） Subject subject = SecurityUtils.getSubject(); UsernamePasswordToken token = new UsernamePasswordToken(&amp;quot;zhang&amp;quot;, &amp;quot;123&amp;quot;); try { //4、登录，即身份验证 subject.login(token); } catch (AuthenticationException e) { //5、身份验证失败 } Assert.</description>
+ public class ShiroTest { @Test public void test() { //1、使用Ini配置文件初始化SecurityManager工厂 Factory&amp;lt;SecurityManager&amp;gt; factory = new IniSecurityManagerFactory(&amp;quot;classpath:shiro.ini&amp;quot;); //2、获取SecurityManager实例，并绑定到SecurityUtils org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance(); SecurityUtils.setSecurityManager(securityManager); //3、SecurityUtils得到的Subject实例会自动绑定到当前线程 Subject subject = SecurityUtils.getSubject(); //4、创建用户名/密码身份验证Token（即用户身份/凭证） UsernamePasswordToken token = new UsernamePasswordToken(&amp;quot;zhang&amp;quot;, &amp;quot;123&amp;quot;); try { //5、登录，即身份验证，会自动委托给SecurityManager.login方法 subject.</description>
     </item>
     
   </channel>
