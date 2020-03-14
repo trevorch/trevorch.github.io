@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://trevorch.github.io/sitemap.xml
