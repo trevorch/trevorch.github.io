@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Trevorch</title>
+  <title>Chapter01 - Trevorch</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="xiaTrevorchnmin" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下： [users] cdm=111111 chendm=111111 在build.gradle中添加以下依赖：" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.67.0" />
 
 
-<link rel="canonical" href="https://trevorch.github.io/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Trevorch" />
+<link rel="canonical" href="https://trevorch.github.io/posts/chapter01/" />
+
 
 
 
@@ -52,21 +53,29 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.scss" integrity="" media="screen" crossorigin="anonymous">
 
 
 
 
 
-<meta property="og:title" content="Trevorch" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://trevorch.github.io/" />
-<meta property="og:updated_time" content="2017-08-20T21:38:52+08:00" />
-<meta itemprop="name" content="Trevorch">
-<meta itemprop="description" content="Hugo theme jane example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Trevorch"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta property="og:title" content="Chapter01" />
+<meta property="og:description" content="新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下： [users] cdm=111111 chendm=111111 在build.gradle中添加以下依赖：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://trevorch.github.io/posts/chapter01/" />
+<meta property="article:published_time" content="2020-03-13T12:59:50+08:00" />
+<meta property="article:modified_time" content="2020-03-13T12:59:50+08:00" />
+<meta itemprop="name" content="Chapter01">
+<meta itemprop="description" content="新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下： [users] cdm=111111 chendm=111111 在build.gradle中添加以下依赖：">
+<meta itemprop="datePublished" content="2020-03-13T12:59:50&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-13T12:59:50&#43;08:00" />
+<meta itemprop="wordCount" content="575">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Chapter01"/>
+<meta name="twitter:description" content="新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下： [users] cdm=111111 chendm=111111 在build.gradle中添加以下依赖："/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -262,7 +271,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -382,180 +391,120 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
+          <article class="post bg-white">
   
-  
-    
-  
-  
-  
-    <article class="post bg-white">
   <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/image-preview/">Image Preview</a>
-    </h1>
+    <h1 class="post-title">Chapter01</h1>
     
     <div class="post-meta">
-      <time datetime="2018-03-03" class="post-time">
-        2018-03-03
+      <time datetime="2020-03-13" class="post-time">
+        2020-03-13
       </time>
-      <div class="post-category">
-          <a href="https://trevorch.github.io/categories/docs/"> docs </a>
-          <a href="https://trevorch.github.io/categories/shortcodes/"> shortcodes </a>
-          <a href="https://trevorch.github.io/categories/index/"> index </a>
-          
-        </div>
-      
-      
-      
     </div>
   </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
   
   <div class="post-content">
-    
-    <div class="post-summary">
-      <p>Thanks for <a href="https://github.com/liwenyip/hugo-easy-gallery">liwenyip/hugo-easy-gallery</a> &amp; <a href="https://github.com/xianmin/hugo-theme-jane/pull/48">Zebradil · Pull Request #48</a> .</p>
-<p>Now, we could use <code>{{&lt; gallery &gt;}}</code> shortcode in hugo-theme-jane.</p>
-<h2 id="normal-image">Normal Image</h2>
-<p>This is an image in <code>static/image</code> folder.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">This is an image in `static/image` folder.</span>](<span style="color:#a6e22e">/image/example.jpg</span>)
-</code></pre></div>
-    </div>
-    <div class="read-more">
-      <a href="/post/image-preview/" class="read-more-link">阅读全文</a>
-    </div>
-    
+      <blockquote>
+<p>新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下：</p>
+</blockquote>
+<pre><code>[users]
+cdm=111111
+chendm=111111
+</code></pre><blockquote>
+<p>在build.gradle中添加以下依赖：</p>
+</blockquote>
+<pre><code>compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.5.1'
+compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+</code></pre><blockquote>
+<p>新建ShiroTest类，代码如下：</p>
+</blockquote>
+<pre><code>public class ShiroTest {
+    @Test
+    public void test() {
+        //1、使用Ini配置文件初始化SecurityManager工厂
+        Factory&lt;SecurityManager&gt; factory = new IniSecurityManagerFactory(&quot;classpath:shiro.ini&quot;);
+        //2、获取SecurityManager实例，并绑定到SecurityUtils
+        org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance();
+        SecurityUtils.setSecurityManager(securityManager);
+        //3、SecurityUtils得到的Subject实例会自动绑定到当前线程
+        Subject subject = SecurityUtils.getSubject();
+        //4、创建用户名/密码身份验证Token（即用户身份/凭证）
+        UsernamePasswordToken token = new UsernamePasswordToken(&quot;zhang&quot;, &quot;123&quot;);
+        try {
+            //5、登录，即身份验证，会自动委托给SecurityManager.login方法
+            subject.login(token);
+        } catch (AuthenticationException e) {
+            //6、身份验证失败，常见异常：
+            // DisabledAccountException（禁用的帐号）
+            // LockedAccountException（锁定的帐号）
+            // UnknownAccountException（错误的帐号）
+            // ExcessiveAttemptsException（登录失败次数过多）
+            // IncorrectCredentialsException （错误的凭证）
+            // ExpiredCredentialsException（过期的凭证）
+        }
+        //断言用户已经登录
+        Assert.assertEquals(true, subject.isAuthenticated());
+        //7、退出，会自动委托给SecurityManager.logout方法
+        subject.logout();
+    }
+}
+</code></pre>
   </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">xiaTrevorchnmin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-03-13
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+  
+  
 </article>
 
+
+
+
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/shortcode-notice/">Shortcodes Notice Preview</a>
-    </h1>
+
+  
+  
+
+  
+
+  
+
+  
+
     
-    <div class="post-meta">
-      <time datetime="2018-03-03" class="post-time">
-        2018-03-03
-      </time>
-      <div class="post-category">
-          <a href="https://trevorch.github.io/categories/docs/"> docs </a>
-          <a href="https://trevorch.github.io/categories/shortcodes/"> shortcodes </a>
-          <a href="https://trevorch.github.io/categories/index/"> index </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info {{% notice info %}} A info disclaimer {{% /notice %}} info An information
-    </div>
-    <div class="read-more">
-      <a href="/post/shortcode-notice/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/doc-footnote-preview/">Jane-Theme Footnote Preview</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-03-01" class="post-time">
-        2018-03-01
-      </time>
-      <div class="post-category">
-          <a href="https://trevorch.github.io/categories/docs/"> docs </a>
-          <a href="https://trevorch.github.io/categories/index/"> index </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      <p>Hugo-theme-jane optimized for footnote. When you mouse hover the footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> , footnote content will be displayed.</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/doc-footnote-preview/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>
