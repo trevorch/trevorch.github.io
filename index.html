@@ -78,6 +78,22 @@
                     
 <div class="res-cons">
     
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://trevorch.github.io/posts/chapter01/" title="Chapter01">Chapter01</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年3月13日
+        </date>
+        
+        <div class="post-content">
+            新建Gradle Web项目,在resources目录下放置shiro.ini文件，内容如下： [users] cdm=111111 chendm=111111 在build.gradle中添加以下依赖： compile group: 'commons-logging', name: 'commons-logging', version: '1.2' compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.5.1' compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30' 新建ShiroTest类，代码如下： public class ShiroTest { @Test public void test() { //1、使用Ini配置文件初始化Securi……
+        </div>
+        <p class="readmore"><a href="https://trevorch.github.io/posts/chapter01/">阅读全文</a></p>
+    </article>
+    
     
 
 
@@ -101,6 +117,10 @@
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="https://trevorch.github.io/posts/chapter01/" title="Chapter01">Chapter01</a>
+    </li>
     
 </ul>
     </section>
