@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Syntax Highlighting · Trevorch</title>
+  <title>Docker Machine 安装及配置 - Trevorch</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Trevorch" />
-  <meta name="description" content="Trevorch&#39;s techlog." />
+  <meta name="description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，" />
+
   <meta name="keywords" content="Java, Go, Python, Docker" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.67.0" />
 
 
-<link rel="canonical" href="https://trevorch.github.io/tags/syntax-highlighting/" />
-<link href="/tags/syntax-highlighting/index.xml" rel="alternate" type="application/rss+xml" title="Trevorch" />
+<link rel="canonical" href="https://trevorch.github.io/post/docker/machine/install/" />
+
 
 
 
@@ -58,15 +59,23 @@
 
 
 
-<meta property="og:title" content="Syntax Highlighting" />
-<meta property="og:description" content="Trevorch&#39;s techlog." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://trevorch.github.io/tags/syntax-highlighting/" />
-<meta property="og:updated_time" content="2011-08-30T16:01:23+08:00" />
-<meta itemprop="name" content="Syntax Highlighting">
-<meta itemprop="description" content="Trevorch&#39;s techlog."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Syntax Highlighting"/>
-<meta name="twitter:description" content="Trevorch&#39;s techlog."/>
+<meta property="og:title" content="Docker Machine 安装及配置" />
+<meta property="og:description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://trevorch.github.io/post/docker/machine/install/" />
+<meta property="article:published_time" content="2020-03-18T10:53:44+08:00" />
+<meta property="article:modified_time" content="2020-03-18T10:53:44+08:00" />
+<meta itemprop="name" content="Docker Machine 安装及配置">
+<meta itemprop="description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，">
+<meta itemprop="datePublished" content="2020-03-18T10:53:44&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-18T10:53:44&#43;08:00" />
+<meta itemprop="wordCount" content="623">
+
+
+
+<meta itemprop="keywords" content="Docker,Machine," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker Machine 安装及配置"/>
+<meta name="twitter:description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -348,7 +357,7 @@
 
       </li>
     
-        <li class="menu-item">
+        <li class="menu-item active">
         
           
           <a class="menu-item-link menu-parent" href="https://trevorch.github.io/">docs</a>
@@ -398,55 +407,274 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-
-<section id="archive" class="archive">
-  
+          <article class="post bg-white">
     
-      <div class="archive-title tag">
-        <h2 class="archive-name">标签： Syntax Highlighting</h2>
+    <header class="post-header">
+      <h1 class="post-title">Docker Machine 安装及配置</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-03-18" class="post-time">
+          2020-03-18
+        </time>
+        <div class="post-category">
+            <a href="https://trevorch.github.io/categories/docker/"> docker </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
       </div>
+    </header>
+
     
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装virtualbox">安装VirtualBox</a></li>
+    <li><a href="#下载-docker-machine">下载 Docker Machine</a></li>
+    <li><a href="#配置环境变量">配置环境变量</a></li>
+    <li><a href="#boot2dockeriso-镜像配置">boot2docker.iso 镜像配置</a></li>
+    <li><a href="#使用docker-machine部署一台机器">使用Docker Machine部署一台机器</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="安装virtualbox">安装VirtualBox</h2>
+<p><a href="https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe">https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe</a></p>
+<h2 id="下载-docker-machine">下载 Docker Machine</h2>
+<p><a href="https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe">https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe</a></p>
+<p>放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe
+<img src="/static/images/docker/docker-machine/install/01.png" alt="avatar"></p>
+<h2 id="配置环境变量">配置环境变量</h2>
+<ol>
+<li>把 D:\Docker\Machine\0.16.2 添加到path环境变量；</li>
+<li>删除path环境变量中带OpenSSH的项，否则会导致Docker Machine卡在  Waiting for an IP&hellip;;</li>
+<li>新建环境变量 MACHINE_STORAGE_PATH 指定docker机器存储位置。</li>
+</ol>
+<h2 id="boot2dockeriso-镜像配置">boot2docker.iso 镜像配置</h2>
+<p>下载最新版nginx:
+<a href="http://nginx.org/download/nginx-1.17.9.zip">http://nginx.org/download/nginx-1.17.9.zip</a>
+解压nginx至某一目录，并启动nginx</p>
+<p>下载最新版boot2docker.iso:
+<a href="https://github.com/boot2docker/boot2docker/releases">https://github.com/boot2docker/boot2docker/releases</a>
+放置于nginx的html目录中</p>
+<h2 id="使用docker-machine部署一台机器">使用Docker Machine部署一台机器</h2>
+<ol>
+<li>打开cmd命令行界面，输入命令：</li>
+</ol>
+<pre><code>dm create  -d &quot;virtualbox&quot; \
+--engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com \
+--engine-registry-mirror http://f1361db2.m.daocloud.io \
+--engine-registry-mirror https://reg-mirror.qiniu.com \
+--engine-registry-mirror http://hub-mirror.c.163.com \
+--engine-registry-mirror https://registry.docker-cn.com \
+--engine-registry-mirror https://mirror.ccs.tencentyun.com \
+--engine-registry-mirror https://dockerhub.azk8s.cn \
+--virtualbox-memory &quot;2048&quot; \
+--virtualbox-boot2docker-url http://localhost/tool/boot2docker.iso  \
+vm1
+</code></pre><ol start="2">
+<li>执行过程如下：</li>
+</ol>
+<pre><code>C:\Users\Trevorch&gt;dm create  -d &quot;virtualbox&quot; --engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com --engine-registry-mirror http://f1361db2.m.daocloud.io --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://registry.docker-cn.com --engine-registry-mirror https://mirror.ccs.tencentyun.com --engine-registry-mirror https://dockerhub.azk8s.cn --virtualbox-memory &quot;2048&quot; --virtualbox-boot2docker-url http://localhost/tool/boot2docker.iso  vm1
+Running pre-create checks...
+Creating machine...
+(vm1) Downloading F:\vms\cache\boot2docker.iso from http://localhost/tool/boot2docker.iso...
+(vm1) 0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+(vm1) Creating VirtualBox VM...
+(vm1) Creating SSH key...
+(vm1) Starting the VM...
+(vm1) Check network to re-create if needed...
+(vm1) Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+(vm1) Waiting for an IP...
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with boot2docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: dm env vm1
+</code></pre><ol start="3">
+<li>登录docker机器并查看环境信息：</li>
+</ol>
+<pre><code>C:\Users\Trevorch&gt;dm ssh vm1
+   ( '&gt;')
+  /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
+ (/-_--_-\)           www.tinycorelinux.net
+
+docker@vm1:~$ docker info
+Client:
+ Debug Mode: false
+
+Server:
+ Containers: 1
+  Running: 1
+  Paused: 0
+  Stopped: 0
+ Images: 1
+ Server Version: 19.03.5
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Native Overlay Diff: true
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: b34a5c8af56e510852c35414db4c1f4fa6172339
+ runc version: 3e425f80a8c931f88e6d94a8c831b9d5aa481657
+ init version: fec3683
+ Security Options:
+  seccomp
+   Profile: default
+ Kernel Version: 4.14.154-boot2docker
+ Operating System: Boot2Docker 19.03.5 (TCL 10.1)
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 1
+ Total Memory: 1.951GiB
+ Name: vm1
+ ID: 7SHL:Y3WY:Z4WI:B7ZY:LSTV:CT6J:ZFZU:MH2A:MFSP:4GE4:GB4I:R6JE
+ Docker Root Dir: /mnt/sda1/var/lib/docker
+ Debug Mode: false
+ Registry: https://index.docker.io/v1/
+ Labels:
+  provider=virtualbox
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Registry Mirrors:
+  https://3laho3y3.mirror.aliyuncs.com/
+  http://f1361db2.m.daocloud.io/
+  https://reg-mirror.qiniu.com/
+  http://hub-mirror.c.163.com/
+  https://registry.docker-cn.com/
+  https://mirror.ccs.tencentyun.com/
+  https://dockerhub.azk8s.cn/
+ Live Restore Enabled: false
+ Product License: Community Engine
+
+docker@vm1:~$
+</code></pre><p>至此，就可以使用docker环境了！</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Trevorch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-03-18
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://trevorch.github.io/tags/docker/">Docker</a>
+          <a href="https://trevorch.github.io/tags/machine/">Machine</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/jane-theme-preview/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Jane 主题预览</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/markdown/manual/">
+            <span class="next-text nav-default">Markdown 手册</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
   
 
   
-    <div class="archive-post">
-      <time datetime="2011-08-30" class="archive-post-time">
-        2011-08-30
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/syntax-highlighting/" class="archive-post-link">
-          Syntax Highlighting
-        </a>
-      </span>
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "trevorch/hugotalks"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
     </div>
   
-</section>
-
-
-
-
-
 
   
-  
+
   
 
   
-  
+
+    
 
   
-  
-
-  
-  
-
-  
-  
-
-
-
-
 
         </div>
       </div>
