@@ -25,7 +25,7 @@
 <meta name="author" content="Trevorch" />
   <meta name="description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，" />
 
-  <meta name="keywords" content="Hugo, theme, jane" />
+  <meta name="keywords" content="Java, Go, Python, Docker" />
 
 
 
@@ -69,7 +69,7 @@
 <meta itemprop="description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，">
 <meta itemprop="datePublished" content="2020-03-18T10:53:44&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-18T10:53:44&#43;08:00" />
-<meta itemprop="wordCount" content="621">
+<meta itemprop="wordCount" content="623">
 
 
 
@@ -93,7 +93,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Jane</a>
+    <a href="/" class="logo">Trevorch</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -128,7 +128,7 @@
         
           
           
-            <a class="menu-item-link" href="https://trevorch.github.io/categories/">目录</a>
+            <a class="menu-item-link" href="https://trevorch.github.io/categories/">分类</a>
           
         
       </li><li class="mobile-menu-item">
@@ -266,7 +266,7 @@
     <div class="logo-wrapper">
   <a href="/" class="logo">
     
-      Jane
+      Trevorch
     
   </a>
 </div>
@@ -312,7 +312,7 @@
         
           
           
-            <a class="menu-item-link" href="https://trevorch.github.io/categories/">目录</a>
+            <a class="menu-item-link" href="https://trevorch.github.io/categories/">分类</a>
           
 
         
@@ -454,17 +454,13 @@
 <li>新建环境变量 MACHINE_STORAGE_PATH 指定docker机器存储位置。</li>
 </ol>
 <h2 id="boot2dockeriso-镜像配置">boot2docker.iso 镜像配置</h2>
-<ol>
-<li>下载最新版nginx</li>
-</ol>
-<pre><code>http://nginx.org/download/nginx-1.17.9.zip
-解压nginx至某一目录，并启动nginx
-</code></pre><ol start="2">
-<li>下载最新版boot2docker.iso</li>
-</ol>
-<pre><code>https://github.com/boot2docker/boot2docker/releases
-放置于nginx的html目录中
-</code></pre><h2 id="使用docker-machine部署一台机器">使用Docker Machine部署一台机器</h2>
+<p>下载最新版nginx:
+<a href="http://nginx.org/download/nginx-1.17.9.zip">http://nginx.org/download/nginx-1.17.9.zip</a>
+解压nginx至某一目录，并启动nginx</p>
+<p>下载最新版boot2docker.iso:
+<a href="https://github.com/boot2docker/boot2docker/releases">https://github.com/boot2docker/boot2docker/releases</a>
+放置于nginx的html目录中</p>
+<h2 id="使用docker-machine部署一台机器">使用Docker Machine部署一台机器</h2>
 <ol>
 <li>打开cmd命令行界面，输入命令：</li>
 </ol>
@@ -507,7 +503,7 @@ To see how to connect your Docker Client to the Docker Engine running on this vi
 </code></pre><ol start="3">
 <li>登录docker机器并查看环境信息：</li>
 </ol>
-<pre><code>C:\Users\ChenDM&gt;dm ssh vm1
+<pre><code>C:\Users\Trevorch&gt;dm ssh vm1
    ( '&gt;')
   /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
  (/-_--_-\)           www.tinycorelinux.net

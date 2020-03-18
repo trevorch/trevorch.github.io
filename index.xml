@@ -65,17 +65,13 @@
 &lt;li&gt;新建环境变量 MACHINE_STORAGE_PATH 指定docker机器存储位置。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;boot2dockeriso-镜像配置&#34;&gt;boot2docker.iso 镜像配置&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载最新版nginx&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;http://nginx.org/download/nginx-1.17.9.zip
-解压nginx至某一目录，并启动nginx
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;下载最新版boot2docker.iso&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/boot2docker/boot2docker/releases
-放置于nginx的html目录中
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;使用docker-machine部署一台机器&#34;&gt;使用Docker Machine部署一台机器&lt;/h2&gt;
+&lt;p&gt;下载最新版nginx:
+&lt;a href=&#34;http://nginx.org/download/nginx-1.17.9.zip&#34;&gt;http://nginx.org/download/nginx-1.17.9.zip&lt;/a&gt;
+解压nginx至某一目录，并启动nginx&lt;/p&gt;
+&lt;p&gt;下载最新版boot2docker.iso:
+&lt;a href=&#34;https://github.com/boot2docker/boot2docker/releases&#34;&gt;https://github.com/boot2docker/boot2docker/releases&lt;/a&gt;
+放置于nginx的html目录中&lt;/p&gt;
+&lt;h2 id=&#34;使用docker-machine部署一台机器&#34;&gt;使用Docker Machine部署一台机器&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;打开cmd命令行界面，输入命令：&lt;/li&gt;
 &lt;/ol&gt;
@@ -118,7 +114,7 @@ To see how to connect your Docker Client to the Docker Engine running on this vi
 &lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;登录docker机器并查看环境信息：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;C:\Users\ChenDM&amp;gt;dm ssh vm1
+&lt;pre&gt;&lt;code&gt;C:\Users\Trevorch&amp;gt;dm ssh vm1
    ( &#39;&amp;gt;&#39;)
   /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
  (/-_--_-\)           www.tinycorelinux.net
