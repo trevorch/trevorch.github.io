@@ -46,6 +46,148 @@
     </item>
     
     <item>
+      <title>Docker Machine 安装及配置</title>
+      <link>https://trevorch.github.io/post/docker-machine-install/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/docker-machine-install/</guid>
+      
+        <description>&lt;h2 id=&#34;安装virtualbox&#34;&gt;安装VirtualBox&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe&#34;&gt;https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载-docker-machine&#34;&gt;下载 Docker Machine&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe&#34;&gt;https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe
+&lt;img src=&#34;https://trevorch.github.io/static/images/docker/docker-machine/install/01.png&#34; alt=&#34;avatar&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;把 D:\Docker\Machine\0.16.2 添加到path环境变量；&lt;/li&gt;
+&lt;li&gt;删除path环境变量中带OpenSSH的项，否则会导致Docker Machine卡在  Waiting for an IP&amp;hellip;;&lt;/li&gt;
+&lt;li&gt;新建环境变量 MACHINE_STORAGE_PATH 指定docker机器存储位置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;boot2dockeriso-镜像配置&#34;&gt;boot2docker.iso 镜像配置&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载最新版nginx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;http://nginx.org/download/nginx-1.17.9.zip
+解压nginx至某一目录，并启动nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;下载最新版boot2docker.iso&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/boot2docker/boot2docker/releases
+放置于nginx的html目录中
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;使用docker-machine部署一台机器&#34;&gt;使用Docker Machine部署一台机器&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;打开cmd命令行界面，输入命令：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;dm create  -d &amp;quot;virtualbox&amp;quot; \
+--engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com \
+--engine-registry-mirror http://f1361db2.m.daocloud.io \
+--engine-registry-mirror https://reg-mirror.qiniu.com \
+--engine-registry-mirror http://hub-mirror.c.163.com \
+--engine-registry-mirror https://registry.docker-cn.com \
+--engine-registry-mirror https://mirror.ccs.tencentyun.com \
+--engine-registry-mirror https://dockerhub.azk8s.cn \
+--virtualbox-memory &amp;quot;2048&amp;quot; \
+--virtualbox-boot2docker-url http://localhost/tool/boot2docker.iso  \
+vm1
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;执行过程如下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Trevorch&amp;gt;dm create  -d &amp;quot;virtualbox&amp;quot; --engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com --engine-registry-mirror http://f1361db2.m.daocloud.io --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://registry.docker-cn.com --engine-registry-mirror https://mirror.ccs.tencentyun.com --engine-registry-mirror https://dockerhub.azk8s.cn --virtualbox-memory &amp;quot;2048&amp;quot; --virtualbox-boot2docker-url http://localhost/tool/boot2docker.iso  vm1
+Running pre-create checks...
+Creating machine...
+(vm1) Downloading F:\vms\cache\boot2docker.iso from http://localhost/tool/boot2docker.iso...
+(vm1) 0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+(vm1) Creating VirtualBox VM...
+(vm1) Creating SSH key...
+(vm1) Starting the VM...
+(vm1) Check network to re-create if needed...
+(vm1) Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+(vm1) Waiting for an IP...
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with boot2docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: dm env vm1
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;登录docker机器并查看环境信息：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\ChenDM&amp;gt;dm ssh vm1
+   ( &#39;&amp;gt;&#39;)
+  /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
+ (/-_--_-\)           www.tinycorelinux.net
+
+docker@vm1:~$ docker info
+Client:
+ Debug Mode: false
+
+Server:
+ Containers: 1
+  Running: 1
+  Paused: 0
+  Stopped: 0
+ Images: 1
+ Server Version: 19.03.5
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Native Overlay Diff: true
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: b34a5c8af56e510852c35414db4c1f4fa6172339
+ runc version: 3e425f80a8c931f88e6d94a8c831b9d5aa481657
+ init version: fec3683
+ Security Options:
+  seccomp
+   Profile: default
+ Kernel Version: 4.14.154-boot2docker
+ Operating System: Boot2Docker 19.03.5 (TCL 10.1)
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 1
+ Total Memory: 1.951GiB
+ Name: vm1
+ ID: 7SHL:Y3WY:Z4WI:B7ZY:LSTV:CT6J:ZFZU:MH2A:MFSP:4GE4:GB4I:R6JE
+ Docker Root Dir: /mnt/sda1/var/lib/docker
+ Debug Mode: false
+ Registry: https://index.docker.io/v1/
+ Labels:
+  provider=virtualbox
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Registry Mirrors:
+  https://3laho3y3.mirror.aliyuncs.com/
+  http://f1361db2.m.daocloud.io/
+  https://reg-mirror.qiniu.com/
+  http://hub-mirror.c.163.com/
+  https://registry.docker-cn.com/
+  https://mirror.ccs.tencentyun.com/
+  https://dockerhub.azk8s.cn/
+ Live Restore Enabled: false
+ Product License: Community Engine
+
+docker@vm1:~$
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;至此，就可以使用docker环境了！&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Math Preview</title>
       <link>https://trevorch.github.io/post/math-preview/</link>
       <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate>

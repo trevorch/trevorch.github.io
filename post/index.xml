@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Mon, 04 Mar 2019 16:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2020 10:53:44 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://trevorch.github.io/post/jane-theme-preview/</guid>
       <description>主题预览,内容有待填充。</description>
+    </item>
+    
+    <item>
+      <title>Docker Machine 安装及配置</title>
+      <link>https://trevorch.github.io/post/docker-machine-install/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/docker-machine-install/</guid>
+      <description>安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，</description>
     </item>
     
     <item>

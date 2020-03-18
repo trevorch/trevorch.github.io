@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Mon, 04 Mar 2019 16:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2020 10:53:44 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker</title>
+      <link>https://trevorch.github.io/tags/docker/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine</title>
+      <link>https://trevorch.github.io/tags/machine/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/tags/machine/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>math</title>
@@ -170,24 +188,6 @@
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>https://trevorch.github.io/tags/jekyll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Syntax Highlighting</title>
-      <link>https://trevorch.github.io/tags/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/tags/syntax-highlighting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag-5</title>
-      <link>https://trevorch.github.io/tags/tag-5/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/tags/tag-5/</guid>
       <description></description>
     </item>
     
