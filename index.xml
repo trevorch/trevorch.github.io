@@ -46,6 +46,20 @@
     </item>
     
     <item>
+      <title>Go 程序编译成不同平台的执行文件</title>
+      <link>https://trevorch.github.io/post/go/env/compile/</link>
+      <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/go/env/compile/</guid>
+      
+        <description>&lt;p&gt;set GOARCH=amd64
+set GOOS=linux
+go build xx.go&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Docker Machine 安装及配置</title>
       <link>https://trevorch.github.io/post/docker/machine/install/</link>
       <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
