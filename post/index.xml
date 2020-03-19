@@ -26,7 +26,7 @@
       <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
       
       <guid>https://trevorch.github.io/post/go/env/compile/</guid>
-      <description>set GOARCH=amd64 set GOOS=linux go build xx.go</description>
+      <description>Go程序可编译成不同平台的可执行文件 set GOARCH=amd64 set GOOS=linux go build xx.go 这样生成的文件没有任何依赖，直接运行就可以了！</description>
     </item>
     
     <item>

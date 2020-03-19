@@ -52,10 +52,12 @@
       
       <guid>https://trevorch.github.io/post/go/env/compile/</guid>
       
-        <description>&lt;pre&gt;&lt;code&gt;set GOARCH=amd64
+        <description>&lt;h3 id=&#34;go程序可编译成不同平台的可执行文件&#34;&gt;Go程序可编译成不同平台的可执行文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;set GOARCH=amd64
 set GOOS=linux
 go build xx.go
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这样生成的文件没有任何依赖，直接运行就可以了！&lt;/p&gt;
+</description>
       
     </item>
     
