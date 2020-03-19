@@ -52,10 +52,10 @@
       
       <guid>https://trevorch.github.io/post/go/env/compile/</guid>
       
-        <description>&lt;p&gt;set GOARCH=amd64
+        <description>&lt;pre&gt;&lt;code&gt;set GOARCH=amd64
 set GOOS=linux
-go build xx.go&lt;/p&gt;
-</description>
+go build xx.go
+&lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
     
