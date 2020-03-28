@@ -6,10 +6,37 @@
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Wed, 18 Mar 2020 10:53:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2020 12:40:24 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>https://trevorch.github.io/categories/linux/</link>
+      <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monetary-economics</title>
+      <link>https://trevorch.github.io/categories/monetary-economics/</link>
+      <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/monetary-economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://trevorch.github.io/categories/go/</link>
+      <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/go/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker</title>
@@ -21,83 +48,11 @@
     </item>
     
     <item>
-      <title>docs</title>
-      <link>https://trevorch.github.io/categories/docs/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate>
+      <title>manual</title>
+      <link>https://trevorch.github.io/categories/manual/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/categories/docs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>index</title>
-      <link>https://trevorch.github.io/categories/index/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/index/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>math</title>
-      <link>https://trevorch.github.io/categories/math/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shortcodes</title>
-      <link>https://trevorch.github.io/categories/shortcodes/</link>
-      <pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/shortcodes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>English</title>
-      <link>https://trevorch.github.io/categories/english/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/english/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://trevorch.github.io/categories/test/</link>
-      <pubDate>Wed, 30 Aug 2017 15:43:48 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development</title>
-      <link>https://trevorch.github.io/categories/development/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://trevorch.github.io/categories/golang/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Syntax Highlighting</title>
-      <link>https://trevorch.github.io/categories/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/syntax-highlighting/</guid>
+      <guid>https://trevorch.github.io/categories/manual/</guid>
       <description></description>
     </item>
     

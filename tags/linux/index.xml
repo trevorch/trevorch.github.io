@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Trevorch</title>
+    <link>https://trevorch.github.io/tags/linux/</link>
+    <description>Recent content in Linux on Trevorch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sat, 28 Mar 2020 12:40:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://trevorch.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Archlinux 安装及配置</title>
+      <link>https://trevorch.github.io/post/linux/archlinux/install/</link>
+      <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/linux/archlinux/install/</guid>
+      <description>下载Archlinux ISO镜像 http://mirrors.163.com/archlinux/iso/2020.03.01/archlinux-2020.03.01-x86_64.iso 安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 创建VirtualBox虚拟机，并挂载Archlinux镜像，启动虚拟机 分区 分区</description>
+    </item>
+    
+  </channel>
+</rss>
