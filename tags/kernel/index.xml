@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kernel on Trevorch</title>
+    <link>https://trevorch.github.io/tags/kernel/</link>
+    <description>Recent content in Kernel on Trevorch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Mon, 20 Apr 2020 23:47:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://trevorch.github.io/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zircon 内核概念</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/concepts/</link>
+      <pubDate>Mon, 20 Apr 2020 23:47:04 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/concepts/</guid>
+      <description>主要内容 简介 系统调用 句柄及权限 内核对象ID 运行中的代码:Job,Process,Thread 消息传递:Socket及Channel 对象及信号</description>
+    </item>
+    
+  </channel>
+</rss>
