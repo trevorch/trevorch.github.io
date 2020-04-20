@@ -34,6 +34,91 @@
     </item>
     
     <item>
+      <title>Zircon 内核概念</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/concepts/</link>
+      <pubDate>Mon, 20 Apr 2020 23:47:04 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/concepts/</guid>
+      
+        <description>&lt;h2 id=&#34;主要内容&#34;&gt;主要内容&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h4 id=&#34;简介&#34;&gt;简介&lt;/h4&gt;
+&lt;h4 id=&#34;系统调用&#34;&gt;系统调用&lt;/h4&gt;
+&lt;h4 id=&#34;句柄及权限&#34;&gt;句柄及权限&lt;/h4&gt;
+&lt;h4 id=&#34;内核对象id&#34;&gt;内核对象ID&lt;/h4&gt;
+&lt;h4 id=&#34;运行中的代码jobprocessthread&#34;&gt;运行中的代码:Job,Process,Thread&lt;/h4&gt;
+&lt;h4 id=&#34;消息传递socket及channel&#34;&gt;消息传递:Socket及Channel&lt;/h4&gt;
+&lt;h4 id=&#34;对象及信号&#34;&gt;对象及信号&lt;/h4&gt;
+&lt;h4 id=&#34;等待等一个等多个端口&#34;&gt;等待:等一个,等多个,端口&lt;/h4&gt;
+&lt;h4 id=&#34;事件事件对&#34;&gt;事件,事件对&lt;/h4&gt;
+&lt;h4 id=&#34;共享内存虚拟内存对象vmo&#34;&gt;共享内存:虚拟内存对象(VMO)&lt;/h4&gt;
+&lt;h4 id=&#34;地址空间管理&#34;&gt;地址空间管理&lt;/h4&gt;
+&lt;h4 id=&#34;futexes&#34;&gt;Futexes&lt;/h4&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;简介-1&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;内核管理着许多不同类型的对象。可通过系统调用直接访问那些实现了Dispatcher接口的C++类，这些类在kernel/object中实现，其中多数是自包含的高级对象，有一些包装了低级的lk原语。&lt;/p&gt;
+&lt;h2 id=&#34;系统调用-1&#34;&gt;系统调用&lt;/h2&gt;
+&lt;p&gt;用户空间代码通过系统调用与内核对象交互，且几乎完全通过句柄实现。在用户空间中，句柄使用32位的整数表示(zx_handle_t类型)。
+当执行系统调用时，内核检查此句柄在当前调用进程的句柄表中引用的真实句柄。内核进一步检查真实句柄的类型正确性(向一个接收事件句柄的系统调用传递
+线程句柄会导致报错)，且此句柄有执行所请求操作的权限。&lt;/p&gt;
+&lt;p&gt;从访问的角度看，系统调用分为三大类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无限制的调用：数量较少，例如zx_clock_get()及zx_nanosleep()可被任何线程调用;&lt;/li&gt;
+&lt;li&gt;使用句柄作第一参数的调用，参数就是被操作对象：数量占了大部分，例如zx_channel_write()及zx_port_queue();&lt;/li&gt;
+&lt;li&gt;创建对象且无句柄参数的调用：例如zx_event_create()及zx_channel_create()，对它们的访问和限制由调用进程所在的Job控制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统调用由libzircon.so提供，它是Zircon内核向用户空间提供的一个虚拟共享库，广为人知的叫法是虚拟动态共享对象(vDSO)。它们
+是C ELF ABI函数，命名形式：zx_noun_verb()或zx_noun_verb_direct-object()。&lt;/p&gt;
+&lt;p&gt;系统调用以FIDL的形式定义在//zircon/vdso中。这些定义先被fidlc处理，然后由kazoo从fidlc获取IR表示并输出各种格式，
+这些输出在VDSO、内核等等中被作为胶水使用。&lt;/p&gt;
+&lt;h2 id=&#34;句柄及权限-1&#34;&gt;句柄及权限&lt;/h2&gt;
+&lt;p&gt;对象可被多个句柄(在一个或多个进程中)引用;&lt;/p&gt;
+&lt;p&gt;对大部分对象来说，当最后一个引用此对象的句柄被关闭时，这个对象要么被销毁，要么被置为不可撤销的最终状态。&lt;/p&gt;
+&lt;p&gt;句柄可通过写入通道(使用zx_channel_wirte(),或在一个新进程的第一个线程中使用zx_process_start()传递一个句柄)
+的方式从一个进程移动到另一个进程。&lt;/p&gt;
+&lt;p&gt;在句柄或它所引用的对象上的可执行的操作是由与此句柄关联的权限控制的。引用同一个对象的两个句柄可以有不一样的权限。&lt;/p&gt;
+&lt;p&gt;当在代码中把句柄传递进来时，可用zx_handle_duplicate()及zx_handle_replace()这两个系统调用来获取引用同一对象的额外句柄，
+且可选择减权。zx_handle_close()系统调用用于关闭句柄，并在其是所引用对象的最后一个引用的情况下释放其所引用的对象。
+zx_handle_close_many()系统调用用于关闭一组句柄。&lt;/p&gt;
+&lt;h2 id=&#34;内核对象id-1&#34;&gt;内核对象ID&lt;/h2&gt;
+&lt;p&gt;内核中的每个对象都有一个内核对象ID(简称koid)，它是一个64位无符号整数，可用于标识对象，且在运行时系统的整个生命周期中唯一。
+这意味着koid是不会被重用的。&lt;/p&gt;
+&lt;p&gt;有两种特别的koid值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ZX_KOID_INVALID: 值为0且被用作“null”哨兵;&lt;/li&gt;
+&lt;li&gt;ZX_KOID_KERNEL: 只有一个内核，且内核有自己的koid.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;内核生成的koid只使用63位，这为人为设置koid留出了余地。内核生成koid的分配顺序是未被指定的，且这是一个未来会变化的部分。&lt;/p&gt;
+&lt;p&gt;人为koid的存在是为了支持诸如标识人为对象、追踪虚拟线程，这些由工具类使用的东西。人为koid的分配由每个程序来定，本文档不作任何规定或惯例约束。&lt;/p&gt;
+&lt;h2 id=&#34;运行中的代码jobprocessthread-1&#34;&gt;运行中的代码:Job,Process,Thread&lt;/h2&gt;
+&lt;p&gt;线程表示在一个地址空间中的执行(CPU寄存器、栈等等)，地址空间进程，线程属于进程，进程属于Job，Job定义了各种资源限制，Job又属于父Job，所有Job
+都可以溯根至Root Job。Root Job由内核在启动时创建，并传递给第一个开始执行的用户空间进程：userboot。&lt;/p&gt;
+&lt;p&gt;如果没有Job句柄，则进程中的线程不可能创建另外一个进程或另外一个Job。&lt;/p&gt;
+&lt;p&gt;程序加载功能是由内核层之上的用户空间基础设施和协议提供的。&lt;/p&gt;
+&lt;p&gt;参考：zx_process_create(), zx_process_start(), zx_thread_create(), zx_thread_start()&lt;/p&gt;
+&lt;h2 id=&#34;消息传递socket及channel-1&#34;&gt;消息传递:Socket及Channel&lt;/h2&gt;
+&lt;p&gt;Socket和Channel都是IPC对象，它们是可以两端双向使用的。创建Socket或Channel对象时会返回两个句柄，分别指向这个对象的两个端点。&lt;/p&gt;
+&lt;p&gt;Socket是面向流的，且数据可以以一个或多个字节为单元写入或读出。短写(假设Socket的缓冲已满)及短读(假设请求的数据比缓冲中的要多)都是可以的。&lt;/p&gt;
+&lt;p&gt;Channel是面向数据报的，且有最大消息大小(由ZX_CHANNEL_MAX_MSG_BYTES控制)，且消息被句柄引用有最大数量限制
+(由ZX_CHANNEL_MAX_MSG_HANDLES控制)。不支持短写及短读。&lt;/p&gt;
+&lt;p&gt;当句柄被写入Channel时，此句柄会从写进程中移除。当接收进程读取带有句柄的消息时，此句柄会被添加到此进程中。在写和读两个事件之间，句柄是
+持续存在的(确保句柄所引用的对象一直都在)，除非被写入通道的另一端已经关闭(此时，消息会被另一端丢弃且消息中包含的句柄会被关闭，进而导致所引用的
+对象被销毁)。&lt;/p&gt;
+&lt;p&gt;参考：zx_channel_create(), zx_channel_read(), zx_channel_write(), zx_channel_call(), zx_socket_create(), zx_socket_read(), zx_socket_write()&lt;/p&gt;
+&lt;h2 id=&#34;对象及信号-1&#34;&gt;对象及信号&lt;/h2&gt;
+&lt;p&gt;对象最多可有32个信号(使用zx_signalst类型表示，且由ZXSIGNAL定义), 这些信号表示关于它们的一段信息。例如Channel和Socket可以是READABLE或
+WRITABLE，进程或线程可以是TERMINATED的，等等。&lt;/p&gt;
+&lt;p&gt;线程可以在一个或多个对象上等待信号以变成激活状态。&lt;/p&gt;
+&lt;h2 id=&#34;等待等一个等多个端口-1&#34;&gt;等待:等一个,等多个,端口&lt;/h2&gt;
+&lt;h2 id=&#34;事件事件对-1&#34;&gt;事件,事件对&lt;/h2&gt;
+&lt;h2 id=&#34;共享内存虚拟内存对象vmo-1&#34;&gt;共享内存:虚拟内存对象(VMO)&lt;/h2&gt;
+&lt;h2 id=&#34;地址空间管理-1&#34;&gt;地址空间管理&lt;/h2&gt;
+&lt;h2 id=&#34;futexes-1&#34;&gt;Futexes&lt;/h2&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Archlinux 安装及配置</title>
       <link>https://trevorch.github.io/post/linux/archlinux/install/</link>
       <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>

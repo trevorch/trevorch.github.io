@@ -9,6 +9,62 @@
   </url>
   
   <url>
+    <loc>https://trevorch.github.io/categories/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/fuchsia/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/kernel/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/post/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/zircon/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/zircon/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/post/fuchsia/kernel/concepts/</loc>
+    <lastmod>2020-04-20T23:47:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://trevorch.github.io/tags/archlinux/</loc>
     <lastmod>2020-03-28T12:40:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/categories/</loc>
-    <lastmod>2020-03-28T12:40:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://trevorch.github.io/tags/linux/</loc>
     <lastmod>2020-03-28T12:40:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,20 +87,6 @@
   
   <url>
     <loc>https://trevorch.github.io/categories/linux/</loc>
-    <lastmod>2020-03-28T12:40:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/post/</loc>
-    <lastmod>2020-03-28T12:40:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/tags/</loc>
     <lastmod>2020-03-28T12:40:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
