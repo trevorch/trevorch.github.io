@@ -69,7 +69,7 @@
 <meta itemprop="description" content="主要内容 简介 系统调用 句柄及权限 内核对象ID 运行中的代码:Job,Process,Thread 消息传递:Socket及Channel 对象及信号">
 <meta itemprop="datePublished" content="2020-04-20T23:47:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-20T23:47:04&#43;08:00" />
-<meta itemprop="wordCount" content="2404">
+<meta itemprop="wordCount" content="3377">
 
 
 
@@ -462,7 +462,7 @@
     <li><a href="#事件事件对-1">事件,事件对</a></li>
     <li><a href="#共享内存虚拟内存对象vmo-1">共享内存:虚拟内存对象(VMO)</a></li>
     <li><a href="#地址空间管理-1">地址空间管理</a></li>
-    <li><a href="#futexes-1">Futexes</a></li>
+    <li><a href="#futexes-同步机制-1">Futexes 同步机制</a></li>
   </ul>
 </nav>
   </div>
@@ -483,7 +483,7 @@
 <h4 id="事件事件对">事件,事件对</h4>
 <h4 id="共享内存虚拟内存对象vmo">共享内存:虚拟内存对象(VMO)</h4>
 <h4 id="地址空间管理">地址空间管理</h4>
-<h4 id="futexes">Futexes</h4>
+<h4 id="futexes-同步机制">Futexes 同步机制</h4>
 </blockquote>
 <h2 id="简介-1">简介</h2>
 <p>内核管理着许多不同类型的对象。可通过系统调用直接访问那些实现了Dispatcher接口的C++类，这些类在kernel/object中实现，其中多数是自包含的高级对象，有一些包装了低级的lk原语。</p>
@@ -540,10 +540,32 @@ zx_handle_close_many()系统调用用于关闭一组句柄。</p>
 WRITABLE，进程或线程可以是TERMINATED的，等等。</p>
 <p>线程可以在一个或多个对象上等待信号以变成激活状态。</p>
 <h2 id="等待等一个等多个端口-1">等待:等一个,等多个,端口</h2>
+<p>线程可在单个句柄上使用zx_object_wait_one()来等待信号以被激活，或在多个句柄上使用zx_object_wait_many()来等待信号以被激活。
+两种方式都支持在超时后返回(即使没有任何待处理信号)。</p>
+<p>由于时间松弛的存在，超时可能会偏离指定的最终时间。具体参考时间松弛相关内容。</p>
+<p>如果线程需要等待大量的句柄，使用Port是更为有效的方式。其它对象可绑定到Port对象上，当这些对象上有信号时，这个Port对象会接收到
+包含待处理信号的数据包。</p>
+<p>参考：zx_port_create(), zx_port_queue(), zx_port_wait(), zx_port_cancel().</p>
 <h2 id="事件事件对-1">事件,事件对</h2>
+<p>事件是最简单的对象，除了它的活动信号集合没有其他状态。</p>
+<p>事件对是一对可以相互发出信号的事件。事件对的一个有用属性是，
+当一个事件对的一端离开时(对它的所有句柄都已关闭)，对等端关闭信号在另一端被断言。</p>
+<p>参考：zx_event_create(), zx_eventpair_create()</p>
 <h2 id="共享内存虚拟内存对象vmo-1">共享内存:虚拟内存对象(VMO)</h2>
+<p>虚拟内存对象表示一组内存物理页，或潜在的页面(将按需懒惰地创建/填充)。</p>
+<p>可以使用zx_vmar_map()将它们映射到进程的地址空间中，以及使用zx_vmar_unmap解除映射。
+映射页面的权限可以使用zx_vmar_protect()进行调整。</p>
+<p>也可以使用zx vmo read()和zx vmo write()直接读写VMO。因此，像“创建一个VMO，向其中写入数据集，
+并将其交给另一个进程使用”这样的一次性操作可以避免将它们映射到地址空间的成本。</p>
 <h2 id="地址空间管理-1">地址空间管理</h2>
-<h2 id="futexes-1">Futexes</h2>
+<p>虚拟内存地址区域(VMAR)提供了管理进程地址空间的抽象。在创建进程时，指向Root VMAR的句柄被交给进程创建者。
+该句柄引用了一个跨越整个地址空间的VMAR。这个空间可以通过zx_vmar映射()和zx_vmar_allocate()接口来划分。
+zx_vmar_allocation()可用于生成新的VMAR(称为子区域)，这些VMARs可用于将地址空间的各个部分分组在一起。</p>
+<p>参考：zx_vmar_map(), zx_vmar_allocate(), zx_vmar_protect(), zx_vmar_unmap(), zx_vmar_destroy(),</p>
+<h2 id="futexes-同步机制-1">Futexes 同步机制</h2>
+<p>Futexes是与用户空间原子操作一起使用的内核原语，用于实现高效的同步原语。例如，在争用情况下只需要进行一次系统调用的互斥锁。
+通常标准库的实现者对它们感兴趣。Zircon的libc和libc++为【互斥对象】、【条件变量】等提供了C11、c++和pthread的接口，并使用Futexes实现。</p>
+<p>参考：zx_futex_wait(), zx_futex_wake(), zx_futex_requeue().</p>
 
     </div>
 
