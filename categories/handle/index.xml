@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Handle on Trevorch</title>
+    <link>https://trevorch.github.io/categories/handle/</link>
+    <description>Recent content in Handle on Trevorch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Wed, 22 Apr 2020 00:42:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://trevorch.github.io/categories/handle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>内核对象：句柄</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/handles/</link>
+      <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/handles/</guid>
+      <description>主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多</description>
+    </item>
+    
+  </channel>
+</rss>

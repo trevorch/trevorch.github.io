@@ -6,10 +6,19 @@
     <description>Recent content in Zircon on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Wed, 22 Apr 2020 00:26:16 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2020 00:42:26 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/tags/zircon/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>内核对象：句柄</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/handles/</link>
+      <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/handles/</guid>
+      <description>主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多</description>
+    </item>
     
     <item>
       <title>Zircon 与 LK</title>
