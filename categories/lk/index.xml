@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Zircon on Trevorch</title>
-    <link>https://trevorch.github.io/tags/zircon/</link>
-    <description>Recent content in Zircon on Trevorch</description>
+    <title>LK on Trevorch</title>
+    <link>https://trevorch.github.io/categories/lk/</link>
+    <description>Recent content in LK on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Wed, 22 Apr 2020 00:26:16 +0800</lastBuildDate>
     
-	<atom:link href="https://trevorch.github.io/tags/zircon/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://trevorch.github.io/categories/lk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://trevorch.github.io/post/fuchsia/kernel/zx_and_lk/</guid>
       <description>Zircon是LK的一个分支，它的许多内部结构都是基于LK的，而上层则是新的。例如，Zircon有进程的概念，而LK没有。 然而，Zircon</description>
-    </item>
-    
-    <item>
-      <title>Zircon 内核概念</title>
-      <link>https://trevorch.github.io/post/fuchsia/kernel/concepts/</link>
-      <pubDate>Mon, 20 Apr 2020 23:47:04 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/post/fuchsia/kernel/concepts/</guid>
-      <description>主要内容 简介 系统调用 句柄及权限 内核对象ID 运行中的代码:Job,Process,Thread 消息传递:Socket及Channel 对象及信号</description>
     </item>
     
   </channel>

@@ -34,6 +34,29 @@
     </item>
     
     <item>
+      <title>Zircon 与 LK</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/zx_and_lk/</link>
+      <pubDate>Wed, 22 Apr 2020 00:26:16 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/zx_and_lk/</guid>
+      
+        <description>&lt;p&gt;Zircon是LK的一个分支，它的许多内部结构都是基于LK的，而上层则是新的。例如，Zircon有进程的概念，而LK没有。
+然而，Zircon进程是由LK级别的结构组成的，如LK的thread_t。&lt;/p&gt;
+&lt;p&gt;LK是为嵌入式应用程序中通常使用的小型系统设计的内核。它是FreeRTOS或ThreadX等商业产品的一个很好的替代品。
+这样的系统通常只有非常有限的ram、一组固定的外围设备和一组有限的任务。&lt;/p&gt;
+&lt;p&gt;另一方面，Zircon的目标是拥有高速处理器的现代手机和现代个人电脑，以及具有任意外设的非平凡内存(ram)来进行开放式计算。&lt;/p&gt;
+&lt;p&gt;更具体地说，一些明显的区别是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LK可以在32位系统中运行。 Zircon仅支持64位。&lt;/li&gt;
+&lt;li&gt;Zircon具有一流的用户模式支持。 LK没有。&lt;/li&gt;
+&lt;li&gt;Zircon具有基于功能的安全模型。 在LK中，所有代码都是受信任的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;随着时间的推移，甚至低层次的构造也发生了变化，以适应新的需求并更好地适应系统的其余部分。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Zircon 内核概念</title>
       <link>https://trevorch.github.io/post/fuchsia/kernel/concepts/</link>
       <pubDate>Mon, 20 Apr 2020 23:47:04 +0800</pubDate>
