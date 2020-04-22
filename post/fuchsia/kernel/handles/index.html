@@ -69,7 +69,7 @@
 <meta itemprop="description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内">
 <meta itemprop="datePublished" content="2020-04-22T00:42:26&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-22T00:42:26&#43;08:00" />
-<meta itemprop="wordCount" content="626">
+<meta itemprop="wordCount" content="678">
 
 
 
@@ -483,15 +483,22 @@
 <li>它绑定到的进程(或者它绑定到内核)</li>
 </ul>
 <p>“权限”规定了允许对内核对象进行哪些操作。一个进程可能对同一个内核对象有两个具有不同的权限的句柄。</p>
-<p><img src="/static/images/fuchsia/kernel/handles/handle-creation1.png" alt="handle-creation1">
+<p><img src="/images/fuchsia/kernel/handles/handle-creation1.png" alt="handle-creation1">
 图1: 用户进程开始创建句柄。
-<img src="/static/images/fuchsia/kernel/handles/handle-creation2.png" alt="handle-creation1">
+<img src="/images/fuchsia/kernel/handles/handle-creation2.png" alt="handle-creation1">
 图2: 用户进程使用系统调用创建内核对象(例如，一个事件)，并持有该对象的整数引用。
-<img src="/static/images/fuchsia/kernel/handles/handle-creation3.png" alt="handle-creation1">
+<img src="/images/fuchsia/kernel/handles/handle-creation3.png" alt="handle-creation1">
 图3: 句柄被创建后带有一组基本权限和适用于内核对象的任何附加权限。
-<img src="/static/images/fuchsia/kernel/handles/handle-creation4.png" alt="handle-creation1">
+<img src="/images/fuchsia/kernel/handles/handle-creation4.png" alt="handle-creation1">
 图4: 可以复制句柄。在此过程中可以删除权限。</p>
 <h4 id="使用句柄-1">使用句柄</h4>
+<p>创建新内核对象并返回其句柄的系统调用有很多。举几个例子:</p>
+<ul>
+<li>zx_event_create()</li>
+<li>zx_process_create()</li>
+<li>zx_thread_create()</li>
+</ul>
+<p>这些调用创建内核对象和指向它的第一个句柄。</p>
 <h4 id="垃圾回收-1">垃圾回收</h4>
 <h4 id="特殊情况-1">特殊情况</h4>
 <h4 id="无效句柄及句柄重用-1">无效句柄及句柄重用</h4>

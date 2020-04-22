@@ -64,15 +64,22 @@
 &lt;li&gt;它绑定到的进程(或者它绑定到内核)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;“权限”规定了允许对内核对象进行哪些操作。一个进程可能对同一个内核对象有两个具有不同的权限的句柄。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation1.png&#34; alt=&#34;handle-creation1&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://trevorch.github.io/images/fuchsia/kernel/handles/handle-creation1.png&#34; alt=&#34;handle-creation1&#34;&gt;
 图1: 用户进程开始创建句柄。
-&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation2.png&#34; alt=&#34;handle-creation1&#34;&gt;
+&lt;img src=&#34;https://trevorch.github.io/images/fuchsia/kernel/handles/handle-creation2.png&#34; alt=&#34;handle-creation1&#34;&gt;
 图2: 用户进程使用系统调用创建内核对象(例如，一个事件)，并持有该对象的整数引用。
-&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation3.png&#34; alt=&#34;handle-creation1&#34;&gt;
+&lt;img src=&#34;https://trevorch.github.io/images/fuchsia/kernel/handles/handle-creation3.png&#34; alt=&#34;handle-creation1&#34;&gt;
 图3: 句柄被创建后带有一组基本权限和适用于内核对象的任何附加权限。
-&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation4.png&#34; alt=&#34;handle-creation1&#34;&gt;
+&lt;img src=&#34;https://trevorch.github.io/images/fuchsia/kernel/handles/handle-creation4.png&#34; alt=&#34;handle-creation1&#34;&gt;
 图4: 可以复制句柄。在此过程中可以删除权限。&lt;/p&gt;
 &lt;h4 id=&#34;使用句柄-1&#34;&gt;使用句柄&lt;/h4&gt;
+&lt;p&gt;创建新内核对象并返回其句柄的系统调用有很多。举几个例子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;zx_event_create()&lt;/li&gt;
+&lt;li&gt;zx_process_create()&lt;/li&gt;
+&lt;li&gt;zx_thread_create()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些调用创建内核对象和指向它的第一个句柄。&lt;/p&gt;
 &lt;h4 id=&#34;垃圾回收-1&#34;&gt;垃圾回收&lt;/h4&gt;
 &lt;h4 id=&#34;特殊情况-1&#34;&gt;特殊情况&lt;/h4&gt;
 &lt;h4 id=&#34;无效句柄及句柄重用-1&#34;&gt;无效句柄及句柄重用&lt;/h4&gt;
