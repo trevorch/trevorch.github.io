@@ -50,6 +50,28 @@
 &lt;h6 id=&#34;更多&#34;&gt;更多&lt;/h6&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&#34;基础-1&#34;&gt;基础&lt;/h4&gt;
+&lt;p&gt;句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对象的会话或连接。&lt;/p&gt;
+&lt;p&gt;通常情况下，多个进程通过不同的句柄并发地访问同一个内核对象。但是，单个句柄只能绑定到单个进程或绑定到内核。&lt;/p&gt;
+&lt;p&gt;当句柄被绑定到内核时，我们说它是“在途的”。&lt;/p&gt;
+&lt;p&gt;在用户模式下，句柄只是某个系统调用返回的特定数字。只有非在途的句柄对用户模式是可见的。&lt;/p&gt;
+&lt;p&gt;表示句柄的整数只对该进程有意义。另一个进程中的相同数字可能不会映射到任何句柄，也可能映射到指向完全不同内核对象的句柄。&lt;/p&gt;
+&lt;p&gt;句柄是任何32位的整数值, 例外的是 ZX_HANDLE_INVALID，它的值总是0。除此之外，一个有效句柄的整数值总是有两个最不重要的位。
+表示这些位的掩码可以使用ZX_HANDLE_FIXED_BITS_MASK来访问。&lt;/p&gt;
+&lt;p&gt;对于内核模式，句柄是一个c++对象，它包含三个逻辑字段:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对内核对象的引用&lt;/li&gt;
+&lt;li&gt;对其绑定到的内核对象(或绑定到内核的进程)的权限&lt;/li&gt;
+&lt;li&gt;它绑定到的进程(或者它绑定到内核)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;“权限”规定了允许对内核对象进行哪些操作。一个进程可能对同一个内核对象有两个具有不同的权限的句柄。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation1.png&#34; alt=&#34;handle-creation1&#34;&gt;
+图1: 用户进程开始创建句柄。
+&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation2.png&#34; alt=&#34;handle-creation1&#34;&gt;
+图2: 用户进程使用系统调用创建内核对象(例如，一个事件)，并持有该对象的整数引用。
+&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation3.png&#34; alt=&#34;handle-creation1&#34;&gt;
+图3: 句柄被创建后带有一组基本权限和适用于内核对象的任何附加权限。
+&lt;img src=&#34;https://trevorch.github.io/static/images/fuchsia/kernel/handles/handle-creation4.png&#34; alt=&#34;handle-creation1&#34;&gt;
+图4: 可以复制句柄。在此过程中可以删除权限。&lt;/p&gt;
 &lt;h4 id=&#34;使用句柄-1&#34;&gt;使用句柄&lt;/h4&gt;
 &lt;h4 id=&#34;垃圾回收-1&#34;&gt;垃圾回收&lt;/h4&gt;
 &lt;h4 id=&#34;特殊情况-1&#34;&gt;特殊情况&lt;/h4&gt;
