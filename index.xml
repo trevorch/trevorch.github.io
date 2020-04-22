@@ -34,6 +34,129 @@
     </item>
     
     <item>
+      <title>内核对象：权限</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/rights/</link>
+      <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/rights/</guid>
+      
+        <description>&lt;p&gt;权限与句柄相关联，并表达了对关联句柄或关联句柄的对象执行操作的权限。&lt;/p&gt;
+&lt;p&gt;&amp;lt;zircon/rights.h&amp;gt;头部文件定义了各种类型对象的默认权限，可以通过zx_handle_replace()或zx_handle_duplicate()降权。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;权限&lt;/th&gt;
+&lt;th&gt;授予的特权&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_DUPLICATE&lt;/td&gt;
+&lt;td&gt;Allows handle duplication via zx_handle_duplicate()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_TRANSFER&lt;/td&gt;
+&lt;td&gt;Allows handle transfer via zx_channel_write()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_READ&lt;/td&gt;
+&lt;td&gt;Allows reading of data from containers (channels, sockets, VM objects, etc)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Allows mapping as readable if ZX_RIGHT_MAP is also present&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;TO BE REMOVED Allows inspection of object state&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_WRITE&lt;/td&gt;
+&lt;td&gt;Allows writing of data to containers (channels, sockets, VM objects, etc)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Allows mapping as writeable if ZX_RIGHT_MAP is also present&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;TO BE REMOVED Allows modification of object state&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_EXECUTE&lt;/td&gt;
+&lt;td&gt;Allows mapping as executable if ZX_RIGHT_MAP is also present&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_MAP&lt;/td&gt;
+&lt;td&gt;Allows mapping of a VM object into an address space.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_GET_PROPERTY&lt;/td&gt;
+&lt;td&gt;Allows property inspection via zx_object_get_property()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_SET_PROPERTY&lt;/td&gt;
+&lt;td&gt;Allows property modification via zx_object_set_property()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_ENUMERATE&lt;/td&gt;
+&lt;td&gt;Allows enumerating child objects via zx_object_get_info() and zx_object_get_child()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_DESTROY&lt;/td&gt;
+&lt;td&gt;Allows termination of task objects via zx_task_kill()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_SET_POLICY&lt;/td&gt;
+&lt;td&gt;Allows policy modification via zx_job_set_policy()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_GET_POLICY&lt;/td&gt;
+&lt;td&gt;Allows policy inspection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_SIGNAL&lt;/td&gt;
+&lt;td&gt;Allows use of zx_object_signal()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_SIGNAL_PEER&lt;/td&gt;
+&lt;td&gt;Allows use of zx_object_signal_peer()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_WAIT&lt;/td&gt;
+&lt;td&gt;Allows use of zx_object_wait_one(), zx_object_wait_many(), and other waiting primitives&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_INSPECT&lt;/td&gt;
+&lt;td&gt;Allows inspection via zx_object_get_info()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_MANAGE_JOB&lt;/td&gt;
+&lt;td&gt;NOT YET IMPLEMENTED Allows creation of processes, subjobs, etc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_MANAGE_PROCESS&lt;/td&gt;
+&lt;td&gt;NOT YET IMPLEMENTED Allows creation of threads, etc&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ZX_RIGHT_MANAGE_THREAD&lt;/td&gt;
+&lt;td&gt;NOT YET IMPLEMENTED Allows suspending/resuming threads, etc&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;基本权限允许对句柄进行基本操作，默认情况下，大多数句柄类型都使用基本权限:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ZX_RIGHT_DUPLICATE&lt;/li&gt;
+&lt;li&gt;ZX_RIGHT_TRANSFER&lt;/li&gt;
+&lt;li&gt;ZX_RIGHT_WAIT&lt;/li&gt;
+&lt;li&gt;ZX_RIGHT_INSPECT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这四个权限一起使用时被称为ZX_RIGHTS_BASIC。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>内核对象：句柄</title>
       <link>https://trevorch.github.io/post/fuchsia/kernel/handles/</link>
       <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
