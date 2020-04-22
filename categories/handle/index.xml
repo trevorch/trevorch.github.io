@@ -17,7 +17,7 @@
       <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
       
       <guid>https://trevorch.github.io/post/fuchsia/kernel/handles/</guid>
-      <description>主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内</description>
+      <description>主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对</description>
     </item>
     
   </channel>

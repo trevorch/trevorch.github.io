@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Trevorch" />
-  <meta name="description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内" />
+  <meta name="description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对" />
 
   <meta name="keywords" content="Java, Go, Python, Docker" />
 
@@ -60,22 +60,22 @@
 
 
 <meta property="og:title" content="内核对象：句柄" />
-<meta property="og:description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内" />
+<meta property="og:description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://trevorch.github.io/post/fuchsia/kernel/handles/" />
 <meta property="article:published_time" content="2020-04-22T00:42:26+08:00" />
 <meta property="article:modified_time" content="2020-04-22T00:42:26+08:00" />
 <meta itemprop="name" content="内核对象：句柄">
-<meta itemprop="description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内">
+<meta itemprop="description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对">
 <meta itemprop="datePublished" content="2020-04-22T00:42:26&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-22T00:42:26&#43;08:00" />
-<meta itemprop="wordCount" content="1790">
+<meta itemprop="wordCount" content="1788">
 
 
 
 <meta itemprop="keywords" content="Zircon,Kernel,Handle," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="内核对象：句柄"/>
-<meta name="twitter:description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 更多 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内"/>
+<meta name="twitter:description" content="主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -474,7 +474,6 @@
 <h4 id="垃圾回收">垃圾回收</h4>
 <h4 id="特殊情况">特殊情况</h4>
 <h4 id="无效句柄及句柄重用">无效句柄及句柄重用</h4>
-<h4 id="更多">更多</h4>
 </blockquote>
 <h2 id="基础-1">基础</h2>
 <p>句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对象的会话或连接。</p>
