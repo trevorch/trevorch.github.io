@@ -34,6 +34,38 @@
     </item>
     
     <item>
+      <title>调度：公平调度器</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/fair_scheduler/</link>
+      <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/fair_scheduler/</guid>
+      
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。
+本文讨论调度器的属性，以及如何在推出之前对其进行测试。&lt;/p&gt;
+&lt;h2 id=&#34;启用公平调度器&#34;&gt;启用公平调度器&lt;/h2&gt;
+&lt;p&gt;默认情况下禁用公平调度程序。通过将GN构建参数enable_fair_scheduler设置为true，可以在编译时启用新的调度器。&lt;/p&gt;
+&lt;p&gt;您可以像这样在GN调用中设置这个变量：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gn gen build-zircon --args=&#39;enable_fair_scheduler=true&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;细化调度器追踪&#34;&gt;细化调度器追踪&lt;/h2&gt;
+&lt;p&gt;新的调度器包括详细的跟踪工具，用于分析调度器的行为及其与系统中竞争的工作负载之间的交互和影响。&lt;/p&gt;
+&lt;p&gt;通过将GN构建参数Detailed scheduler跟踪设置为true，可以在编译时启用详细跟踪:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gn gen build-zircon --args=&#39;enable_fair_scheduler=true detailed_scheduler_tracing=true&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;调度器事件汇总&#34;&gt;调度器事件汇总&lt;/h3&gt;
+&lt;h2 id=&#34;公平调度器概述&#34;&gt;公平调度器概述&lt;/h2&gt;
+&lt;h2 id=&#34;zircon中的公平调度器&#34;&gt;Zircon中的公平调度器&lt;/h2&gt;
+&lt;h3 id=&#34;线程执行顺序&#34;&gt;线程执行顺序&lt;/h3&gt;
+&lt;h3 id=&#34;排序条件&#34;&gt;排序条件&lt;/h3&gt;
+&lt;h3 id=&#34;每个线程的调度状态&#34;&gt;每个线程的调度状态&lt;/h3&gt;
+&lt;h3 id=&#34;可调试状态&#34;&gt;可调试状态&lt;/h3&gt;
+&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
+&lt;h3 id=&#34;时间片&#34;&gt;时间片&lt;/h3&gt;
+&lt;h3 id=&#34;让步&#34;&gt;让步&lt;/h3&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>调度：Zircon调度</title>
       <link>https://trevorch.github.io/post/fuchsia/kernel/kernel_scheduling/</link>
       <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>

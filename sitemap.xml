@@ -10,70 +10,91 @@
   
   <url>
     <loc>https://trevorch.github.io/categories/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/fair-scheduler/</loc>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/fair-scheduler/</loc>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/categories/fuchsia/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/tags/kernel/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/categories/kernel/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/tags/kernel-scheduling/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/categories/kernel-scheduling/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/post/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/tags/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/tags/zircon/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/categories/zircon/</loc>
-    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/post/fuchsia/kernel/fair_scheduler/</loc>
+    <lastmod>2020-04-23T18:36:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

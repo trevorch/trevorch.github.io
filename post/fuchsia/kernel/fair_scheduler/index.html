@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Trevorch</title>
+  <title>调度：公平调度器 - Trevorch</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Trevorch" />
-  <meta name="description" content="Trevorch&#39;s techlog." />
+  <meta name="description" content="简介 作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。 本文讨论调度器的属性，以及如何在推出之前对其" />
+
   <meta name="keywords" content="Java, Go, Python, Docker" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.67.0" />
 
 
-<link rel="canonical" href="https://trevorch.github.io/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Trevorch" />
+<link rel="canonical" href="https://trevorch.github.io/post/fuchsia/kernel/fair_scheduler/" />
+
 
 
 
@@ -58,15 +59,23 @@
 
 
 
-<meta property="og:title" content="Trevorch" />
-<meta property="og:description" content="Trevorch&#39;s techlog." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://trevorch.github.io/" />
-<meta property="og:updated_time" content="2017-08-20T21:38:52+08:00" />
-<meta itemprop="name" content="Trevorch">
-<meta itemprop="description" content="Trevorch&#39;s techlog."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Trevorch"/>
-<meta name="twitter:description" content="Trevorch&#39;s techlog."/>
+<meta property="og:title" content="调度：公平调度器" />
+<meta property="og:description" content="简介 作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。 本文讨论调度器的属性，以及如何在推出之前对其" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://trevorch.github.io/post/fuchsia/kernel/fair_scheduler/" />
+<meta property="article:published_time" content="2020-04-23T18:36:45+08:00" />
+<meta property="article:modified_time" content="2020-04-23T18:36:45+08:00" />
+<meta itemprop="name" content="调度：公平调度器">
+<meta itemprop="description" content="简介 作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。 本文讨论调度器的属性，以及如何在推出之前对其">
+<meta itemprop="datePublished" content="2020-04-23T18:36:45&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-23T18:36:45&#43;08:00" />
+<meta itemprop="wordCount" content="337">
+
+
+
+<meta itemprop="keywords" content="Zircon,Kernel,Kernel-scheduling,Fair-scheduler," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="调度：公平调度器"/>
+<meta name="twitter:description" content="简介 作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。 本文讨论调度器的属性，以及如何在推出之前对其"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -266,7 +275,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -406,173 +415,175 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
-  
-  
+          <article class="post bg-white">
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">调度：公平调度器</h1>
       
-      <a class="post-link" href="/post/fuchsia/kernel/zx_and_lk/">Zircon 与 LK</a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2020-04-23" class="post-time">
+          2020-04-23
+        </time>
+        <div class="post-category">
+            <a href="https://trevorch.github.io/categories/fuchsia/"> Fuchsia </a>
+            <a href="https://trevorch.github.io/categories/zircon/"> Zircon </a>
+            <a href="https://trevorch.github.io/categories/kernel/"> Kernel </a>
+            <a href="https://trevorch.github.io/categories/kernel-scheduling/"> Kernel-scheduling </a>
+            <a href="https://trevorch.github.io/categories/fair-scheduler/"> Fair-scheduler </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="2020-04-22" class="post-time">
-        2020-04-22
-      </time>
-      <div class="post-category">
-          <a href="https://trevorch.github.io/categories/fuchsia/"> Fuchsia </a>
-          <a href="https://trevorch.github.io/categories/zircon/"> Zircon </a>
-          <a href="https://trevorch.github.io/categories/lk/"> LK </a>
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#启用公平调度器">启用公平调度器</a></li>
+    <li><a href="#细化调度器追踪">细化调度器追踪</a>
+      <ul>
+        <li><a href="#调度器事件汇总">调度器事件汇总</a></li>
+      </ul>
+    </li>
+    <li><a href="#公平调度器概述">公平调度器概述</a></li>
+    <li><a href="#zircon中的公平调度器">Zircon中的公平调度器</a>
+      <ul>
+        <li><a href="#线程执行顺序">线程执行顺序</a></li>
+        <li><a href="#排序条件">排序条件</a></li>
+        <li><a href="#每个线程的调度状态">每个线程的调度状态</a></li>
+        <li><a href="#可调试状态">可调试状态</a></li>
+        <li><a href="#定义">定义</a></li>
+        <li><a href="#时间片">时间片</a></li>
+        <li><a href="#让步">让步</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="简介">简介</h2>
+<p>作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。
+本文讨论调度器的属性，以及如何在推出之前对其进行测试。</p>
+<h2 id="启用公平调度器">启用公平调度器</h2>
+<p>默认情况下禁用公平调度程序。通过将GN构建参数enable_fair_scheduler设置为true，可以在编译时启用新的调度器。</p>
+<p>您可以像这样在GN调用中设置这个变量：</p>
+<pre><code>gn gen build-zircon --args='enable_fair_scheduler=true'
+</code></pre><h2 id="细化调度器追踪">细化调度器追踪</h2>
+<p>新的调度器包括详细的跟踪工具，用于分析调度器的行为及其与系统中竞争的工作负载之间的交互和影响。</p>
+<p>通过将GN构建参数Detailed scheduler跟踪设置为true，可以在编译时启用详细跟踪:</p>
+<pre><code>gn gen build-zircon --args='enable_fair_scheduler=true detailed_scheduler_tracing=true'
+</code></pre><h3 id="调度器事件汇总">调度器事件汇总</h3>
+<h2 id="公平调度器概述">公平调度器概述</h2>
+<h2 id="zircon中的公平调度器">Zircon中的公平调度器</h2>
+<h3 id="线程执行顺序">线程执行顺序</h3>
+<h3 id="排序条件">排序条件</h3>
+<h3 id="每个线程的调度状态">每个线程的调度状态</h3>
+<h3 id="可调试状态">可调试状态</h3>
+<h3 id="定义">定义</h3>
+<h3 id="时间片">时间片</h3>
+<h3 id="让步">让步</h3>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Trevorch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-04-23
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://trevorch.github.io/tags/zircon/">Zircon</a>
+          <a href="https://trevorch.github.io/tags/kernel/">Kernel</a>
+          <a href="https://trevorch.github.io/tags/kernel-scheduling/">Kernel-scheduling</a>
+          <a href="https://trevorch.github.io/tags/fair-scheduler/">Fair-scheduler</a>
           
         </div>
+
       
-      
-      
-    </div>
-  </header>
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/fuchsia/kernel/kernel_scheduling/">
+            <span class="next-text nav-default">调度：Zircon调度</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
   
-  <div class="post-content">
+  
+
+  
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "trevorch/hugotalks"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+
     
-    <div class="post-summary">
-      Zircon是LK的一个分支，它的许多内部结构都是基于LK的，而上层则是新的。例如，Zircon有进程的概念，而LK没有。 然而，Zircon
-    </div>
-    <div class="read-more">
-      <a href="/post/fuchsia/kernel/zx_and_lk/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/fuchsia/kernel/concepts/">Zircon 内核概念</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-04-20" class="post-time">
-        2020-04-20
-      </time>
-      <div class="post-category">
-          <a href="https://trevorch.github.io/categories/fuchsia/"> Fuchsia </a>
-          <a href="https://trevorch.github.io/categories/zircon/"> Zircon </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      主要内容 简介 系统调用 句柄及权限 内核对象ID 运行中的代码:Job,Process,Thread 消息传递:Socket及Channel 对象及信号
-    </div>
-    <div class="read-more">
-      <a href="/post/fuchsia/kernel/concepts/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/linux/archlinux/install/">Archlinux 安装及配置</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-03-28" class="post-time">
-        2020-03-28
-      </time>
-      <div class="post-category">
-          <a href="https://trevorch.github.io/categories/linux/"> Linux </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      下载Archlinux ISO镜像 http://mirrors.163.com/archlinux/iso/2020.03.01/archlinux-2020.03.01-x86_64.iso 安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 创建VirtualBox虚拟机，并挂载Archlinux镜像，启动虚拟机 分区 分区
-    </div>
-    <div class="read-more">
-      <a href="/post/linux/archlinux/install/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>
