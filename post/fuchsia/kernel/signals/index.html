@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Trevorch" />
-  <meta name="description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号是可等待的zircon内核对象向应用程序公开的单个比特信息。 每个对象可以公开" />
+  <meta name="description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号可等待的内核对象向应用程序暴露的单个比特信息。 每个内核对象可暴露一个或多个信" />
 
   <meta name="keywords" content="Java, Go, Python, Docker" />
 
@@ -60,22 +60,22 @@
 
 
 <meta property="og:title" content="内核对象：Signals" />
-<meta property="og:description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号是可等待的zircon内核对象向应用程序公开的单个比特信息。 每个对象可以公开" />
+<meta property="og:description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号可等待的内核对象向应用程序暴露的单个比特信息。 每个内核对象可暴露一个或多个信" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://trevorch.github.io/post/fuchsia/kernel/signals/" />
 <meta property="article:published_time" content="2020-04-22T17:43:33+08:00" />
 <meta property="article:modified_time" content="2020-04-22T17:43:33+08:00" />
 <meta itemprop="name" content="内核对象：Signals">
-<meta itemprop="description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号是可等待的zircon内核对象向应用程序公开的单个比特信息。 每个对象可以公开">
+<meta itemprop="description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号可等待的内核对象向应用程序暴露的单个比特信息。 每个内核对象可暴露一个或多个信">
 <meta itemprop="datePublished" content="2020-04-22T17:43:33&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-22T17:43:33&#43;08:00" />
-<meta itemprop="wordCount" content="1140">
+<meta itemprop="wordCount" content="1133">
 
 
 
-<meta itemprop="keywords" content="Zircon,Kernel,Signals," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Zircon,Kernel,Kernel Object,Signals," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="内核对象：Signals"/>
-<meta name="twitter:description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号是可等待的zircon内核对象向应用程序公开的单个比特信息。 每个对象可以公开"/>
+<meta name="twitter:description" content="主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号可等待的内核对象向应用程序暴露的单个比特信息。 每个内核对象可暴露一个或多个信"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -427,6 +427,8 @@
         <div class="post-category">
             <a href="https://trevorch.github.io/categories/fuchsia/"> Fuchsia </a>
             <a href="https://trevorch.github.io/categories/zircon/"> Zircon </a>
+            <a href="https://trevorch.github.io/categories/kernel/"> Kernel </a>
+            <a href="https://trevorch.github.io/categories/kernel/"> Kernel Object </a>
             <a href="https://trevorch.github.io/categories/signals/"> Signals </a>
             
           </div>
@@ -473,8 +475,8 @@
 <h4 id="用户信号">用户信号</h4>
 </blockquote>
 <h2 id="简介-1">简介</h2>
-<p>信号是可等待的zircon内核对象向应用程序公开的单个比特信息。
-每个对象可以公开一个或多个信号，其中大多数是特定于对象类型的。</p>
+<p>信号可等待的内核对象向应用程序暴露的单个比特信息。
+每个内核对象可暴露一个或多个信号，大多数信号与对象类型相关的。</p>
 <p>例如，信号ZX_CHANNEL_READABLE指示“此通道端点有消息要读取”，而ZX_PROCESS_TERMINATED指示“此进程停止运行”。</p>
 <p>对象的信号存储在uint32位掩码中，其值（特定于对象）在zircon/types.h中定义。
 typedef zx_signals_t 用于引用系统调用和其他api中的信号位掩码。</p>
@@ -530,6 +532,7 @@ typedef zx_signals_t 用于引用系统调用和其他api中的信号位掩码�
       <div class="post-tags">
           <a href="https://trevorch.github.io/tags/zircon/">Zircon</a>
           <a href="https://trevorch.github.io/tags/kernel/">Kernel</a>
+          <a href="https://trevorch.github.io/tags/kernel/">Kernel Object</a>
           <a href="https://trevorch.github.io/tags/signals/">Signals</a>
           
         </div>
@@ -537,6 +540,19 @@ typedef zx_signals_t 用于引用系统调用和其他api中的信号位掩码�
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/fuchsia/kernel/vdso/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">系统调用：Vdso</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         
           <a class="next" href="/post/fuchsia/kernel/rights/">
             <span class="next-text nav-default">内核对象：权限</span>

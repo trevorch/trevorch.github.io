@@ -34,6 +34,127 @@
     </item>
     
     <item>
+      <title>系统调用：Vdso</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/vdso/</link>
+      <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/vdso/</guid>
+      
+        <description>&lt;p&gt;vDSO是访问Zircon系统调用的唯一方法。vDSO表示虚拟动态共享对象。动态共享对象是ELF(Executable Linkable Format)格式中用于共享库的术语。
+它是虚拟的，因为它不是从文件系统中的ELF文件加载的。相反，vDSO映像是由内核直接提供的。&lt;/p&gt;
+&lt;p&gt;ELF是一种用于二进制文件、可执行文件、目标代码、共享库和核心转储格式文件。
+是UNIX系统实验室（USL）作为应用程序二进制接口（Application Binary Interface，ABI）而开发和发布的，也是Linux的主要可执行文件格式。
+ELF文件由4部分组成，分别是ELF头（ELF header）、程序头表（Program header table）、节（Section）和节头表（Section header table）。&lt;/p&gt;
+&lt;h2 id=&#34;使用vdso&#34;&gt;使用vDSO&lt;/h2&gt;
+&lt;h4 id=&#34;系统调用abi&#34;&gt;系统调用ABI&lt;/h4&gt;
+&lt;p&gt;vDSO是ELF格式的共享库。它的使用方式与ELF共享库的使用方式一样，根据ELF动态符号表中的符号名查找入口点 (the .dynsym section, located via DT_SYMTAB)。
+ELF定义了一种散列表格式来优化符号表中的名称查找(the .hash section, located via DT_HASH)。
+GNU工具定义了一种改进的哈希表格式，使查找更加有效 (the .gnu_hash section, located via DT_GNU_HASH)。
+Fuchsia ELF共享库(包括vDSO)仅使用DT GNU散列格式。(也可以通过线性搜索直接使用符号表，忽略哈希表。)&lt;/p&gt;
+&lt;p&gt;vDSO使用了一个简化的布局，该布局没有可写段，也不需要动态重定位。这使得使用系统调用ABI更容易，
+而不需要实现通用的ELF加载器和完整的ELF动态链接语义。&lt;/p&gt;
+&lt;p&gt;ELF符号名与带有外部链接的C标识符相同。每个系统调用都对应于vDSO中的ELF符号，并且具有C函数的ABI。
+vDSO函数仅使用基本的特定于机器的C调用约定来控制机器寄存器和堆栈的使用，
+这在许多使用ELF的系统(如Linux和所有BSD变体)中是很常见的。
+它们不依赖于复杂的特性，比如ELF线程本地存储，也不依赖于fuchsia特定的ABI元素，比如SafeStack不安全的堆栈指针。&lt;/p&gt;
+&lt;h4 id=&#34;vdso-展开信息&#34;&gt;vDSO 展开信息&lt;/h4&gt;
+&lt;p&gt;vDSO有一个类型为PT_GNU_EH_FRAME的ELF程序头。这指向展开GNU .eh_frame格式的信息，它是标准的DWARF调用框架信息格式的近亲。
+该信息使得从vDSO代码中的调用帧中恢复寄存器值成为可能，这样就可以从vDSO代码中的PC值中的任何线程的寄存器状态中重构完整的堆栈跟踪。
+这些格式和它们在vDSO中的使用与在Fuchsia上的任何普通ELF共享库或使用公共GNU ELF扩展(如Linux和所有BSD变体)的其他系统中的使用是一样的。&lt;/p&gt;
+&lt;h4 id=&#34;vdso-构建id&#34;&gt;vDSO 构建ID&lt;/h4&gt;
+&lt;p&gt;vDSO有一个ELF构建ID，就像其他使用公共GNU扩展构建的ELF共享库和可执行文件一样。
+构建ID是一个标识了该二进制文件的特定构建的唯一字符串。它以ELF note格式存储，由类型为PT_NOTE的ELF程序头指向。
+名称为“GNU”、类型为NT_GNU_BUILD_ID的有效载荷是构成构建ID的字节序列。&lt;/p&gt;
+&lt;p&gt;构建id的一个主要用途是将二进制文件与其调试信息和构建它们的源代码关联起来。
+vDSO二进制文件与内核二进制文件绑定(并嵌入其中)，并包含特定于每个内核构建的信息，因此，vDSO的构建ID也可以区分内核。&lt;/p&gt;
+&lt;h4 id=&#34;zx_process_start参数&#34;&gt;zx_process_start()参数&lt;/h4&gt;
+&lt;p&gt;[zx_process_start()]系统调用是程序加载器告诉内核启动新进程的第一个执行线程的方式。
+最后一个参数([zx process start()]文档中的arg2)是传递给寄存器中的新线程的一个普通uintptr_t值。&lt;/p&gt;
+&lt;p&gt;按照惯例，程序加载器将vDSO映射到每个新进程的地址空间(在系统选择的随机位置)，
+并将映像的基本地址传递给arg2寄存器中新进程的第一个线程。
+这个地址是在内存中可以找到ELF文件头的地方，它指向所有其他必需的ELF格式元素来查找符号名，从而进行系统调用。&lt;/p&gt;
+&lt;h4 id=&#34;pa_vmo_vdso句柄&#34;&gt;PA_VMO_VDSO句柄&lt;/h4&gt;
+&lt;p&gt;vDSO映像在编译时嵌入到内核中。内核将它作为只读VMO(Virtual Memory Object)暴露给用户空间。当程序加载器设置一个新进程时，
+使该进程能够进行系统调用的唯一方法是，在新进程的第一个线程开始运行之前将vDSO映射到新进程的地址空间。
+因此，每个将启动能够进行系统调用的其他进程的进程必须能够访问vDSO VMO。&lt;/p&gt;
+&lt;p&gt;按照惯例，vDSO的VMO句柄在发送给每个新进程的zx_proc_args_t引导消息中从一个进程传递到另一个进程(see &amp;lt;zircon/processargs.h&amp;gt;)。
+句柄表中的VMO句柄条目由句柄信息条目PA_HND(PA_VMO_VDSO, 0)标识。&lt;/p&gt;
+&lt;h2 id=&#34;vdso实现细节&#34;&gt;vDSO实现细节&lt;/h2&gt;
+&lt;h4 id=&#34;kazoo-工具&#34;&gt;kazoo 工具&lt;/h4&gt;
+&lt;p&gt;kazoo工具既生成构成公共系统调用API的C/C++函数声明，又生成在vDSO的实现中使用的一些C++和汇编代码。
+内核和vDSO代码之间的公共API和私有接口均由//zircon/vdso中的.fidl(Fuchsia Interface Definition Language)文件指定。&lt;/p&gt;
+&lt;p&gt;系统调用可分为以下几组，它们的区别在于系统调用名称后面的属性:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;既没有vdsocall也没有internal是简单的情况(它们是系统调用的主要部分)，其中公共API和私有API是完全相同的。
+它们完全由生成的代码实现。公共API函数的名称前缀是_zx_和zx_(别名)。&lt;/li&gt;
+&lt;li&gt;vdsocall项只是公共API的声明。这些功能由system/ulib/zircon/中的常规手写C++代码实现。
+这些源文件引用 #include “private.h”, 然后为系统调用定义c++函数，该函数的名称以_zx_为前缀。
+最后，他们使用VDSO_INTERFACE_FUNCTION宏在系统调用的名称前面加上zx(没有前导下划线)。
+此实现代码可以为任何其他系统调用项(公共生成的调用、公共手写的vdsocall或内部生成的调用)调用c++函数，但必须使用其私有入口点别名，该别名具有VDSO_zx_前缀。
+否则，代码是正常的(最小的)c++，但是必须是无状态的和可重入的(只使用它的堆栈和寄存器)&lt;/li&gt;
+&lt;li&gt;internal条目是私有API的声明，仅供vDSO实现代码用于进入内核(例如通过其他函数实现vdsocall系统调用)使用。
+这些在vDSO实现中生成的函数具有与公共API中声明的相同的C签名(给定系统调用项的签名)。
+但是，它不使用_zx_和zx_前缀命名，只能通过#include “private.h”和VDSO_zx前缀来访问。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;只读动态共享对象布局&#34;&gt;只读动态共享对象布局&lt;/h4&gt;
+&lt;p&gt;vDSO是一个普通的ELF共享库，可以像对待其他库一样对待它。但是它被有意地保留为ELF共享库的一个小子集。这有几个好处:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将ELF映像映射到一个进程非常简单，并且不涉及任何复杂的、支持ELF PT_LOAD程序头文件的情况。
+vDSO的布局可以由特殊情况的代码来处理，不需要使用循环从ELF头中读取少量值。&lt;/li&gt;
+&lt;li&gt;使用vDSO不需要全功能的ELF动态链接。特别是，vDSO没有动态重定位。在ELF PT_LOAD段中的映射是惟一需要完成的设置。&lt;/li&gt;
+&lt;li&gt;vDSO代码是无状态的和可重入的。它只引用调用它的寄存器和堆栈。这使得它可以在各种上下文中使用，对用户代码如何组织自身的约束最小，这适合于操作系统的强制ABI。
+它还使代码更容易推理和审计，以确保健壮性和安全性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;布局是简单的两个连续的部分，每个部分包含对齐的整个页面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一个段是只读的，包括用于动态链接的ELF头文件和元数据，以及用于vDSO实现的私有常量数据。&lt;/li&gt;
+&lt;li&gt;第二段是可执行的，包含了vDSO代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整个vDSO映像只包含这两个段的页面，在ELF映像中呈现，就像它们应该出现在内存中一样。要在vDSO中进行映射，只需从vDSO的ELF头中收集两个值:每个段中的页面数。&lt;/p&gt;
+&lt;h4 id=&#34;引导时只读数据&#34;&gt;引导时只读数据&lt;/h4&gt;
+&lt;p&gt;一些系统调用仅仅返回在整个系统运行期间都是常量的值，尽管系统的ABI是它们的值必须在运行时查询，并且不能编译成用户代码。
+这些值要么在编译时在内核中固定，要么在引导时由内核根据硬件或引导参数确定。
+例如：zx_system_get_version_string(), zx_system_get_num_cpus(), zx_ticks_per_second()&lt;/p&gt;
+&lt;p&gt;因为这些值是常量，所以没必要进入内核读取它们。相反，vDSO实现这些是通过简单的c++函数返回从vDSO的只读数据段读取的常量。
+编译时固定的值(例如系统版本字符串)被简单地编译到vDSO中。&lt;/p&gt;
+&lt;p&gt;对于在引导时确定的值，内核必须修改vDSO的内容。这是由启动时代码完成的，该代码在启动第一个用户空间进程并给它VMO句柄之前设置vDSO VMO。
+在编译时，将从嵌入到内核中的vDSO ELF文件中提取vDSO映像中vdso_constants数据结构的偏移量。
+在启动时，内核临时将包含vdso_constants的VMO页面映射到它自己的地址空间中，直到为当前运行的系统使用正确的值初始化结构。&lt;/p&gt;
+&lt;h4 id=&#34;强制性&#34;&gt;强制性&lt;/h4&gt;
+&lt;p&gt;vDSO入口点是进入内核进行系统调用的唯一方法。用于进入内核的特定于机器的指令(例如x86上的syscall)不是系统ABI的一部分，用户代码直接执行这些指令是无效的。
+内核和vDSO代码之间的接口是一个私有实现细节。&lt;/p&gt;
+&lt;p&gt;因为vDSO本身是在用户空间中执行的普通代码，所以内核必须健壮地处理从用户空间进入内核模式的所有可能的条目。
+但是，通过强制每个内核条目只能来自适当的vDSO代码，可以在一定程度上减少潜在的内核bug。
+这种强制执行还避免了用户空间代码的开发人员绕过ABI规则(由于无知、恶意或被误导的意图，他们试图绕过官方ABI的一些明确的限制)，
+这可能导致私有内核- vdso接口成为应用程序代码的实际ABI。&lt;/p&gt;
+&lt;p&gt;内核以两种方式强制正确使用vDSO:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它限制了vDSO VMO映射到进程的方式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当使用vDSO VMO调用zx_vmar_map()并请求ZX_VM_PERM_EXECUTE时，内核要求映射的偏移量和大小与vDSO的可执行段完全匹配。
+它也只允许一个这样的映射。一旦在流程中建立了有效的vDSO映射，就不能删除它。
+尝试第二次将vDSO映射到相同的进程中，从进程取消对vDSO代码的映射，或者使vDSO的可执行映射不使用正确的偏移量和大小，都将失败:ZX_ERR_ACCESS_DENIED。&lt;/p&gt;
+&lt;p&gt;在编译时，从vDSO ELF文件中提取vDSO代码段的偏移量和大小，并在内核的映射实施代码中用作常量。&lt;/p&gt;
+&lt;p&gt;当在一个进程中建立一个有效的vDSO映射时，内核将记录该进程的地址，以便能够快速地检查它。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它限制了什么PC(Program Counter)位置可以用来进入内核。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当用户线程进入内核进行系统调用时，寄存器指示调用的是哪个低级系统调用。
+底层系统调用是内核与vDSO之间的私有接口;许多直接对应于公共ABI中的系统调用，但其他则不是。&lt;/p&gt;
+&lt;p&gt;对于每个低级系统调用，在vDSO代码中有一组固定的PC位置来调用该调用。
+vDSO的源代码定义了标识每个位置的内部符号。在编译时，这些位置从vDSO的符号表中提取出来，并用于生成内核代码，该代码为每个低级系统调用定义一个PC有效性谓词。
+由于系统中所有用户进程使用的vDSO代码只有一个定义，所以这些谓词只是检查从vDSO代码段开始的已知、有效、不变的偏移量。&lt;/p&gt;
+&lt;p&gt;在进入内核进行系统调用时，内核检查x86上的syscall指令的PC位置(或其他机器上的等效指令)。
+它从PC上减去为进程在zx_vmar_map()时间记录的vDSO代码的基本地址，并将结果偏移量传递给正在调用的系统调用的有效性谓词。
+如果断言规则PC无效，则调用线程将不允许继续进行系统调用，而是采用与调用未定义的或特权机器指令所导致的机器异常类似的合成异常。&lt;/p&gt;
+&lt;h4 id=&#34;variants&#34;&gt;Variants&lt;/h4&gt;
+&lt;p&gt;vDSO变体是一个还没有真正使用的实验性特性。有一个概念验证的实现和简单的测试，但是需要更多的工作来健壮地实现这个概念，并确定将提供哪些变体。
+其概念是提供仅导出完整vDSO系统调用接口的子集的vDSO映像的变体。例如，仅供设备驱动程序使用的系统调用可能与用于普通应用程序代码的vDSO变体不同。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>内核对象：Signals</title>
       <link>https://trevorch.github.io/post/fuchsia/kernel/signals/</link>
       <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
@@ -49,8 +170,8 @@
 &lt;h4 id=&#34;用户信号&#34;&gt;用户信号&lt;/h4&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;简介-1&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;信号是可等待的zircon内核对象向应用程序公开的单个比特信息。
-每个对象可以公开一个或多个信号，其中大多数是特定于对象类型的。&lt;/p&gt;
+&lt;p&gt;信号可等待的内核对象向应用程序暴露的单个比特信息。
+每个内核对象可暴露一个或多个信号，大多数信号与对象类型相关的。&lt;/p&gt;
 &lt;p&gt;例如，信号ZX_CHANNEL_READABLE指示“此通道端点有消息要读取”，而ZX_PROCESS_TERMINATED指示“此进程停止运行”。&lt;/p&gt;
 &lt;p&gt;对象的信号存储在uint32位掩码中，其值（特定于对象）在zircon/types.h中定义。
 typedef zx_signals_t 用于引用系统调用和其他api中的信号位掩码。&lt;/p&gt;
@@ -85,7 +206,7 @@ typedef zx_signals_t 用于引用系统调用和其他api中的信号位掩码�
       
       <guid>https://trevorch.github.io/post/fuchsia/kernel/rights/</guid>
       
-        <description>&lt;p&gt;权限与句柄相关联，并表达了对关联句柄或关联句柄的对象执行操作的权限。&lt;/p&gt;
+        <description>&lt;p&gt;权限与句柄相关联，并表达此句柄或句柄所引用的对象执行操作的权限。&lt;/p&gt;
 &lt;p&gt;&amp;lt;zircon/rights.h&amp;gt;头部文件定义了各种类型对象的默认权限，可以通过zx_handle_replace()或zx_handle_duplicate()降权。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
