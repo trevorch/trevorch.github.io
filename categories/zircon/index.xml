@@ -6,10 +6,19 @@
     <description>Recent content in Zircon on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Wed, 22 Apr 2020 16:25:24 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2020 17:43:33 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/categories/zircon/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>内核对象：Signals</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/signals/</link>
+      <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/signals/</guid>
+      <description>主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号是可等待的zircon内核对象向应用程序公开的单个比特信息。 每个对象可以公开</description>
+    </item>
     
     <item>
       <title>内核对象：权限</title>

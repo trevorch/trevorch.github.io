@@ -34,6 +34,51 @@
     </item>
     
     <item>
+      <title>内核对象：Signals</title>
+      <link>https://trevorch.github.io/post/fuchsia/kernel/signals/</link>
+      <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/kernel/signals/</guid>
+      
+        <description>&lt;h2 id=&#34;主要内容&#34;&gt;主要内容&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h4 id=&#34;简介&#34;&gt;简介&lt;/h4&gt;
+&lt;h4 id=&#34;状态状态变更及术语&#34;&gt;状态、状态变更及术语&lt;/h4&gt;
+&lt;h4 id=&#34;观察信号&#34;&gt;观察信号&lt;/h4&gt;
+&lt;h4 id=&#34;合成信号&#34;&gt;合成信号&lt;/h4&gt;
+&lt;h4 id=&#34;用户信号&#34;&gt;用户信号&lt;/h4&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;简介-1&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;信号是可等待的zircon内核对象向应用程序公开的单个比特信息。
+每个对象可以公开一个或多个信号，其中大多数是特定于对象类型的。&lt;/p&gt;
+&lt;p&gt;例如，信号ZX_CHANNEL_READABLE指示“此通道端点有消息要读取”，而ZX_PROCESS_TERMINATED指示“此进程停止运行”。&lt;/p&gt;
+&lt;p&gt;对象的信号存储在uint32位掩码中，其值（特定于对象）在zircon/types.h中定义。
+typedef zx_signals_t 用于引用系统调用和其他api中的信号位掩码。&lt;/p&gt;
+&lt;p&gt;大多数对象是可以等待的。端口是不可等待对象的一个例子。要确定一个对象是否是可等待的，可以调用zx_object_get_info()，
+主题参数传入ZX_INFO_HANDLE_BASIC，并测试ZX_OBJ_PROP_WAITABLE。&lt;/p&gt;
+&lt;h2 id=&#34;状态状态变更及术语-1&#34;&gt;状态、状态变更及术语&lt;/h2&gt;
+&lt;p&gt;当一个信号的位是1时，它是活动的;当它的位是0时，它是不活动的。&lt;/p&gt;
+&lt;p&gt;当一个信号被激活以响应一个事件时(即使它已经激活了)，我们称它为已断言的。
+当它在响应某个事件时变为非活动状态(即使它已经处于非活动状态)，则称为取消断言的&lt;/p&gt;
+&lt;p&gt;例如:将消息写入通道端点时，另一端的ZX_CHANNEL_READABLE信号被断言(如果该信号不是活动的，则会导致该信号变为活动的)。
+当通道端点队列中的最后一条消息从该端点读取时，端点的ZX_CHANNEL_READABLE信号被取消断言(这会导致信号变成非活动)。&lt;/p&gt;
+&lt;h2 id=&#34;观察信号-1&#34;&gt;观察信号&lt;/h2&gt;
+&lt;p&gt;zx_object_wait_one(), zx_object_wait_many(), zx_object_wait_async()，与Port结合，可用于在一个或多个对象上等待特定的信号。&lt;/p&gt;
+&lt;p&gt;如果多个线程正在操作同一个对象，这些系统调用的结果可能在调用线程实际操作它们时就已经过时了。
+例如，在通道上等待ZX_CHANNEL_READABLE的线程可能从zx_object_wait_one()中唤醒，结果发现没有待处理消息，
+因为另一个线程已经读取了它。&lt;/p&gt;
+&lt;h2 id=&#34;合成信号-1&#34;&gt;合成信号&lt;/h2&gt;
+&lt;p&gt;ZX_SIGNAL_HANDLE_CLOSED是一个合成信号，这只存在于zx_object_wait_one()或zx_object_wait_many()
+的结果中，并且表示正在等待的句柄已关闭，导致等待操作中止。&lt;/p&gt;
+&lt;p&gt;当等待本身返回ZX_ERR_CANCELED时，该信号只能作为上述两个等待调用的结果获得。&lt;/p&gt;
+&lt;h2 id=&#34;用户信号-1&#34;&gt;用户信号&lt;/h2&gt;
+&lt;p&gt;有8个信号(ZX_USER_SIGNAL_0 到 ZX_USER_SIGNAL_7)在句柄具有适当的权限(分别是ZX_RIGHT_SIGNAL或ZX_RIGHT_SIGNAL_PEER)的时候，
+可使用zx_object_signal()和zx_object_signal_peer()将其置成被断言或取消断言。这些用户信号最初总是不活动的，并且只由对象信号系统调用来修改。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>内核对象：权限</title>
       <link>https://trevorch.github.io/post/fuchsia/kernel/rights/</link>
       <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
