@@ -6,25 +6,6 @@
   },
   "inbounds": [
     {
-      "port": 1080,
-      "listen": "127.0.0.1",
-      "protocol": "socks",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
-      },
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "ip": null,
-        "clients": null
-      },
-      "streamSettings": null
-    },
-    {
       "port": 1081,
       "listen": "127.0.0.1",
       "protocol": "http",
@@ -51,11 +32,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "twsk.y7k.xyz",
+            "address": "65.52.160.99",
             "port": 443,
             "users": [
               {
-                "id": "533ea809-7334-3c35-94f0-83d66eab6eef",
+                "id": "00d5455d-5b7d-3fb3-92c8-17cc9492cb86",
                 "alterId": 2,
                 "email": "t@t.tt",
                 "security": "aes-128-gcm"
@@ -77,9 +58,9 @@
         "kcpSettings": null,
         "wsSettings": {
           "connectionReuse": true,
-          "path": "/v2",
+          "path": "/hls",
           "headers": {
-            "Host": "twsk.y7k.xyz"
+            "Host": "hk01.az.jinkela.icu"
           }
         },
         "httpSettings": null
