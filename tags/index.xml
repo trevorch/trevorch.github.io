@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Thu, 23 Apr 2020 18:36:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 01:04:24 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fuchsia</title>
+      <link>https://trevorch.github.io/tags/fuchsia/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/tags/fuchsia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fuchsia-Development</title>
+      <link>https://trevorch.github.io/tags/fuchsia-development/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/tags/fuchsia-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fuchsia-Download-Source-Code</title>
+      <link>https://trevorch.github.io/tags/fuchsia-download-source-code/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/tags/fuchsia-download-source-code/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Fair-scheduler</title>
@@ -161,33 +188,6 @@
       <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
       
       <guid>https://trevorch.github.io/tags/m2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>M3</title>
-      <link>https://trevorch.github.io/tags/m3/</link>
-      <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/tags/m3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://trevorch.github.io/tags/go/</link>
-      <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://trevorch.github.io/tags/docker/</link>
-      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/tags/docker/</guid>
       <description></description>
     </item>
     

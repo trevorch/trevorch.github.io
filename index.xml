@@ -34,6 +34,45 @@
     </item>
     
     <item>
+      <title>开发：下载源码</title>
+      <link>https://trevorch.github.io/post/fuchsia/development/download-source/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/development/download-source/</guid>
+      
+        <description>&lt;h1 id=&#34;前提条件&#34;&gt;前提条件&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ubuntu 最新版系统&lt;/li&gt;
+&lt;li&gt;科学上网(v2ray-core)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装依赖&#34;&gt;安装依赖&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install build-essential curl git python unzip
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;下载源码&#34;&gt;下载源码&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;curl -s &amp;quot;https://fuchsia.googlesource.com/fuchsia/+/master/scripts/bootstrap?format=TEXT&amp;quot; | base64 --decode | bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;下载完成后&#34;&gt;下载完成后&lt;/h1&gt;
+&lt;p&gt;在~/.bashrc最后添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export PATH=&amp;quot;/root/fuchsia/.jiri_root/bin:$PATH&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;命令行执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;下载错误处理&#34;&gt;下载错误处理&lt;/h1&gt;
+&lt;p&gt;脚本下载到一半时，出现如下报错：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Some packages are skipped by cipd due to lack of access, you might want to run &amp;quot;cipd auth-login&amp;quot; and try again
+ERROR: context deadline exceeded
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;解决办法：打开下方网页登录google账户获得授权码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://accounts.google.com/o/oauth2/auth?access_type=offline&amp;amp;approval_prompt=force&amp;amp;client_id=446450136466-2hr92jrq8e6i4tnsa56b52vacp7t3936.apps.googleusercontent.com&amp;amp;redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&amp;amp;response_type=code&amp;amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cipd auth-login
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;命令行弹出：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Authorization code:
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;贴上授权码即可。&lt;/p&gt;
+&lt;p&gt;进入 fuchsia 源码目录，输入:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;jiri update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更新源代码，问题解决。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>调度：公平调度器</title>
       <link>https://trevorch.github.io/post/fuchsia/kernel/fair_scheduler/</link>
       <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>

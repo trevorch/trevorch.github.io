@@ -6,10 +6,19 @@
     <description>Recent content in Fuchsia on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Thu, 23 Apr 2020 18:36:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 01:04:24 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/categories/fuchsia/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>开发：下载源码</title>
+      <link>https://trevorch.github.io/post/fuchsia/development/download-source/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/fuchsia/development/download-source/</guid>
+      <description>前提条件 ubuntu 最新版系统 科学上网(v2ray-core) 安装依赖 sudo apt-get install build-essential curl git python unzip 下载源码 curl -s &amp;quot;https://fuchsia.googlesource.com/fuchsia/+/master/scripts/bootstrap?format=TEXT&amp;quot; | base64 --decode | bash 下载完成后 在~/.bashrc最后添加：</description>
+    </item>
     
     <item>
       <title>调度：公平调度器</title>

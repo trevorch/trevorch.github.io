@@ -418,6 +418,42 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/fuchsia/development/download-source/">开发：下载源码</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-04-24" class="post-time">
+        2020-04-24
+      </time>
+      <div class="post-category">
+          <a href="https://trevorch.github.io/categories/fuchsia/"> Fuchsia </a>
+          <a href="https://trevorch.github.io/categories/fuchsia-development/"> Fuchsia-Development </a>
+          <a href="https://trevorch.github.io/categories/fuchsia-download-source-code/"> Fuchsia-Download-Source-Code </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      前提条件 ubuntu 最新版系统 科学上网(v2ray-core) 安装依赖 sudo apt-get install build-essential curl git python unzip 下载源码 curl -s &quot;https://fuchsia.googlesource.com/fuchsia/+/master/scripts/bootstrap?format=TEXT&quot; | base64 --decode | bash 下载完成后 在~/.bashrc最后添加：
+    </div>
+    <div class="read-more">
+      <a href="/post/fuchsia/development/download-source/" class="read-more-link">阅读全文</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/fuchsia/kernel/fair_scheduler/">调度：公平调度器</a>
     </h1>
     
@@ -484,44 +520,6 @@
     </div>
     <div class="read-more">
       <a href="/post/fuchsia/kernel/kernel_scheduling/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/fuchsia/kernel/vdso/">系统调用：Vdso</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-04-23" class="post-time">
-        2020-04-23
-      </time>
-      <div class="post-category">
-          <a href="https://trevorch.github.io/categories/fuchsia/"> Fuchsia </a>
-          <a href="https://trevorch.github.io/categories/zircon/"> Zircon </a>
-          <a href="https://trevorch.github.io/categories/kernel/"> Kernel </a>
-          <a href="https://trevorch.github.io/categories/system-call/"> System-Call </a>
-          <a href="https://trevorch.github.io/categories/vdso/"> Vdso </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      vDSO是访问Zircon系统调用的唯一方法。vDSO表示虚拟动态共享对象。动态共享对象是ELF(Executable Linkable Format)格式中
-    </div>
-    <div class="read-more">
-      <a href="/post/fuchsia/kernel/vdso/" class="read-more-link">阅读全文</a>
     </div>
     
   </div>
