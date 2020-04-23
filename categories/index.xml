@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Thu, 23 Apr 2020 14:40:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2020 17:48:32 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Fuchsia</title>
       <link>https://trevorch.github.io/categories/fuchsia/</link>
-      <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
+      <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
       
       <guid>https://trevorch.github.io/categories/fuchsia/</guid>
       <description></description>
@@ -23,9 +23,36 @@
     <item>
       <title>Kernel</title>
       <link>https://trevorch.github.io/categories/kernel/</link>
-      <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
+      <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
       
       <guid>https://trevorch.github.io/categories/kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kernel-scheduling</title>
+      <link>https://trevorch.github.io/categories/kernel-scheduling/</link>
+      <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/kernel-scheduling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zircon</title>
+      <link>https://trevorch.github.io/categories/zircon/</link>
+      <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/zircon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zircon-scheduling</title>
+      <link>https://trevorch.github.io/categories/zircon-scheduling/</link>
+      <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/zircon-scheduling/</guid>
       <description></description>
     </item>
     
@@ -44,15 +71,6 @@
       <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
       
       <guid>https://trevorch.github.io/categories/vdso/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zircon</title>
-      <link>https://trevorch.github.io/categories/zircon/</link>
-      <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/zircon/</guid>
       <description></description>
     </item>
     

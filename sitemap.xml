@@ -10,35 +10,91 @@
   
   <url>
     <loc>https://trevorch.github.io/categories/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/categories/fuchsia/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/tags/kernel/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/categories/kernel/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/kernel-scheduling/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/kernel-scheduling/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://trevorch.github.io/post/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/zircon/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/zircon/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/zircon-scheduling/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/zircon-scheduling/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/post/fuchsia/kernel/kernel_scheduling/</loc>
+    <lastmod>2020-04-23T17:48:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -58,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/tags/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://trevorch.github.io/tags/vdso/</loc>
     <lastmod>2020-04-23T14:40:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -73,20 +122,6 @@
   
   <url>
     <loc>https://trevorch.github.io/categories/vdso/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/tags/zircon/</loc>
-    <lastmod>2020-04-23T14:40:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/categories/zircon/</loc>
     <lastmod>2020-04-23T14:40:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
