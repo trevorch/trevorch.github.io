@@ -34,24 +34,49 @@
     </item>
     
     <item>
-      <title>开发：下载源码</title>
+      <title>开发：源码及编译</title>
       <link>https://trevorch.github.io/post/fuchsia/development/download-source/</link>
       <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
       
       <guid>https://trevorch.github.io/post/fuchsia/development/download-source/</guid>
       
         <description>&lt;h1 id=&#34;前提条件&#34;&gt;前提条件&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;ubuntu 最新版系统&lt;/li&gt;
-&lt;li&gt;科学上网(v2ray-core)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;安装依赖&#34;&gt;安装依赖&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install build-essential curl git python unzip
+&lt;p&gt;docker-machine创建宿主机：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dm create -d &amp;quot;virtualbox&amp;quot; --engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com --engine-registry-mirror http://f1361db2.m.daocloud.io --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://registry.docker-cn.com --engine-registry-mirror https://mirror.ccs.tencentyun.com --engine-registry-mirror https://dockerhub.azk8s.cn --virtualbox-cpu-count &amp;quot;4&amp;quot; --virtualbox-memory &amp;quot;8192&amp;quot; --virtualbox-disk-size &amp;quot;100000&amp;quot; --virtualbox-share-folder &amp;quot;F:\vmshare&amp;quot; --virtualbox-boot2docker-url http://localhost/tool/boot2docker-19.iso vm
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dm ssh vm
+docker run -it --name fuchsia-builder --cap-add NET_ADMIN -v /vmshare/share:/root/share ubuntu:latest /bin/bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;安装依赖&#34;&gt;安装依赖&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;apt-get update &amp;amp;&amp;amp; apt-get install -y vim wget build-essential curl git python unzip net-tools iproute2 uml-utilities ethstatus
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;科学上网v2ray-core&#34;&gt;科学上网(v2ray-core)&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/v2ray/v2ray-core/releases/download/v4.23.1/v2ray-linux-64.zip&#34;&gt;https://github.com/v2ray/v2ray-core/releases/download/v4.23.1/v2ray-linux-64.zip&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;unzip v2ray-linux-64.zip
+cd v2ray
+wget https://trevorch.github.io/file/xxoo.json 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;新建restart.sh:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+PROCESS=`ps -ef|grep v2ray|grep -v grep|grep -v $0|awk &#39;{ print $2}&#39;`
+for i in $PROCESS
+do
+  echo &amp;quot;Kill the $1 process [ $i ]&amp;quot;
+  kill -9 $i
+done
+rm -rf nohup.out
+nohup ./v2ray --config $1 &amp;amp;
+tail -f nohup.out
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更改权限：chmod a+x restart.sh
+执行脚本：./restart.sh xxoo.json&lt;/p&gt;
+&lt;p&gt;在~/.bashrc末添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http_proxy=http://127.0.0.1:1080
+https_proxy=$http_proxy
+export http_proxy https_proxy
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;下载源码&#34;&gt;下载源码&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;curl -s &amp;quot;https://fuchsia.googlesource.com/fuchsia/+/master/scripts/bootstrap?format=TEXT&amp;quot; | base64 --decode | bash
+&lt;pre&gt;&lt;code&gt;cd /root
+curl -s &amp;quot;https://fuchsia.googlesource.com/fuchsia/+/master/scripts/bootstrap?format=TEXT&amp;quot; | base64 --decode | bash
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;下载完成后&#34;&gt;下载完成后&lt;/h1&gt;
 &lt;p&gt;在~/.bashrc最后添加：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;export PATH=&amp;quot;/root/fuchsia/.jiri_root/bin:$PATH&amp;quot;
+&lt;pre&gt;&lt;code&gt;export PATH=~/fuchsia/.jiri_root/bin:$PATH
+source ~/fuchsia/scripts/fx-env.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;命令行执行：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;source ~/.bashrc
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;下载错误处理&#34;&gt;下载错误处理&lt;/h1&gt;
@@ -68,7 +93,45 @@ ERROR: context deadline exceeded
 &lt;p&gt;进入 fuchsia 源码目录，输入:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;jiri update
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更新源代码，问题解决。&lt;/p&gt;
-</description>
+&lt;h1 id=&#34;编译&#34;&gt;编译&lt;/h1&gt;
+&lt;p&gt;开启ccache&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install -y ccache uuid-runtime
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;build配置&amp;amp;build&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fx metrics enable
+fx set core.x64 --ccache
+fx build
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;安装qemu&#34;&gt;安装qemu&lt;/h1&gt;
+&lt;p&gt;安装meson&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get install -y python3 python3-pip ninja-build
+pip3 install --user meson
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;编辑 ~/.bashrc 添加如下内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export PATH=/root/.local/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行：source ~/.bashrc&lt;/p&gt;
+&lt;p&gt;安装glib&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get install -y zlib1g-dev libffi-dev gettext
+wget http://ftp.acc.umu.se/pub/GNOME/sources/glib/2.64/glib-2.64.2.tar.xz
+tar -xvf glib-2.64.2.tar.xz
+cd glib-2.64.2
+meson _build
+ninja -C _build
+ninja -C _build install
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;编译qemu并安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get install -y libpixman-1-dev
+git clone --recursive https://fuchsia.googlesource.com/third_party/qemu
+cd qemu
+./configure --target-list=aarch64-softmmu,x86_64-softmmu
+make -j32
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;设置通信网络&#34;&gt;设置通信网络&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;mkdir /dev/net
+mknod /dev/net/tun c 10 200
+chmod a+w /dev/net/tun
+sudo ip tuntap add dev qemu mode tap user $USER
+sudo ifconfig qemu up
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;启动qemu&#34;&gt;启动qemu&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;fx qemu -N
+&lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
     
