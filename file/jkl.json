@@ -32,7 +32,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "65.52.160.99",
+            "address": "13.70.6.37",
             "port": 443,
             "users": [
               {
@@ -60,7 +60,7 @@
           "connectionReuse": true,
           "path": "/hls",
           "headers": {
-            "Host": "hk01.az.jinkela.icu"
+            "Host": "hk02.az.jinkela.icu"
           }
         },
         "httpSettings": null
