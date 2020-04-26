@@ -69,7 +69,7 @@
 <meta itemprop="description" content="下载kubectl &amp; minikube https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe 安装virtualbox 设置环境变量 指定minikube集群的存储位置 MINIKUBE_HOME = F:\minikube 创建并启动kubernetes集群 minikube start">
 <meta itemprop="datePublished" content="2020-04-26T11:39:49&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-26T11:39:49&#43;08:00" />
-<meta itemprop="wordCount" content="372">
+<meta itemprop="wordCount" content="381">
 
 
 
@@ -478,6 +478,8 @@ kubectl expose deployment nginx --type=LoadBalancer --port=8080 --target-port=80
 此service会把自身的8080端口映射到对应的deployment的pod的80端口
 同时集群会随机选择一个集群端口(例如：30060)映射到此service的8080端口
 此时通过：&lt;集群IP&gt;:&lt;集群端口&gt;就可以访问到nginx服务了
+node &lt;-&gt; service &lt;-&gt; pod
+30060&lt;-&gt; 8080    &lt;-&gt; 80
 </code></pre>
     </div>
 

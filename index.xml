@@ -60,6 +60,8 @@ kubectl expose deployment nginx --type=LoadBalancer --port=8080 --target-port=80
 此service会把自身的8080端口映射到对应的deployment的pod的80端口
 同时集群会随机选择一个集群端口(例如：30060)映射到此service的8080端口
 此时通过：&amp;lt;集群IP&amp;gt;:&amp;lt;集群端口&amp;gt;就可以访问到nginx服务了
+node &amp;lt;-&amp;gt; service &amp;lt;-&amp;gt; pod
+30060&amp;lt;-&amp;gt; 8080    &amp;lt;-&amp;gt; 80
 &lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
