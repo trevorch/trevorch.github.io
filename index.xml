@@ -34,7 +34,7 @@
     </item>
     
     <item>
-      <title>安装&amp;及基本使用</title>
+      <title>Minikube安装&amp;及基本使用</title>
       <link>https://trevorch.github.io/post/kubernets/minikube/install/</link>
       <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
       
@@ -50,10 +50,11 @@ MINIKUBE_HOME = F:\minikube&lt;/p&gt;
 &lt;h1 id=&#34;创建并启动kubernetes集群&#34;&gt;创建并启动kubernetes集群&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;minikube start --image-mirror-country cn --iso-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.9.0.iso --registry-mirror=https://3laho3y3.mirror.aliyuncs.com --registry-mirror=http://hub-mirror.c.163.com
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;创建部署服务并暴露服务&#34;&gt;创建部署、服务，并暴露服务&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;kubectl create deployment nginx --image=hub-mirror.c.163.com/nginx:latest
+&lt;pre&gt;&lt;code&gt;kubectl create deployment nginx --image=nginx:latest
 此命令会创建一个deployment
-此deployment会创建一个pod,并使用指定的镜像创建一个容器，并监测
+此deployment会部署一个ReplicaSet，此ReplicaSet会创建一个pod,使用指定的镜像创建一个容器
 k8s为此pod分配一个只能在集群内部访问的IP
+k8s持续监测此deployment的状态，当状态不满足时维护到满足为止
 
 kubectl expose deployment nginx --type=LoadBalancer --port=8080 --target-port=80
 此命令会为名称为nginx的dployment创建一个LoadBalancer类型的service, 并为其分配一个集群IP

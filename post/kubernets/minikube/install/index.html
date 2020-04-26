@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>安装&amp;及基本使用 - Trevorch</title>
+  <title>Minikube安装&amp;及基本使用 - Trevorch</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -59,22 +59,22 @@
 
 
 
-<meta property="og:title" content="安装&amp;及基本使用" />
+<meta property="og:title" content="Minikube安装&amp;及基本使用" />
 <meta property="og:description" content="下载kubectl &amp; minikube https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe 安装virtualbox 设置环境变量 指定minikube集群的存储位置 MINIKUBE_HOME = F:\minikube 创建并启动kubernetes集群 minikube start" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://trevorch.github.io/post/kubernets/minikube/install/" />
 <meta property="article:published_time" content="2020-04-26T11:39:49+08:00" />
 <meta property="article:modified_time" content="2020-04-26T11:39:49+08:00" />
-<meta itemprop="name" content="安装&amp;及基本使用">
+<meta itemprop="name" content="Minikube安装&amp;及基本使用">
 <meta itemprop="description" content="下载kubectl &amp; minikube https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe 安装virtualbox 设置环境变量 指定minikube集群的存储位置 MINIKUBE_HOME = F:\minikube 创建并启动kubernetes集群 minikube start">
 <meta itemprop="datePublished" content="2020-04-26T11:39:49&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-26T11:39:49&#43;08:00" />
-<meta itemprop="wordCount" content="381">
+<meta itemprop="wordCount" content="439">
 
 
 
 <meta itemprop="keywords" content="Minikube,Minikube-Install," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="安装&amp;及基本使用"/>
+<meta name="twitter:title" content="Minikube安装&amp;及基本使用"/>
 <meta name="twitter:description" content="下载kubectl &amp; minikube https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe 安装virtualbox 设置环境变量 指定minikube集群的存储位置 MINIKUBE_HOME = F:\minikube 创建并启动kubernetes集群 minikube start"/>
 
 <!--[if lte IE 9]>
@@ -189,7 +189,7 @@
               </li>
             
               <li>
-                <a href="https://trevorch.github.io/post/kubernets/minikube/install/">安装&amp;及基本使用</a>
+                <a href="https://trevorch.github.io/post/kubernets/minikube/install/">Minikube安装&amp;及基本使用</a>
               </li>
             
           </ul>
@@ -400,7 +400,7 @@
               </li>
             
               <li>
-                <a href="https://trevorch.github.io/post/kubernets/minikube/install/">安装&amp;及基本使用</a>
+                <a href="https://trevorch.github.io/post/kubernets/minikube/install/">Minikube安装&amp;及基本使用</a>
               </li>
             
           </ul>
@@ -426,7 +426,7 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">安装&amp;及基本使用</h1>
+      <h1 class="post-title">Minikube安装&amp;及基本使用</h1>
       
       <div class="post-meta">
         <time datetime="2020-04-26" class="post-time">
@@ -468,10 +468,11 @@ MINIKUBE_HOME = F:\minikube</p>
 <h1 id="创建并启动kubernetes集群">创建并启动kubernetes集群</h1>
 <pre><code>minikube start --image-mirror-country cn --iso-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.9.0.iso --registry-mirror=https://3laho3y3.mirror.aliyuncs.com --registry-mirror=http://hub-mirror.c.163.com
 </code></pre><h1 id="创建部署服务并暴露服务">创建部署、服务，并暴露服务</h1>
-<pre><code>kubectl create deployment nginx --image=hub-mirror.c.163.com/nginx:latest
+<pre><code>kubectl create deployment nginx --image=nginx:latest
 此命令会创建一个deployment
-此deployment会创建一个pod,并使用指定的镜像创建一个容器，并监测
+此deployment会部署一个ReplicaSet，此ReplicaSet会创建一个pod,使用指定的镜像创建一个容器
 k8s为此pod分配一个只能在集群内部访问的IP
+k8s持续监测此deployment的状态，当状态不满足时维护到满足为止
 
 kubectl expose deployment nginx --type=LoadBalancer --port=8080 --target-port=80
 此命令会为名称为nginx的dployment创建一个LoadBalancer类型的service, 并为其分配一个集群IP
