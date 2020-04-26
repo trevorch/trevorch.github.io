@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minikube-Install on Trevorch</title>
+    <link>https://trevorch.github.io/tags/minikube-install/</link>
+    <description>Recent content in Minikube-Install on Trevorch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sun, 26 Apr 2020 11:39:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://trevorch.github.io/tags/minikube-install/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>安装&amp;及基本使用</title>
+      <link>https://trevorch.github.io/post/kubernets/minikube/install/</link>
+      <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/kubernets/minikube/install/</guid>
+      <description>下载kubectl &amp;amp; minikube https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe 安装virtualbox 设置环境变量 指定minikube集群的存储位置 MINIKUBE_HOME = F:\minikube 创建并启动kubernetes集群 minikube start</description>
+    </item>
+    
+  </channel>
+</rss>

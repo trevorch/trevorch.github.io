@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Fri, 24 Apr 2020 01:04:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 11:39:49 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minikube</title>
+      <link>https://trevorch.github.io/categories/minikube/</link>
+      <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/minikube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Minikube-Install</title>
+      <link>https://trevorch.github.io/categories/minikube-install/</link>
+      <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/minikube-install/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Fuchsia</title>
@@ -170,24 +188,6 @@
       <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
       
       <guid>https://trevorch.github.io/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://trevorch.github.io/categories/docker/</link>
-      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>manual</title>
-      <link>https://trevorch.github.io/categories/manual/</link>
-      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/manual/</guid>
       <description></description>
     </item>
     

@@ -34,6 +34,37 @@
     </item>
     
     <item>
+      <title>安装&amp;及基本使用</title>
+      <link>https://trevorch.github.io/post/kubernets/minikube/install/</link>
+      <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/kubernets/minikube/install/</guid>
+      
+        <description>&lt;h1 id=&#34;下载kubectl--minikube&#34;&gt;下载kubectl &amp;amp; minikube&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe&#34;&gt;https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe&#34;&gt;https://github.com/kubernetes/minikube/releases/download/v1.9.2/minikube-windows-amd64.exe&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装virtualbox&#34;&gt;安装virtualbox&lt;/h1&gt;
+&lt;h1 id=&#34;设置环境变量&#34;&gt;设置环境变量&lt;/h1&gt;
+&lt;p&gt;指定minikube集群的存储位置
+MINIKUBE_HOME = F:\minikube&lt;/p&gt;
+&lt;h1 id=&#34;创建并启动kubernetes集群&#34;&gt;创建并启动kubernetes集群&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;minikube start --image-mirror-country cn --iso-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.9.0.iso --registry-mirror=https://3laho3y3.mirror.aliyuncs.com --registry-mirror=http://hub-mirror.c.163.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;创建部署服务并暴露服务&#34;&gt;创建部署、服务，并暴露服务&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;kubectl create deployment nginx --image=hub-mirror.c.163.com/nginx:latest
+此命令会创建一个deployment
+此deployment会创建一个pod,并使用指定的镜像创建一个容器，并监测
+k8s为此pod分配一个只能在集群内部访问的IP
+
+kubectl expose deployment nginx --type=LoadBalancer --port=8080 --target-port=80
+此命令会为名称为nginx的dployment创建一个LoadBalancer类型的service, 并为其分配一个集群IP
+此service会把自身的8080端口映射到对应的deployment的pod的80端口
+同时集群会随机选择一个集群端口(例如：30060)映射到此service的8080端口
+此时通过：&amp;lt;集群IP&amp;gt;:&amp;lt;集群端口&amp;gt;就可以访问到nginx服务了
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>开发：源码及编译</title>
       <link>https://trevorch.github.io/post/fuchsia/development/download-source/</link>
       <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
