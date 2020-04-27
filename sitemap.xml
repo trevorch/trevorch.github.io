@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://trevorch.github.io/categories/</loc>
-    <lastmod>2020-04-26T11:39:49+08:00</lastmod>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/kubectl/</loc>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/kubectl/</loc>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/post/kubernetes/kubectl/expose/</loc>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/kubectl-expose/</loc>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/categories/kubectl-expose/</loc>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/post/</loc>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://trevorch.github.io/tags/</loc>
+    <lastmod>2020-04-27T14:46:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/post/kubernets/minikube/install/</loc>
-    <lastmod>2020-04-26T11:39:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/post/</loc>
-    <lastmod>2020-04-26T11:39:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/tags/</loc>
+    <loc>https://trevorch.github.io/post/kubernetes/minikube/install/</loc>
     <lastmod>2020-04-26T11:39:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -34,11 +34,29 @@
     </item>
     
     <item>
+      <title>kubectl expose命令</title>
+      <link>https://trevorch.github.io/post/kubernetes/kubectl/expose/</link>
+      <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/kubernetes/kubectl/expose/</guid>
+      
+        <description>&lt;p&gt;把资源暴露为一个新的Kubernetes服务&lt;/p&gt;
+&lt;p&gt;通过名称查找【deployment】, 【service】, 【replica set】, 【replication controller】或【pod】
+并使用此资源的selector作为在指定端口的新服务的 selector。
+【deployment】或【replica set】 仅当其selector可转换为服务支持的selector时，才会作为服务公开,
+例如，当 selector 仅包含 matchLabels 组件时。
+注意：如果不通过 &amp;ndash;port 指定端口，且被暴露的资源有多个端口，则这些端口会被所创建的新服务所重用。
+同样地，如果没有指定label，新服务会重用被暴露资源的所有label。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Minikube安装&amp;及基本使用</title>
-      <link>https://trevorch.github.io/post/kubernets/minikube/install/</link>
+      <link>https://trevorch.github.io/post/kubernetes/minikube/install/</link>
       <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/post/kubernets/minikube/install/</guid>
+      <guid>https://trevorch.github.io/post/kubernetes/minikube/install/</guid>
       
         <description>&lt;h1 id=&#34;下载kubectl--minikube&#34;&gt;下载kubectl &amp;amp; minikube&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe&#34;&gt;https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe&lt;/a&gt;&lt;/p&gt;
@@ -63,6 +81,12 @@ kubectl expose deployment nginx --type=LoadBalancer --port=8080 --target-port=80
 此时通过：&amp;lt;集群IP&amp;gt;:&amp;lt;集群端口&amp;gt;就可以访问到nginx服务了
 node &amp;lt;-&amp;gt; service &amp;lt;-&amp;gt; pod
 30060&amp;lt;-&amp;gt; 8080    &amp;lt;-&amp;gt; 80
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pod 是容器的集合，通常会将紧密相关的一组容器放到一个 Pod 中。&lt;/p&gt;
+&lt;p&gt;Pod 中的所有容器共享 IP 地址和 Port 空间，也就是说它们在一个 network namespace 中。&lt;/p&gt;
+&lt;p&gt;Pod 是 Kubernetes 调度的最小单位，同一 Pod 中的容器始终被一起调度。&lt;/p&gt;
+&lt;h1 id=&#34;停止启动集群&#34;&gt;停止&amp;amp;启动集群&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;minikube stop
+minikube start --image-mirror-country cn
 &lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>

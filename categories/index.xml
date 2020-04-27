@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Sun, 26 Apr 2020 11:39:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubectl</title>
+      <link>https://trevorch.github.io/categories/kubectl/</link>
+      <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/kubectl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubectl-Expose</title>
+      <link>https://trevorch.github.io/categories/kubectl-expose/</link>
+      <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/categories/kubectl-expose/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Minikube</title>
@@ -170,24 +188,6 @@
       <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
       
       <guid>https://trevorch.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>monetary-economics</title>
-      <link>https://trevorch.github.io/categories/monetary-economics/</link>
-      <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/monetary-economics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://trevorch.github.io/categories/go/</link>
-      <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
-      
-      <guid>https://trevorch.github.io/categories/go/</guid>
       <description></description>
     </item>
     
