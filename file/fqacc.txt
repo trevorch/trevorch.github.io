@@ -21,3 +21,8 @@ xo11@c.com 211cb3da-1802-3185-afd5-c5ac1179a26b
 xo12@c.com fa089db1-c503-3a2c-82e0-a1a9926c3d7f
 xo13@c.com 567590db-3769-37cb-9448-edc6571129db
 xo14@c.com 45894315-9069-30c2-a095-b9a65bdfea92
+
+apt-get update &&
+
+sudo apt-get install -y apt-transport-https
+&& curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add && echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' >> /etc/apt/sources.list.d/kubernetes.list  && apt-get update && apt-get install -y kubelet kubeadm kubectl

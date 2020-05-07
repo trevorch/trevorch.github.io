@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 12:49:33 +0800</lastBuildDate>
     
 	<atom:link href="https://trevorch.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PortableApps封装入门</title>
+      <link>https://trevorch.github.io/post/portableapps/get-start/</link>
+      <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/portableapps/get-start/</guid>
+      <description>准备 我是按照PortableApps的规范来做便携软件的，所以需要用到的工具有： 1、一个虚拟机：这是用来构建一个纯净的系统来安装程序的。可以</description>
+    </item>
     
     <item>
       <title>kubectl expose命令</title>

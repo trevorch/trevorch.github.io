@@ -34,6 +34,173 @@
     </item>
     
     <item>
+      <title>PortableApps封装入门</title>
+      <link>https://trevorch.github.io/post/portableapps/get-start/</link>
+      <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/post/portableapps/get-start/</guid>
+      
+        <description>&lt;h1 id=&#34;准备&#34;&gt;准备&lt;/h1&gt;
+&lt;p&gt;我是按照PortableApps的规范来做便携软件的，所以需要用到的工具有：&lt;/p&gt;
+&lt;p&gt;1、一个虚拟机：这是用来构建一个纯净的系统来安装程序的。可以用VMWare Workstation，或者免费的Virtual Box。虚拟机安装好后，装一个纯净的操作系统（注意：一定要干净哦！最好除了系统什么软件都没。什么VC++、.NET之类的补丁一个都没打过。），做一个快照，以后每次要做一个便携软件就恢复到这个纯净的快照先（或者用Deep Freeze把系统冻住o(∩_∩)o ，这样重启虚拟机就恢复了，比较省事。缺点是有可能对某些软件安装有影响，比方说需要重启的）。&lt;/p&gt;
+&lt;p&gt;2、一个行为监控软件：用来监视软件安装后对系统做了哪些改动。可以用Total Uninstall，或者免费的RegShot，或者 VMWare ThinApp。下载好安装在虚拟机里（我个人觉得ThinApp最好，不怕安装过程中重启，而且会自己帮你把文件提出来）。&lt;/p&gt;
+&lt;p&gt;3、PortableApps.com Launcher 和 NSIS Portable Unicode：最关键的两个工具。下载下来后，将它们安装到同一目录。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;X:\PortableApps\PortableApps.comLauncher
+X:\PortableApps\NSISPortable
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;4、PortableApps.com Development Toolkit：这个不是必须的，但是很有用，强烈建议下载（除非你是代码狂人）。&lt;/p&gt;
+&lt;p&gt;5、PAL模板 （PortableApps.com Application Template）：熟练以后这个也不是必须的，但是初学的时候，用模版改改比较省事，而且不太会出错（其实熟练以后一样可以用模版改改的，省事省心啊！）。&lt;/p&gt;
+&lt;p&gt;6、一个网址：http://portableapps.com/manuals/PortableApps.comLauncher/ ，这个是portablapps的用户手册，很多时候要到这里来查资料的。&lt;/p&gt;
+&lt;p&gt;7、一个提取图标的软件。例如IconWorkshop之类的，这个选择太多了，自己找吧。&lt;/p&gt;
+&lt;h1 id=&#34;制作&#34;&gt;制作&lt;/h1&gt;
+&lt;p&gt;第一步，用前面准备好的行为监控软件给系统做第一个快照。这里不同的软件操作不一样，我就不一一讲了，不难的。&lt;/p&gt;
+&lt;p&gt;第二步，安装准备制作成便携软件的软件。我就以IconWorkshop为例。全部都安装好以后运行一次，把文件类型关联取消掉，联机注册、自动更新之类的取消掉。当然也可以不运行，安装好结束。&lt;/p&gt;
+&lt;p&gt;第三步，用监控软件做第二个快照，并对比两次快照。通过两次快照的对比，可以看到IconWorkshop在%ProgramDir%（也就是“Program Files”）底下创建了了一个名为“IconWorkshop”的文件夹，里面是它的程序文件。另外在%AppData%和%LocalAppData%这几个位置都写了文件。另外注册表方面，则是在“HKCU\Software”下增加了“Axialis”这个项。这一步如果用VMWare Thinapp就很省事了，因为它会帮你把所有的改动都提取出来。&lt;/p&gt;
+&lt;p&gt;关于两个变量%AppData%和%LocalAppData%，这两个都是PAL的系统变量，分别代表这些文件夹位置：&lt;/p&gt;
+&lt;p&gt;LOCALAPPDATA：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Documents and Settings\Username\Local Settings\Application Data on XP and 2000,
+
+C:\Users\Username\AppData\Local on Vista and Win7.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;APPDATA:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Documents and Settings\Username\Application Data on XP and 2000,
+
+C:\Users\Username\AppData\Roaming on Vista and Win7.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更多变量参见该网址：http://portableapps.chrismorgan.info/launcher/manual/ref/envsub/&lt;/p&gt;
+&lt;p&gt;第四步，把之前准备好的PAL模版解压出来，并改名。将下载好的“PortableApps.com_Application_Template_X.X.zip”解压开，会得到一个名为“AppNamePortable”的文件夹，将它重命名，用你的软件的名称替换“AppName”，本例中将“AppNamePortable”改成“IconWorkshopPortable”。&lt;/p&gt;
+&lt;p&gt;第五步，把程序文件复制到“App”文件夹下。我这里把“Program Files”下的整个“IconWorkshop”文件夹复制到“IconWorkshopPortable\App”中。&lt;/p&gt;
+&lt;p&gt;第六步，提取程序图标和注册表。这里就用IconWorkshop把它主程序的图标提取出来，保存到“IconWorkshopPortable\App\Appinfo\Appicon.ico”,并将其导出成 16x16 的 png文件“Appicon_16.png”、32x32 的 “Appicon_32.png” 和 128x128（非必须） 的 “Appicon_128.png”。运行“Regedit”，把“HKCU\Software\Axialis”导出成“IconWorkshopPortable.reg”备用。&lt;/p&gt;
+&lt;p&gt;第七步，提取Application Data。前面已经知道IconWorkshop会在%AppData%和%LocalAppData%这几个位置写文件，再仔细分析后发现，安装完成后，只有“%AppData%\Axialis\IconWorkshop\Color Swatches\”底下有一个“IconWorkshopSwatches”文件的，另外几个只建了个空的文件夹。&lt;/p&gt;
+&lt;p&gt;在“IconWorkshopPortable\App”下建一个文件夹“DefaultData”（DefaultData的作用：顾名思义，它是存放默认数据的地方，当便携软件第一次运行时，会先把它里面的内容拷到“AppNamePortable\Data”中再运行），在里面建个目录，自己起个名字，我这里为了后面好分辨叫“Appdata”，并把整个“%AppData%\Axialis\IconWorkshop”底下的“Color Swatches\IconWorkshopSwatches”目录下拷进去（不连前面的“Axialis\IconWorkshop一起拷进去的原因见底下Launcher.ini部分”）。&lt;/p&gt;
+&lt;p&gt;第八步，准备注册表文件。编辑之前准备好的“IconWorkshopPortable.reg”，把一些无用的信息删除掉，特别是注意下有没有关于程序路径设置的项，有的话要好好分析，没用的删，有用的另外记录下来再删，后面要写进脚本里的。然后把它复制到“DefaultData\settings”底下。&lt;/p&gt;
+&lt;p&gt;第九步，生成Appinfo.ini。这一步有两种方法：一种是直接在“Appinfo”下新建个“Appinfo.ini”，把代码写进去；另一种则是利用前面准备的“PortableApps.com Development Toolkit”，运行后打开自己做的软件目录，如“IconWorkshopPortable”，然后点击“Edit details”,一项项输进去，再保存就OK了。得到类似这样的一个“Appinfo.ini”：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Format]
+Type=PortableApps.comFormat
+Version=2.0
+
+[Details]
+Name=IconWorkshop Portable
+AppID=IconWorkshopPortable
+Publisher=Shuewood Forest &amp;amp; PortableApps.com
+Homepage=PortableApps.com/IconWorkshopPortable
+Category=Graphics &amp;amp; Pictures
+Description=IconWorkshop is a tool for icon edit.
+Language=Multilingual
+Trademarks=Axialis IconWorkshop
+
+[License]
+Shareable=false
+OpenSource=false
+Freeware=false
+CommercialUse=false
+
+[Version]
+PackageVersion=6.8.0.0
+DisplayVersion=6.8.0.0
+
+[Control]
+Icons=1
+Start=IconWorkshopPortable.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;第十步，写Launcher.ini。这是最难的一步，也是最关键的一步。它告诉PAL怎么把我们的软件便携化。细分为以下几步：&lt;/p&gt;
+&lt;p&gt;1、创建“App\Appinfo\Launcher\AppNamePortable.ini”。这里的文件名要和上面“Appinfo.ini”中的“AppID”相同。例如：“App\Appinfo\Launcher\IconWorkshopPortable.ini”。&lt;/p&gt;
+&lt;p&gt;2、写代码。这里有一个样例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Launch]
+;主程序位置
+ProgramExecutable=AppName\AppName.exe
+;除了AppName.exe，当AppNameTray.exe正在运行时，便携软件也拒绝启动。
+CloseEXE=AppNameTray.exe 
+;当AppName.exe关闭后，等待AppNameTray.exe结束才真正结束便携软件。
+WaitForExe1=AppNameTray.exe
+;路径改变并不会影响便携软件运行，因此检测到路径改变时不提示警告。
+DirectoryMoveOK=yes
+
+[Activate]
+;表示本软件需要写注册表
+Registry=true
+
+[DirectoriesMove]
+;当软件启动时，原%LOCALAPPDATA%\AppName会被重命名（备份）为%LOCALAPPDATA%\AppName-Backup-by-AppNamePortable，
+;当软件结束时，%LOCALAPPDATA%\AppName会被删除，
+;%LOCALAPPDATA%\AppName-Backup-by-AppNamePortable 被重命名（恢复）为%LOCALAPPDATA%\AppName
+;（-=）的意思是程序结束时不将%LOCALAPPDATA%\AppName备份到便携软件Data目录，因为这几个目录主要是日志、
+;临时文件，没有备份到便携设备的必要。如果需要备份到Data目录，则将“-”指定为其他名称。
+-=%LOCALAPPDATA%\AppName   
+-=%APPDATA%\AppName
+-=%USERPROFILE%\AppData\LocalLow\AppName
+
+[DirectoriesCleanupIfEmpty]
+;如为空目录，则在结束时删除目录，避免留下垃圾文件。下同
+1=%LOCALAPPDATA%\AppNameAppName   
+2=%LOCALAPPDATA%\AppName
+3=%APPDATA%\AppName
+4=%USERPROFILE%\AppData\LocalLow\AppName
+
+[RegistryKeys]
+;在程序启动时，HKCU\Software\AppName被重命名为
+;HKCU\Software\AppName-Backup-by-AppNamePortable，
+;Data\settings\AppNamePortable.reg 被导入注册表，在程
+;序结束后，反过来导出便携软件键值，恢复本机注册表项。
+AppNamePortable=HKCU\Software\AppName   
+
+[RegistryValueWrite]
+;在程序启动时，在HKCU\Software\AppName\AppName\AppNamePath中写入便携软件Data目录路径，
+;以将数据库目录设定为便携软件的Data。更多PAL专有变量请参阅文档。
+HKCU\Software\AppName\AppName\AppNamePath=REG_SZ:%PAL:DataDir%  
+
+[RegistryCleanupIfEmpty]
+;如为空项，则在结束时删除，避免留下注册表垃圾。
+1=HKCU\Software\AppName
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在本例中生成的“IconWorkshopPortable.ini”如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Launch]
+ProgramExecutable=IconWorkshop\IconWorkshop.exe
+DirectoryMoveOK=yes 
+
+[Activate]
+Registry=true 
+
+[DirectoriesMove]
+;这个目录存的都是临时性的文件，不保存它，用完就删，所以等号前用“-”
+-=%LOCALAPPDATA%\Axialis\IconWorkshop
+
+;这里要调用DefaultData底下的Appdata，所以名字要一样，等号前用目录的名称
+;这里的基本原则就是：不准备保留也不影响使用的用“-”，需要从DefaultData或者保留修改的起个名字。
+;还有需要注意的是，当便携软件运行时，会自己生成“%APPDATA%\Axialis\IconWorkshop”目录，再把内容拷进去
+;所以在保存原有目录内容时，上面两个层级的目录别拷进去。
+Appdata=%APPDATA%\Axialis\IconWorkshop
+
+[DirectoriesCleanupIfEmpty]
+;这里是防止系统因为没装过Axialis的其它软件，在删除IconWorkshop目录后，留下Axialis目录
+1=%LOCALAPPDATA%\Axialis
+2=%APPDATA%\Axialis
+
+[RegistryKeys]
+;这里起了名字而没用用“-”是因为需要用这个名字来备份原注册表，用完还要还原的！
+IconWorkshopPortable=HKCU\Software\Axialis\IconWorkshop
+
+[RegistryCleanupIfEmpty]
+;这里的目的和上面文件夹的目的是一样的
+1=HKCU\Software\Axialis
+
+具体各项的意义和其他参数见准备工作第六项的网址。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;经过上面的步骤，整个便携软件的准备工作就差不多了。但是如果碰上有的软件结束后有后台进程不会自己结束掉的情况，就需要一个额外的步骤了。&lt;/p&gt;
+&lt;p&gt;额外步骤，写Custom Code。在“App\Appinfo\Launcher”下创建“Custom.nsh”,并写入内容。例如上面提到的需要关闭进程的，可以这么写：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;${SegmentFile}
+${SegmentPrePrimary}
+KillProcDLL::KillProc “AppNameBackground.exe”
+!macroend
+${SegmentPostPrimary}
+KillProcDLL::KillProc “AppNameBackground.exe”
+!macroend
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在程序启动与退出时结束AppNameBackground.exe进程（可能需要额外安装NSIS的KillPorcDLL插件）。
+更多可使用的Segments请参看：http://portableapps.chrismorgan.info/launcher/manual/advanced/segments/#segments&lt;/p&gt;
+&lt;p&gt;最终步骤，编译与封包。准备工作都到位了以后，最终步骤就简单了。在 PortableApps.com Launcher 中载入 AppNamePortable 目录，
+按下一步编译。如果成功，会在 AppNamePortable 目录下生成 AppNamePortable.exe。&lt;/p&gt;
+&lt;p&gt;需要注意的是，准备步骤的第三步一定要把两个软件放在一起，因为PortableApps.com Launcher需要调用NISI的。&lt;/p&gt;
+&lt;p&gt;其实最后生成便携软件的就是NISI，前面的步骤都是让PortableApps.com Launcher准备NISI的脚本，
+所以牛人直接用NISI写PortableApp也是可以的。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>kubectl expose命令</title>
       <link>https://trevorch.github.io/post/kubernetes/kubectl/expose/</link>
       <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
@@ -1121,6 +1288,8 @@ Server:
 
 docker@vm1:~$
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;至此，就可以使用docker环境了！&lt;/p&gt;
+&lt;p&gt;dm create  -d &amp;ldquo;virtualbox&amp;rdquo; &amp;ndash;engine-registry-mirror &lt;a href=&#34;http://hub-mirror.c.163.com&#34;&gt;http://hub-mirror.c.163.com&lt;/a&gt; &amp;ndash;virtualbox-memory &amp;ldquo;2048&amp;rdquo; &amp;ndash;virtualbox-boot2docker-url http://localhost/tool/photon.iso vm3&lt;/p&gt;
+&lt;p&gt;curl -L &amp;ldquo;&lt;a href=&#34;https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz%22&#34;&gt;https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz&amp;quot;&lt;/a&gt; | tar -C /opt/cni/bin -xz&lt;/p&gt;
 </description>
       
     </item>

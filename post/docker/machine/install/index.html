@@ -69,7 +69,7 @@
 <meta itemprop="description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，">
 <meta itemprop="datePublished" content="2020-03-18T10:53:44&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-18T10:53:44&#43;08:00" />
-<meta itemprop="wordCount" content="623">
+<meta itemprop="wordCount" content="642">
 
 
 
@@ -600,6 +600,8 @@ Server:
 
 docker@vm1:~$
 </code></pre><p>至此，就可以使用docker环境了！</p>
+<p>dm create  -d &ldquo;virtualbox&rdquo; &ndash;engine-registry-mirror <a href="http://hub-mirror.c.163.com">http://hub-mirror.c.163.com</a> &ndash;virtualbox-memory &ldquo;2048&rdquo; &ndash;virtualbox-boot2docker-url http://localhost/tool/photon.iso vm3</p>
+<p>curl -L &ldquo;<a href="https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz%22">https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz&quot;</a> | tar -C /opt/cni/bin -xz</p>
 
     </div>
 
