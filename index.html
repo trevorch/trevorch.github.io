@@ -434,6 +434,37 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/java/getresource/">Class和ClassLoader的getResource()方法的差别</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-05-13" class="post-time">
+        2020-05-13
+      </time>
+      
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      源码： public class Name { public static void main(String[] args) { System.out.println(&quot;Name.class location: src/main/java/first&quot;); System.out.println(&quot;Name.class.getResource(\&quot;\&quot;):&quot;+Name.class.getResource(&quot;&quot;)); System.out.println(&quot;Name.class.getResource(\&quot;/\&quot;):&quot;+Name.class.getResource(&quot;/&quot;)); System.out.println(&quot;***********************************************&quot;); System.out.println(&quot;Name.class.getResource(\&quot;first.txt\&quot;):&quot;+Name.class.getResource(&quot;first.txt&quot;)); System.out.println(&quot;Name.class.getResource(\&quot;/first.txt\&quot;):&quot;+Name.class.getResource(&quot;/first.txt&quot;)); System.out.println(&quot;Name.class.getResource(\&quot;second/second.txt\&quot;):&quot;+Name.class.getResource(&quot;second/second.txt&quot;)); System.out.println(&quot;Name.class.getResource(\&quot;/second/second.txt\&quot;):&quot;+Name.class.getResource(&quot;/second/second.txt&quot;)); System.out.println(&quot;Name.class.getResource(\&quot;/first/second/second.txt\&quot;):&quot;+Name.class.getResource(&quot;/first/second/second.txt&quot;)); System.out.println(&quot;Name.class.getResource(\&quot;root.txt\&quot;:)&quot;+Name.class.getResource(&quot;root.txt&quot;)); System.out.println(&quot;Name.class.getResource(\&quot;/root.txt\&quot;:)&quot;+Name.class.getResource(&quot;/root.txt&quot;)); System.out.println(&quot;***********************************************&quot;); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;/\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;/&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;first.txt\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;first.txt&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;first/first.txt\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;first/first.txt&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;second.txt\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;second.txt&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;second/second.txt\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;second/second.txt&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;first/second/second.txt\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;first/second/second.txt&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;root.txt\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;root.txt&quot;)); System.out.println(&quot;Name.class.getClassLoader().getResource(\&quot;/root.txt\&quot;):&quot;+Name.class.getClassLoader().getResource(&quot;/root.txt&quot;)); } } 运行结果： Name.class location: src/main/java/first Name.class.getResource(&quot;&quot;):file:/E:/Java/validation/build/classes/java/main/first/ Name.class.getResource(&quot;/&quot;):file:/E:/Java/validation/build/classes/java/main/ *********************************************** Name.class.getResource(&quot;first.txt&quot;):file:/E:/Java/validation/build/resources/main/first/first.txt Name.class.getResource(&quot;/first.txt&quot;):null Name.class.getResource(&quot;second/second.txt&quot;):file:/E:/Java/validation/build/resources/main/first/second/second.txt Name.class.getResource(&quot;/second/second.txt&quot;):null Name.class.getResource(&quot;/first/second/second.txt&quot;):file:/E:/Java/validation/build/resources/main/first/second/second.txt Name.class.getResource(&quot;root.txt&quot;:)null Name.class.getResource(&quot;/root.txt&quot;:)file:/E:/Java/validation/build/resources/main/root.txt *********************************************** Name.class.getClassLoader().getResource(&quot;&quot;):file:/E:/Java/validation/build/classes/java/main/ Name.class.getClassLoader().getResource(&quot;/&quot;):null Name.class.getClassLoader().getResource(&quot;first.txt&quot;):null Name.class.getClassLoader().getResource(&quot;first/first.txt&quot;):file:/E:/Java/validation/build/resources/main/first/first.txt Name.class.getClassLoader().getResource(&quot;second.txt&quot;):null Name.class.getClassLoader().getResource(&quot;second/second.txt&quot;):null Name.class.getClassLoader().getResource(&quot;first/second/second.txt&quot;):file:/E:/Java/validation/build/resources/main/first/second/second.txt Name.class.getClassLoader().getResource(&quot;root.txt&quot;):file:/E:/Java/validation/build/resources/main/root.txt Name.class.getClassLoader().getResource(&quot;/root.txt&quot;):null
+    </div>
+    <div class="read-more">
+      <a href="/post/java/getresource/" class="read-more-link">阅读全文</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/gradle/organizing-gradle-project/">Organizing Gradle Project</a>
     </h1>
     
@@ -486,37 +517,6 @@
     </div>
     <div class="read-more">
       <a href="/post/gradle/build-lifecycle/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/portableapps/get-start/">PortableApps封装入门</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-07" class="post-time">
-        2020-05-07
-      </time>
-      
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      准备 我是按照PortableApps的规范来做便携软件的，所以需要用到的工具有： 1、一个虚拟机：这是用来构建一个纯净的系统来安装程序的。可以
-    </div>
-    <div class="read-more">
-      <a href="/post/portableapps/get-start/" class="read-more-link">阅读全文</a>
     </div>
     
   </div>
