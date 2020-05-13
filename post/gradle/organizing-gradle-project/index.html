@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>归档 - Trevorch</title>
+  <title>Organizing Gradle Project - Trevorch</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Trevorch" />
-  <meta name="description" content="Trevorch&#39;s techlog." />
+  <meta name="description" content="按语言分离源码文件夹 Gradle的语言插件使用惯例来发现及编译源码。例如java插件会自动编译位于 src/main/java目录下的代码。其" />
+
   <meta name="keywords" content="Java, Go, Python, Docker" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.67.0" />
 
 
-<link rel="canonical" href="https://trevorch.github.io/post/" />
-<link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="Trevorch" />
+<link rel="canonical" href="https://trevorch.github.io/post/gradle/organizing-gradle-project/" />
+
 
 
 
@@ -58,15 +59,23 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Trevorch&#39;s techlog." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://trevorch.github.io/post/" />
-<meta property="og:updated_time" content="2020-05-13T14:05:40+08:00" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Trevorch&#39;s techlog."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Trevorch&#39;s techlog."/>
+<meta property="og:title" content="Organizing Gradle Project" />
+<meta property="og:description" content="按语言分离源码文件夹 Gradle的语言插件使用惯例来发现及编译源码。例如java插件会自动编译位于 src/main/java目录下的代码。其" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://trevorch.github.io/post/gradle/organizing-gradle-project/" />
+<meta property="article:published_time" content="2020-05-13T14:05:40+08:00" />
+<meta property="article:modified_time" content="2020-05-13T14:05:40+08:00" />
+<meta itemprop="name" content="Organizing Gradle Project">
+<meta itemprop="description" content="按语言分离源码文件夹 Gradle的语言插件使用惯例来发现及编译源码。例如java插件会自动编译位于 src/main/java目录下的代码。其">
+<meta itemprop="datePublished" content="2020-05-13T14:05:40&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-13T14:05:40&#43;08:00" />
+<meta itemprop="wordCount" content="2810">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Organizing Gradle Project"/>
+<meta name="twitter:description" content="按语言分离源码文件夹 Gradle的语言插件使用惯例来发现及编译源码。例如java插件会自动编译位于 src/main/java目录下的代码。其"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -351,7 +360,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -422,177 +431,301 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          共计 19 篇文章
-      </span>
-    </div>
+          <article class="post bg-white">
     
-      <div class="collection-title">
-        <h2 class="archive-year">2020</h2>
+    <header class="post-header">
+      <h1 class="post-title">Organizing Gradle Project</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-05-13" class="post-time">
+          2020-05-13
+        </time>
+        
+        
+
+        
+        
+
+        
+        
       </div>
+    </header>
 
-    <div class="archive-post">
-      <time datetime="2020-05-13" class="archive-post-time">
-        2020-05-13
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/gradle/organizing-gradle-project/" class="archive-post-link">
-          Organizing Gradle Project
-        </a>
-      </span>
-    </div>
     
-
-    <div class="archive-post">
-      <time datetime="2020-05-13" class="archive-post-time">
-        2020-05-13
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/gradle/build-lifecycle/" class="archive-post-link">
-          Gradle Build Lifecycle
-        </a>
-      </span>
-    </div>
     
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#按语言分离源码文件夹">按语言分离源码文件夹</a></li>
+    <li><a href="#按测试类型分离源码">按测试类型分离源码</a></li>
+    <li><a href="#尽可能使用标准约定">尽可能使用标准约定</a></li>
+    <li><a href="#总是定义一个settings文件">总是定义一个settings文件</a></li>
+    <li><a href="#使用buildsrc抽象命令式逻辑">使用buildSrc抽象命令式逻辑</a></li>
+    <li><a href="#在gradleproperties中声明属性">在gradle.properties中声明属性</a></li>
+    <li><a href="#避免任务输出重叠">避免任务输出重叠</a></li>
+    <li><a href="#使用定制的gradle发布版进行标准化构建">使用定制的Gradle发布版进行标准化构建</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
 
-    <div class="archive-post">
-      <time datetime="2020-05-07" class="archive-post-time">
-        2020-05-07
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/portableapps/get-start/" class="archive-post-link">
-          PortableApps封装入门
-        </a>
-      </span>
-    </div>
     
+    <div class="post-content">
+      <h2 id="按语言分离源码文件夹">按语言分离源码文件夹</h2>
+<p>Gradle的语言插件使用惯例来发现及编译源码。例如java插件会自动编译位于
+src/main/java目录下的代码。其它语言也是同样的模式。目录路径的最后一部
+分通常表示所期望源码的格式。</p>
+<p>某些编译器可以在同一个源码目录交叉编译多种语言。Groovy编译器可以处理位于
+src/main/groovy目录下混合了Java和Groovy的源码文件。Gradle推荐把源码
+按语言分类存储到不同的目录中，因为构建更具有性能，用户和构建都可以做出更强的假设。</p>
+<pre><code>.
+├── build.gradle
+├── settings.gradle
+└── src
+    └── main
+        ├── java
+        │   └── HelloWorld.java
+        └── kotlin
+            └── Utils.kt
+</code></pre><h2 id="按测试类型分离源码">按测试类型分离源码</h2>
+<p>项目定义和运行不同类型的测试是很常见的，例如单元测试、集成测试、功能测试或冒烟测试。
+最理想的情况是，每个测试类型的测试源代码应该存储在专用的源目录中。分离的测试源代码对
+可维护性和关注点分离有积极的影响，因为您可以运行相互独立的测试类型。</p>
+<pre><code>.
+├── build.gradle
+├── gradle
+│   └── integration-test.gradle
+├── settings.gradle
+└── src
+    ├── integTest
+    │   └── java
+    │       └── DefaultFileReaderIntegrationTest.java
+    ├── main
+    │   └── java
+    │       ├── DefaultFileReader.java
+    │       ├── FileReader.java
+    │       └── StringUtils.java
+    └── test
+        └── java
+            └── StringUtilsTest.java
+</code></pre><p>Gradle在源代码集概念的帮助下建立了源代码目录模型。通过将一个源集的实例指向一个或多个源代码目录，
+Gradle将自动创建相应的即时编译任务:</p>
+<pre><code>sourceSets {
+    integTest {
+        java.srcDir file('src/integTest/java')
+        resources.srcDir file('src/integTest/resources')
+        compileClasspath += sourceSets.main.output + configurations.testRuntimeClasspath
+        runtimeClasspath += output + compileClasspath
+    }
+}
+</code></pre><p>源集只负责编译源代码，但不负责执行字节码。为了执行测试，需要建立相应的Test类型任务:</p>
+<pre><code>task integTest(type: Test) {
+    description = 'Runs the integration tests.'
+    group = 'verification'
+    testClassesDirs = sourceSets.integTest.output.classesDirs
+    classpath = sourceSets.integTest.runtimeClasspath
+    mustRunAfter test
+}
 
-    <div class="archive-post">
-      <time datetime="2020-04-27" class="archive-post-time">
-        2020-04-27
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/kubernetes/kubectl/expose/" class="archive-post-link">
-          kubectl expose命令
-        </a>
-      </span>
+check.dependsOn integTest
+</code></pre><h2 id="尽可能使用标准约定">尽可能使用标准约定</h2>
+<p>所有Gradle核心插件都遵循软件工程范例约定。插件为用户提供了在特定上下文中合理的默认值和标准、约定。
+从java插件为例：</p>
+<ul>
+<li>它将目录src/main/java定义为编译的默认源目录。</li>
+<li>编译后的源代码和其他工件(如JAR文件)的输出目录是build。</li>
+</ul>
+<p>通过遵守默认约定，项目的新开发人员立即知道如何找到解决问题的方法。虽然可以重新配置这些约定，
+但这会使构建脚本用户和作者更难管理构建逻辑及其结果。尽量遵守默认约定，除非您需要适应遗留项目的布局。</p>
+<h2 id="总是定义一个settings文件">总是定义一个settings文件</h2>
+<p>Gradle每次构建调用都会试图定位settings.gradle (Groovy DSL)或settings.gradle.kts (Kotlin DSL)文件。
+为此，运行时将遍历目录树的层次结构，直到根目录。一旦找到设置文件，算法就停止搜索。</p>
+<p>始终将settings.gradle添加到构建的根目录中，以避免对最初的性能产生影响。
+本建议适用于单个项目构建和多个项目构建。该文件可以为空，也可以定义所需的项目名称。</p>
+<p>一个带有设置文件的典型Gradle项目看起来就是这样的:</p>
+<pre><code>.
+├── build.gradle
+└── settings.gradle
+</code></pre><h2 id="使用buildsrc抽象命令式逻辑">使用buildSrc抽象命令式逻辑</h2>
+<p>把复杂的构建逻辑封装为定制任务或二进制插件不失为一种好的选择。自定义任务和插件实现不应该存在于构建脚本中。
+只要代码不需要在多个独立项目之间共享，使用buildSrc就非常方便。</p>
+<p>目录buildSrc被视为一个被包含的构建。一旦发现该目录，Gradle就会自动编译并测试这些代码，并将其放入构建脚本的类路径中。</p>
+<p>对于多项目构建，只能有一个buildSrc目录，该目录必须位于根项目目录中。与脚本插件相比，buildSrc应该是首选，因为它更易于维护、重构和测试代码。</p>
+<p>buildSrc使用适用于Java和Groovy项目的相同源代码约定。它还提供了对Gradle API的直接访问。
+可以在buildSrc目录下专用的build.gradle声明其他依赖项:</p>
+<pre><code>buildSrc/build.gradle
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+</code></pre><p>包含buildSrc的典型项目具有以下布局:</p>
+<pre><code>.
+├── build.gradle
+├── buildSrc
+│   ├── build.gradle
+│   └── src
+│       ├── main
+│       │   └── java
+│       │       └── com
+│       │           └── enterprise
+│       │               ├── Deploy.java
+│       │               └── DeploymentPlugin.java
+│       └── test
+│           └── java
+│               └── com
+│                   └── enterprise
+│                       └── DeploymentPluginTest.java
+└── settings.gradle
+</code></pre><p>buildSrc下的任何代码都应该使用类似于应用程序代码的包。如果需要额外的配置(例如，应用插件或声明依赖项)，buildSrc目录可以放置一个构建脚本。</p>
+<p>buildSrc中的更改会导致整个项目变得过时。因此，在进行小的增量更改时，——no-rebuild命令行选项通常有助于获得更快的反馈。
+请记住定期运行完整的构建，或者至少在完成时运行。</p>
+<h2 id="在gradleproperties中声明属性">在gradle.properties中声明属性</h2>
+<p>在Gradle中，属性可以在构建脚本、gradle.properties中定义，或作为命令行上的参数传进来。</p>
+<p>在特定场景的命令行中声明属性是很常见的。例如，仅针对构建的这一次调用，您可能希望传入一个特定的属性值来控制运行时行为。
+构建脚本中的属性很容易成为维护的难题，并影响构建脚本逻辑。gradle.properties有助于将属性从构建脚本中分离出来，
+应该将其作为可行的选项加以研究。它是放置控制构建环境的属性的好地方。</p>
+<p>一个典型的项目把gradle.properties放置于构建的根目录中。或者，如果您希望将该文件应用于您机器上的所有构建，
+那么该文件也可以位于GRADLE_USER_HOME目录中。</p>
+<pre><code>.
+├── build.gradle
+├── gradle.properties
+└── settings.gradle
+</code></pre><h2 id="避免任务输出重叠">避免任务输出重叠</h2>
+<p>任务应该定义输入和输出，以获得增量构建功能的性能好处。在声明任务的输出时，请确保用于写入输出的目录在项目中的所有任务中是唯一的。
+混合或覆盖由不同任务产生的输出文件会损害最新的检查，从而导致更慢的构建。
+反过来，这些文件系统的更改可能会阻止Gradle构建缓存正确地标识和缓存本来可以缓存的任务。</p>
+<h2 id="使用定制的gradle发布版进行标准化构建">使用定制的Gradle发布版进行标准化构建</h2>
+<p>企业通常希望通过定义公共约定或规则来标准化组织中所有项目的构建平台。您可以在初始化脚本的帮助下实现这一点。
+初始化脚本使得在一台机器上跨所有项目应用构建逻辑变得非常容易。例如，声明内部存储库及其凭证。</p>
+<p>这种方法有一些缺点。首先，您必须在公司的所有开发人员之间沟通安装过程。此外，统一更新初始化脚本逻辑也很有挑战性。</p>
+<p>定制的Gradle发布版本是这个问题的实际解决方案。一个自定义的Gradle发布版本由标准的Gradle分布加上一个或多个自定义初始化脚本组成。
+初始化脚本与发行版绑定在一起，并在每次运行构建时应用。开发人员只需要将他们签入的Wrapper文件指向自定义Gradle发行版的URL。</p>
+<p>自定义的发布版本的根目录也可以包含一个gradle.properties文件，它提供组织范围内的一组控制构建环境的属性。</p>
+<p>以下步骤通常用于创建自定义发布版本：</p>
+<ul>
+<li>实现下载和重新包装一个Gradle分发版的逻辑；</li>
+<li>使用所需的逻辑定义一个或多个初始化脚本；</li>
+<li>将初始化脚本与Gradle分发包捆绑在一起，形成归档文件；</li>
+<li>将Gradle分发归档文件上传到HTTP服务器；</li>
+<li>更改所有项目的Wrapper文件，指向自定义Gradle发布版的URL。</li>
+</ul>
+<pre><code>plugins {
+    id 'base'
+}
+
+// This is defined in buildSrc
+import org.gradle.distribution.DownloadGradle
+
+version = '0.1'
+
+task downloadGradle(type: DownloadGradle) {
+    description = 'Downloads the Gradle distribution with a given version.'
+    gradleVersion = '4.6'
+}
+
+task createCustomGradleDistribution(type: Zip) {
+    description = 'Builds custom Gradle distribution and bundles initialization scripts.'
+
+    dependsOn downloadGradle
+
+    def projectVersion = project.version
+    archiveFileName = downloadGradle.gradleVersion.map { gradleVersion -&gt;
+        &quot;mycompany-gradle-${gradleVersion}-${projectVersion}-bin.zip&quot;
+    }
+
+    from zipTree(downloadGradle.destinationFile)
+
+    from('src/init.d') {
+        into &quot;${downloadGradle.distributionNameBase.get()}/init.d&quot;
+    }
+}
+</code></pre>
     </div>
+
     
-
-    <div class="archive-post">
-      <time datetime="2020-04-26" class="archive-post-time">
-        2020-04-26
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/kubernetes/minikube/install/" class="archive-post-link">
-          Minikube安装&amp;及基本使用
-        </a>
-      </span>
-    </div>
     
-
-    <div class="archive-post">
-      <time datetime="2020-04-24" class="archive-post-time">
-        2020-04-24
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/fuchsia/development/download-source/" class="archive-post-link">
-          开发：源码及编译
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-04-23" class="archive-post-time">
-        2020-04-23
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/fuchsia/kernel/fair_scheduler/" class="archive-post-link">
-          调度：公平调度器
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-04-23" class="archive-post-time">
-        2020-04-23
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/fuchsia/kernel/kernel_scheduling/" class="archive-post-link">
-          调度：Zircon调度
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-04-23" class="archive-post-time">
-        2020-04-23
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/fuchsia/kernel/vdso/" class="archive-post-link">
-          系统调用：Vdso
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-04-22" class="archive-post-time">
-        2020-04-22
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/fuchsia/kernel/signals/" class="archive-post-link">
-          内核对象：Signals
-        </a>
-      </span>
-    </div></section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Trevorch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-05-13
       
-      <li  class="active" >
-        <a href="/post/">1</a>
-      </li>
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
       
-      <li >
-        <a href="/post/page/2/">2</a>
-      </li>
+
       
-    </ul>
-  </nav>
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/gradle/build-lifecycle/">
+            <span class="next-text nav-default">Gradle Build Lifecycle</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
 
+  
+  
 
+  
 
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "trevorch/hugotalks"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
 
+  
+
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>
