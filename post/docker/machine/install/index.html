@@ -69,7 +69,7 @@
 <meta itemprop="description" content="安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，">
 <meta itemprop="datePublished" content="2020-03-18T10:53:44&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-18T10:53:44&#43;08:00" />
-<meta itemprop="wordCount" content="642">
+<meta itemprop="wordCount" content="605">
 
 
 
@@ -486,27 +486,17 @@
 <li>新建环境变量 MACHINE_STORAGE_PATH 指定docker机器存储位置。</li>
 </ol>
 <h2 id="boot2dockeriso-镜像配置">boot2docker.iso 镜像配置</h2>
-<p>下载最新版nginx:
+<p>下载最新版nginx: 
 <a href="http://nginx.org/download/nginx-1.17.9.zip">http://nginx.org/download/nginx-1.17.9.zip</a>
 解压nginx至某一目录，并启动nginx</p>
-<p>下载最新版boot2docker.iso:
+<p>下载最新版boot2docker.iso: 
 <a href="https://github.com/boot2docker/boot2docker/releases">https://github.com/boot2docker/boot2docker/releases</a>
 放置于nginx的html目录中</p>
 <h2 id="使用docker-machine部署一台机器">使用Docker Machine部署一台机器</h2>
 <ol>
 <li>打开cmd命令行界面，输入命令：</li>
 </ol>
-<pre><code>dm create  -d &quot;virtualbox&quot; \
---engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com \
---engine-registry-mirror http://f1361db2.m.daocloud.io \
---engine-registry-mirror https://reg-mirror.qiniu.com \
---engine-registry-mirror http://hub-mirror.c.163.com \
---engine-registry-mirror https://registry.docker-cn.com \
---engine-registry-mirror https://mirror.ccs.tencentyun.com \
---engine-registry-mirror https://dockerhub.azk8s.cn \
---virtualbox-memory &quot;2048&quot; \
---virtualbox-boot2docker-url http://localhost/tool/boot2docker.iso  \
-vm1
+<pre><code>dm create -d &quot;virtualbox&quot; --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror https://registry.docker-cn.com --virtualbox-memory &quot;2048&quot; --virtualbox-boot2docker-url http://localhost/tools/boot2docker-19.iso vm
 </code></pre><ol start="2">
 <li>执行过程如下：</li>
 </ol>
@@ -600,8 +590,6 @@ Server:
 
 docker@vm1:~$
 </code></pre><p>至此，就可以使用docker环境了！</p>
-<p>dm create  -d &ldquo;virtualbox&rdquo; &ndash;engine-registry-mirror <a href="http://hub-mirror.c.163.com">http://hub-mirror.c.163.com</a> &ndash;virtualbox-memory &ldquo;2048&rdquo; &ndash;virtualbox-boot2docker-url http://localhost/tool/photon.iso vm3</p>
-<p>curl -L &ldquo;<a href="https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz%22">https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz&quot;</a> | tar -C /opt/cni/bin -xz</p>
 
     </div>
 

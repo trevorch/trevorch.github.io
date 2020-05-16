@@ -1586,27 +1586,17 @@ go build xx.go
 &lt;li&gt;新建环境变量 MACHINE_STORAGE_PATH 指定docker机器存储位置。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;boot2dockeriso-镜像配置&#34;&gt;boot2docker.iso 镜像配置&lt;/h2&gt;
-&lt;p&gt;下载最新版nginx:
+&lt;p&gt;下载最新版nginx: 
 &lt;a href=&#34;http://nginx.org/download/nginx-1.17.9.zip&#34;&gt;http://nginx.org/download/nginx-1.17.9.zip&lt;/a&gt;
 解压nginx至某一目录，并启动nginx&lt;/p&gt;
-&lt;p&gt;下载最新版boot2docker.iso:
+&lt;p&gt;下载最新版boot2docker.iso: 
 &lt;a href=&#34;https://github.com/boot2docker/boot2docker/releases&#34;&gt;https://github.com/boot2docker/boot2docker/releases&lt;/a&gt;
 放置于nginx的html目录中&lt;/p&gt;
 &lt;h2 id=&#34;使用docker-machine部署一台机器&#34;&gt;使用Docker Machine部署一台机器&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;打开cmd命令行界面，输入命令：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;dm create  -d &amp;quot;virtualbox&amp;quot; \
---engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com \
---engine-registry-mirror http://f1361db2.m.daocloud.io \
---engine-registry-mirror https://reg-mirror.qiniu.com \
---engine-registry-mirror http://hub-mirror.c.163.com \
---engine-registry-mirror https://registry.docker-cn.com \
---engine-registry-mirror https://mirror.ccs.tencentyun.com \
---engine-registry-mirror https://dockerhub.azk8s.cn \
---virtualbox-memory &amp;quot;2048&amp;quot; \
---virtualbox-boot2docker-url http://localhost/tool/boot2docker.iso  \
-vm1
+&lt;pre&gt;&lt;code&gt;dm create -d &amp;quot;virtualbox&amp;quot; --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror https://registry.docker-cn.com --virtualbox-memory &amp;quot;2048&amp;quot; --virtualbox-boot2docker-url http://localhost/tools/boot2docker-19.iso vm
 &lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;执行过程如下：&lt;/li&gt;
 &lt;/ol&gt;
@@ -1700,8 +1690,6 @@ Server:
 
 docker@vm1:~$
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;至此，就可以使用docker环境了！&lt;/p&gt;
-&lt;p&gt;dm create  -d &amp;ldquo;virtualbox&amp;rdquo; &amp;ndash;engine-registry-mirror &lt;a href=&#34;http://hub-mirror.c.163.com&#34;&gt;http://hub-mirror.c.163.com&lt;/a&gt; &amp;ndash;virtualbox-memory &amp;ldquo;2048&amp;rdquo; &amp;ndash;virtualbox-boot2docker-url http://localhost/tool/photon.iso vm3&lt;/p&gt;
-&lt;p&gt;curl -L &amp;ldquo;&lt;a href=&#34;https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz%22&#34;&gt;https://github.com/containernetworking/plugins/releases/download/v0.8.2/cni-plugins-linux-amd64-v0.8.2.tgz&amp;quot;&lt;/a&gt; | tar -C /opt/cni/bin -xz&lt;/p&gt;
 </description>
       
     </item>
