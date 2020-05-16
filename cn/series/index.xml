@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Trevorch</title>
-    <link>http://192.168.0.115/blog/cn/series/</link>
+    <link>https://trevorch.github.io/cn/series/</link>
     <description>Recent content in Series on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
@@ -15,7 +15,7 @@
     <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-        <atom:link href="http://192.168.0.115/blog/cn/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/cn/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     

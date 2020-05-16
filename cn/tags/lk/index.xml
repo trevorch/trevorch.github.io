@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>LK on Trevorch</title>
-    <link>http://192.168.0.115/blog/cn/tags/lk/</link>
+    <link>https://trevorch.github.io/cn/tags/lk/</link>
     <description>Recent content in LK on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 22 Apr 2020 00:26:16 +0800</lastBuildDate>
     
-        <atom:link href="http://192.168.0.115/blog/cn/tags/lk/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/cn/tags/lk/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Zircon 与 LK</title>
-        <link>http://192.168.0.115/blog/cn/post/fuchsia/kernel/zx_and_lk/</link>
+        <link>https://trevorch.github.io/cn/post/fuchsia/kernel/zx_and_lk/</link>
         <pubDate>Wed, 22 Apr 2020 00:26:16 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 22 Apr 2020 00:26:16 +0800</atom:modified>
-        <guid>http://192.168.0.115/blog/cn/post/fuchsia/kernel/zx_and_lk/</guid>
+        <guid>https://trevorch.github.io/cn/post/fuchsia/kernel/zx_and_lk/</guid>
         <description>Zircon是LK的一个分支，它的许多内部结构都是基于LK的，而上层则是新的。例如，Zircon有进程的概念，而LK没有。 然而，Zircon</description>
         
         <dc:creator>Trevorch</dc:creator>

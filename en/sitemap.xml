@@ -3,58 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://192.168.0.115/blog/en/categories/</loc>
+    <loc>https://trevorch.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://192.168.0.115/blog/cn/categories/"
+                href="https://trevorch.github.io/cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://192.168.0.115/blog/en/categories/"
+                href="https://trevorch.github.io/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://192.168.0.115/blog/en/series/</loc>
+    <loc>https://trevorch.github.io/en/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://192.168.0.115/blog/cn/series/"
+                href="https://trevorch.github.io/cn/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://192.168.0.115/blog/en/series/"
+                href="https://trevorch.github.io/en/series/"
                 />
   </url>
   
   <url>
-    <loc>http://192.168.0.115/blog/en/tags/</loc>
+    <loc>https://trevorch.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://192.168.0.115/blog/cn/tags/"
+                href="https://trevorch.github.io/cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://192.168.0.115/blog/en/tags/"
+                href="https://trevorch.github.io/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>http://192.168.0.115/blog/en/</loc>
+    <loc>https://trevorch.github.io/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://192.168.0.115/blog/cn/"
+                href="https://trevorch.github.io/cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://192.168.0.115/blog/en/"
+                href="https://trevorch.github.io/en/"
                 />
   </url>
   

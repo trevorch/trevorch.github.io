@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on Trevorch</title>
-    <link>http://192.168.0.115/blog/cn/categories/</link>
+    <link>https://trevorch.github.io/cn/categories/</link>
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
     
-        <atom:link href="http://192.168.0.115/blog/cn/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/cn/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Kubectl</title>
-        <link>http://192.168.0.115/blog/cn/categories/kubectl/</link>
+        <link>https://trevorch.github.io/cn/categories/kubectl/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/kubectl/</guid>
+        <guid>https://trevorch.github.io/cn/categories/kubectl/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>Kubectl-Expose</title>
-        <link>http://192.168.0.115/blog/cn/categories/kubectl-expose/</link>
+        <link>https://trevorch.github.io/cn/categories/kubectl-expose/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/kubectl-expose/</guid>
+        <guid>https://trevorch.github.io/cn/categories/kubectl-expose/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>Minikube</title>
-        <link>http://192.168.0.115/blog/cn/categories/minikube/</link>
+        <link>https://trevorch.github.io/cn/categories/minikube/</link>
         <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/minikube/</guid>
+        <guid>https://trevorch.github.io/cn/categories/minikube/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -78,11 +78,11 @@
       
       <item>
         <title>Minikube-Install</title>
-        <link>http://192.168.0.115/blog/cn/categories/minikube-install/</link>
+        <link>https://trevorch.github.io/cn/categories/minikube-install/</link>
         <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/minikube-install/</guid>
+        <guid>https://trevorch.github.io/cn/categories/minikube-install/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -96,11 +96,11 @@
       
       <item>
         <title>Fuchsia</title>
-        <link>http://192.168.0.115/blog/cn/categories/fuchsia/</link>
+        <link>https://trevorch.github.io/cn/categories/fuchsia/</link>
         <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/fuchsia/</guid>
+        <guid>https://trevorch.github.io/cn/categories/fuchsia/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -114,11 +114,11 @@
       
       <item>
         <title>Fuchsia-Development</title>
-        <link>http://192.168.0.115/blog/cn/categories/fuchsia-development/</link>
+        <link>https://trevorch.github.io/cn/categories/fuchsia-development/</link>
         <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/fuchsia-development/</guid>
+        <guid>https://trevorch.github.io/cn/categories/fuchsia-development/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -132,11 +132,11 @@
       
       <item>
         <title>Fuchsia-Download-Source-Code</title>
-        <link>http://192.168.0.115/blog/cn/categories/fuchsia-download-source-code/</link>
+        <link>https://trevorch.github.io/cn/categories/fuchsia-download-source-code/</link>
         <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/fuchsia-download-source-code/</guid>
+        <guid>https://trevorch.github.io/cn/categories/fuchsia-download-source-code/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -150,11 +150,11 @@
       
       <item>
         <title>Fair-scheduler</title>
-        <link>http://192.168.0.115/blog/cn/categories/fair-scheduler/</link>
+        <link>https://trevorch.github.io/cn/categories/fair-scheduler/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/fair-scheduler/</guid>
+        <guid>https://trevorch.github.io/cn/categories/fair-scheduler/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -168,11 +168,11 @@
       
       <item>
         <title>Kernel</title>
-        <link>http://192.168.0.115/blog/cn/categories/kernel/</link>
+        <link>https://trevorch.github.io/cn/categories/kernel/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/kernel/</guid>
+        <guid>https://trevorch.github.io/cn/categories/kernel/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -186,11 +186,11 @@
       
       <item>
         <title>Kernel-scheduling</title>
-        <link>http://192.168.0.115/blog/cn/categories/kernel-scheduling/</link>
+        <link>https://trevorch.github.io/cn/categories/kernel-scheduling/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/kernel-scheduling/</guid>
+        <guid>https://trevorch.github.io/cn/categories/kernel-scheduling/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -204,11 +204,11 @@
       
       <item>
         <title>Zircon</title>
-        <link>http://192.168.0.115/blog/cn/categories/zircon/</link>
+        <link>https://trevorch.github.io/cn/categories/zircon/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/zircon/</guid>
+        <guid>https://trevorch.github.io/cn/categories/zircon/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -222,11 +222,11 @@
       
       <item>
         <title>Zircon-scheduling</title>
-        <link>http://192.168.0.115/blog/cn/categories/zircon-scheduling/</link>
+        <link>https://trevorch.github.io/cn/categories/zircon-scheduling/</link>
         <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/zircon-scheduling/</guid>
+        <guid>https://trevorch.github.io/cn/categories/zircon-scheduling/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -240,11 +240,11 @@
       
       <item>
         <title>System-Call</title>
-        <link>http://192.168.0.115/blog/cn/categories/system-call/</link>
+        <link>https://trevorch.github.io/cn/categories/system-call/</link>
         <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/system-call/</guid>
+        <guid>https://trevorch.github.io/cn/categories/system-call/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -258,11 +258,11 @@
       
       <item>
         <title>Vdso</title>
-        <link>http://192.168.0.115/blog/cn/categories/vdso/</link>
+        <link>https://trevorch.github.io/cn/categories/vdso/</link>
         <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/vdso/</guid>
+        <guid>https://trevorch.github.io/cn/categories/vdso/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -276,11 +276,11 @@
       
       <item>
         <title>Kernel-Object</title>
-        <link>http://192.168.0.115/blog/cn/categories/kernel-object/</link>
+        <link>https://trevorch.github.io/cn/categories/kernel-object/</link>
         <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/kernel-object/</guid>
+        <guid>https://trevorch.github.io/cn/categories/kernel-object/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -294,11 +294,11 @@
       
       <item>
         <title>Signals</title>
-        <link>http://192.168.0.115/blog/cn/categories/signals/</link>
+        <link>https://trevorch.github.io/cn/categories/signals/</link>
         <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/signals/</guid>
+        <guid>https://trevorch.github.io/cn/categories/signals/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -312,11 +312,11 @@
       
       <item>
         <title>Rights</title>
-        <link>http://192.168.0.115/blog/cn/categories/rights/</link>
+        <link>https://trevorch.github.io/cn/categories/rights/</link>
         <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/rights/</guid>
+        <guid>https://trevorch.github.io/cn/categories/rights/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -330,11 +330,11 @@
       
       <item>
         <title>Handle</title>
-        <link>http://192.168.0.115/blog/cn/categories/handle/</link>
+        <link>https://trevorch.github.io/cn/categories/handle/</link>
         <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/handle/</guid>
+        <guid>https://trevorch.github.io/cn/categories/handle/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -348,11 +348,11 @@
       
       <item>
         <title>LK</title>
-        <link>http://192.168.0.115/blog/cn/categories/lk/</link>
+        <link>https://trevorch.github.io/cn/categories/lk/</link>
         <pubDate>Wed, 22 Apr 2020 00:26:16 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/lk/</guid>
+        <guid>https://trevorch.github.io/cn/categories/lk/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -366,11 +366,11 @@
       
       <item>
         <title>Linux</title>
-        <link>http://192.168.0.115/blog/cn/categories/linux/</link>
+        <link>https://trevorch.github.io/cn/categories/linux/</link>
         <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/linux/</guid>
+        <guid>https://trevorch.github.io/cn/categories/linux/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -384,11 +384,11 @@
       
       <item>
         <title>monetary-economics</title>
-        <link>http://192.168.0.115/blog/cn/categories/monetary-economics/</link>
+        <link>https://trevorch.github.io/cn/categories/monetary-economics/</link>
         <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/monetary-economics/</guid>
+        <guid>https://trevorch.github.io/cn/categories/monetary-economics/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -402,11 +402,11 @@
       
       <item>
         <title>go</title>
-        <link>http://192.168.0.115/blog/cn/categories/go/</link>
+        <link>https://trevorch.github.io/cn/categories/go/</link>
         <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/go/</guid>
+        <guid>https://trevorch.github.io/cn/categories/go/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -420,11 +420,11 @@
       
       <item>
         <title>docker</title>
-        <link>http://192.168.0.115/blog/cn/categories/docker/</link>
+        <link>https://trevorch.github.io/cn/categories/docker/</link>
         <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/docker/</guid>
+        <guid>https://trevorch.github.io/cn/categories/docker/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -438,11 +438,11 @@
       
       <item>
         <title>manual</title>
-        <link>http://192.168.0.115/blog/cn/categories/manual/</link>
+        <link>https://trevorch.github.io/cn/categories/manual/</link>
         <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://192.168.0.115/blog/cn/categories/manual/</guid>
+        <guid>https://trevorch.github.io/cn/categories/manual/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>

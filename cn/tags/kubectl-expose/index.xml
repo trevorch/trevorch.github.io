@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Kubectl-Expose on Trevorch</title>
-    <link>http://192.168.0.115/blog/cn/tags/kubectl-expose/</link>
+    <link>https://trevorch.github.io/cn/tags/kubectl-expose/</link>
     <description>Recent content in Kubectl-Expose on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
     
-        <atom:link href="http://192.168.0.115/blog/cn/tags/kubectl-expose/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/cn/tags/kubectl-expose/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>kubectl expose命令</title>
-        <link>http://192.168.0.115/blog/cn/post/kubernetes/kubectl/expose/</link>
+        <link>https://trevorch.github.io/cn/post/kubernetes/kubectl/expose/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Mon, 27 Apr 2020 14:46:31 +0800</atom:modified>
-        <guid>http://192.168.0.115/blog/cn/post/kubernetes/kubectl/expose/</guid>
+        <guid>https://trevorch.github.io/cn/post/kubernetes/kubectl/expose/</guid>
         <description>把资源暴露为一个新的Kubernetes服务 通过名称查找【deployment】, 【service】, 【replica set】, 【repli</description>
         
         <dc:creator>Trevorch</dc:creator>
