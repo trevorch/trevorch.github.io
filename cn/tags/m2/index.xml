@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>M2 on Trevorch</title>
+    <link>http://192.168.0.115/blog/cn/tags/m2/</link>
+    <description>Recent content in M2 on Trevorch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
+    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 22 Mar 2020 11:49:42 +0800</lastBuildDate>
+    
+        <atom:link href="http://192.168.0.115/blog/cn/tags/m2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>M0 M1 M2 M3</title>
+        <link>http://192.168.0.115/blog/cn/post/monetary-economics/m0-m1-m2-m3/</link>
+        <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        <atom:modified>Sun, 22 Mar 2020 11:49:42 +0800</atom:modified>
+        <guid>http://192.168.0.115/blog/cn/post/monetary-economics/m0-m1-m2-m3/</guid>
+        <description>基础概念 利率 也称“利息率”，指一定时期内利息额与本金额的比率。利率有年利率、月利率和日利率三种表现形式： 年利率：按本金百分比表示，在中国称为</description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M0</category>
+            
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>M2</category>
+            
+          
+            
+              <category>M3</category>
+            
+          
+        
+        
+          
+            
+              <category>monetary-economics</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Zircon-scheduling on Trevorch</title>
+    <link>http://192.168.0.115/blog/cn/tags/zircon-scheduling/</link>
+    <description>Recent content in Zircon-scheduling on Trevorch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
+    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 23 Apr 2020 17:48:32 +0800</lastBuildDate>
+    
+        <atom:link href="http://192.168.0.115/blog/cn/tags/zircon-scheduling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>调度：Zircon调度</title>
+        <link>http://192.168.0.115/blog/cn/post/fuchsia/kernel/kernel_scheduling/</link>
+        <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        <atom:modified>Thu, 23 Apr 2020 17:48:32 +0800</atom:modified>
+        <guid>http://192.168.0.115/blog/cn/post/fuchsia/kernel/kernel_scheduling/</guid>
+        <description>背景 任何调度器的主要职责是在希望使用处理器时间的所有线程之间共享有限的处理器时间资源。 在通用操作系统中，它试图以一种公平的方式做到这一点，以</description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Zircon</category>
+            
+          
+            
+              <category>Kernel</category>
+            
+          
+            
+              <category>Kernel-scheduling</category>
+            
+          
+            
+              <category>Zircon-scheduling</category>
+            
+          
+        
+        
+          
+            
+              <category>Fuchsia</category>
+            
+          
+            
+              <category>Zircon</category>
+            
+          
+            
+              <category>Kernel</category>
+            
+          
+            
+              <category>Kernel-scheduling</category>
+            
+          
+            
+              <category>Zircon-scheduling</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://192.168.0.115/blog/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="http://192.168.0.115/blog/cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://192.168.0.115/blog/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://192.168.0.115/blog/en/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="http://192.168.0.115/blog/cn/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://192.168.0.115/blog/en/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://192.168.0.115/blog/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="http://192.168.0.115/blog/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://192.168.0.115/blog/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://192.168.0.115/blog/en/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="http://192.168.0.115/blog/cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://192.168.0.115/blog/en/"
+                />
+  </url>
+  
+</urlset>
