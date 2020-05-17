@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Docker on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/categories/docker/</link>
+    <link>https://trevorch.github.io/zh/categories/docker/</link>
     <description>Recent content in Docker on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 17 May 2020 08:54:10 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>使用docker-compose部署服务到远程Docker</title>
-        <link>http://chendm.gitee.io/blog/zh/post/docker/compose/deploy-to-remote-docker/</link>
+        <link>https://trevorch.github.io/zh/post/docker/compose/deploy-to-remote-docker/</link>
         <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Sun, 17 May 2020 08:54:10 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/docker/compose/deploy-to-remote-docker/</guid>
+        <guid>https://trevorch.github.io/zh/post/docker/compose/deploy-to-remote-docker/</guid>
         <description>安装docker-compose docker-compose-Windows-x86_64.exe 下载后放到系统path路径下，并重命名为dm.exe 配置远程连接命令行环境 SET DOCKER_TLS_VERIFY=1 # 远程docker的主机连接</description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -62,11 +62,11 @@
       
       <item>
         <title>Docker Machine 安装及配置</title>
-        <link>http://chendm.gitee.io/blog/zh/post/docker/machine/install/</link>
+        <link>https://trevorch.github.io/zh/post/docker/machine/install/</link>
         <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 18 Mar 2020 10:53:44 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/docker/machine/install/</guid>
+        <guid>https://trevorch.github.io/zh/post/docker/machine/install/</guid>
         <description>安装VirtualBox VirtualBox-6.1.4-136177-Win.exe 下载 Docker Machine docker-machine-Windows-x86_64.exe 放置至 D:\Docker\Machine\0.16.2 并重命名为 dm.exe 配置环境变量 把 D:\Docker\Machine\0.16.2 添加到path环境变量； 删除path环境变量中带OpenSSH的项，</description>
         
         <dc:creator>Trevorch</dc:creator>
