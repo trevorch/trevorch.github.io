@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Showcase overview on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/showcase/</link>
+    <link>https://trevorch.github.io/zh/showcase/</link>
     <description>Recent content in Showcase overview on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 15:43:38 +0900</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/showcase/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/showcase/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Hugo</title>
-        <link>http://chendm.gitee.io/blog/zh/showcase/hugo/</link>
+        <link>https://trevorch.github.io/zh/showcase/hugo/</link>
         <pubDate>Sun, 19 Jan 2020 21:04:11 +0900</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Sun, 19 Jan 2020 21:04:11 +0900</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/showcase/hugo/</guid>
+        <guid>https://trevorch.github.io/zh/showcase/hugo/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
