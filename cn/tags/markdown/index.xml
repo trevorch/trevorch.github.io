@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Markdown on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/cn/tags/markdown/</link>
+    <link>https://trevorch.github.io/cn/tags/markdown/</link>
     <description>Recent content in Markdown on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 18 Mar 2020 10:53:44 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/cn/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/cn/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Markdown 手册</title>
-        <link>http://chendm.gitee.io/blog/cn/post/markdown/manual/</link>
+        <link>https://trevorch.github.io/cn/post/markdown/manual/</link>
         <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 18 Mar 2020 10:53:44 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/cn/post/markdown/manual/</guid>
+        <guid>https://trevorch.github.io/cn/post/markdown/manual/</guid>
         <description>主要内容 Markdown是什么？ 谁创造了它？ 为什么要使用它？ 怎么使用？ 谁在用？ 尝试一下 正文 1. Markdown是什么？ Markdown是一种轻</description>
         
         <dc:creator>Trevorch</dc:creator>
