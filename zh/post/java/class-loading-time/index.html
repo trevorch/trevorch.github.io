@@ -1746,9 +1746,7 @@
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><ol>
-<li>通过子类引用父类的静态字段，不会触发子类的初始化：</li>
-</ol>
+</div><h4 id="1-通过子类引用父类的静态字段不会触发子类的初始化">1. 通过子类引用父类的静态字段，不会触发子类的初始化：</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1773,14 +1771,6 @@
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// jvm参数：-Xlog:class+load=info
@@ -1803,21 +1793,30 @@
 </span><span class="c1"></span>        <span class="c1">//[0.265s][info][class,load] jdk.internal.misc.TerminatingThreadLocal$1 source: jrt:/java.base
 </span><span class="c1"></span>        <span class="c1">//[0.266s][info][class,load] java.lang.Shutdown source: jrt:/java.base
 </span><span class="c1"></span>        <span class="c1">//[0.266s][info][class,load] java.lang.Shutdown$Lock source: jrt:/java.base
-</span><span class="c1"></span>
-        <span class="c1">// 原因：
-</span><span class="c1"></span>        <span class="c1">// staticValue是ChildClass的类成员变量，也是SuperClass的类成员变量，
-</span><span class="c1"></span>        <span class="c1">// 编译时会把当前类所引用的类名存储在当前类的常量池中，
-</span><span class="c1"></span>        <span class="c1">// 在运行时它们是有关联的，所以SuperClass、ChildClass、StaticValue都会被加载，
-</span><span class="c1"></span>        <span class="c1">// 又因为staticValue实际上是在SuperClass定义的，在使用之前要先执行静态代码块初始化。
-</span><span class="c1"></span>        <span class="c1">// 对于ChildClass,当前代码只是通过它的名称(因此触发ChildClass被加载)引用其父类的变量，
-</span><span class="c1"></span>        <span class="c1">// 并没有引用ChildClass的任何变量（因此没有触发ChildClass类的初始化）
 </span><span class="c1"></span>    <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><ol start="2">
-<li>通过数组定义来引用类，不会触发此类的初始化：</li>
-</ol>
+</div><p>原因：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">staticValue是ChildClass的类成员变量，也是SuperClass的类成员变量，
+编译时会把当前类所引用的类名存储在当前类的常量池中，
+在运行时它们是有关联的，所以SuperClass、ChildClass、StaticValue都会被加载，
+又因为staticValue实际上是在SuperClass定义的，在使用之前要先执行静态代码块初始化。
+对于ChildClass,当前代码只是通过它的名称(因此触发ChildClass被加载)引用其父类的变量，
+并没有引用ChildClass的任何变量（因此没有触发ChildClass类的初始化）
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="2-通过数组定义来引用类不会触发此类的初始化">2. 通过数组定义来引用类，不会触发此类的初始化：</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1835,14 +1834,6 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// jvm参数：-Xlog:class+load=info
@@ -1858,21 +1849,30 @@
 </span><span class="c1"></span>        <span class="c1">//[0.289s][info][class,load] jdk.internal.misc.TerminatingThreadLocal$1 source: jrt:/java.base
 </span><span class="c1"></span>        <span class="c1">//[0.289s][info][class,load] java.lang.Shutdown source: jrt:/java.base
 </span><span class="c1"></span>        <span class="c1">//[0.290s][info][class,load] java.lang.Shutdown$Lock source: jrt:/java.base
-</span><span class="c1"></span>        <span class="c1">//原理：
-</span><span class="c1"></span>        <span class="c1">//当前类只引用了SuperClass的类名，因此在SuperClass的类名会存储在当前类的常量池中，
-</span><span class="c1"></span>        <span class="c1">//在当前类的代码中使用时，会触发SuperClass的加载，但因为并没有使用到SuperClass中的
-</span><span class="c1"></span>        <span class="c1">//任何变量，所以不会触发SuperClass类的初始化。
-</span><span class="c1"></span>
-        <span class="c1">//实际上当前类会触发如下数组类的初始化：
-</span><span class="c1"></span>        <span class="c1">//[Ltrevorch.classloading.SuperClass
-</span><span class="c1"></span>        <span class="c1">//此类由JVM自动生成, 它直接继承java.lang.Object, 使用newarray字节码指令创建实例。
 </span><span class="c1"></span>    <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><ol start="3">
-<li>引用类的常量字段不会触发此类的初始化：</li>
-</ol>
+</div><p>原因：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">当前类只引用了SuperClass的类名，因此在SuperClass的类名会存储在当前类的常量池中，
+在当前类的代码中使用时，会触发SuperClass的加载，但因为并没有使用到SuperClass中的
+任何变量，所以不会触发SuperClass类的初始化。
+实际上当前类会触发如下数组类的初始化：
+[Ltrevorch.classloading.SuperClass
+此类由JVM自动生成, 它直接继承java.lang.Object, 使用newarray字节码指令创建实例。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="3-引用类的常量字段不会触发此类的初始化">3. 引用类的常量字段不会触发此类的初始化：</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1895,11 +1895,6 @@
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// jvm参数：-Xlog:class+load=info
@@ -1920,13 +1915,21 @@
 </span><span class="c1"></span>        <span class="c1">//[0.218s][info][class,load] jdk.internal.misc.TerminatingThreadLocal$1 source: jrt:/java.base
 </span><span class="c1"></span>        <span class="c1">//[0.218s][info][class,load] java.lang.Shutdown source: jrt:/java.base
 </span><span class="c1"></span>        <span class="c1">//[0.218s][info][class,load] java.lang.Shutdown$Lock source: jrt:/java.base
-</span><span class="c1"></span>
-        <span class="c1">// 原理：
-</span><span class="c1"></span>        <span class="c1">// ChildClass中的常量值在编译时会拷贝至当前类的常量池中，
-</span><span class="c1"></span>        <span class="c1">// 因此在运行时完全断掉了与ChildClass和SuperClass的联系
-</span><span class="c1"></span>        <span class="c1">// 因此类加载时只加载ConstantValue类本身
 </span><span class="c1"></span>    <span class="o">}</span>
 <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>原因：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">ChildClass中的常量值在编译时会拷贝至当前类的常量池中，
+因此在运行时完全断掉了与ChildClass和SuperClass的联系
+因此类加载时只加载ConstantValue类本身
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2516,7 +2519,17 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
       </ul>
     </li>
-    <li><a href="#代码实操演示">代码实操演示</a></li>
+    <li><a href="#代码实操演示">代码实操演示</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-通过子类引用父类的静态字段不会触发子类的初始化">1. 通过子类引用父类的静态字段，不会触发子类的初始化：</a></li>
+            <li><a href="#2-通过数组定义来引用类不会触发此类的初始化">2. 通过数组定义来引用类，不会触发此类的初始化：</a></li>
+            <li><a href="#3-引用类的常量字段不会触发此类的初始化">3. 引用类的常量字段不会触发此类的初始化：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
