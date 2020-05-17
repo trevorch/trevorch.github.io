@@ -93,6 +93,18 @@
         
         
         
+          
+            
+              <category>Gradle</category>
+            
+          
+        
+        
+          
+            
+              <category>Gradle</category>
+            
+          
         
         
       </item>
@@ -111,6 +123,18 @@
         
         
         
+          
+            
+              <category>Gradle</category>
+            
+          
+        
+        
+          
+            
+              <category>Gradle</category>
+            
+          
         
         
       </item>
@@ -149,6 +173,10 @@
         
           
             
+              <category>Kubernetes</category>
+            
+          
+            
               <category>Kubectl</category>
             
           
@@ -158,6 +186,10 @@
           
         
         
+          
+            
+              <category>Kubernetes</category>
+            
           
             
               <category>Kubectl</category>
@@ -172,7 +204,7 @@
       </item>
       
       <item>
-        <title>Minikube安装&amp;及基本使用</title>
+        <title>Minikube安装&amp;基本使用</title>
         <link>http://chendm.gitee.io/blog/cn/post/kubernetes/minikube/install/</link>
         <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
@@ -187,6 +219,10 @@
         
           
             
+              <category>Kubernetes</category>
+            
+          
+            
               <category>Minikube</category>
             
           
@@ -196,6 +232,10 @@
           
         
         
+          
+            
+              <category>Kubernetes</category>
+            
           
             
               <category>Minikube</category>

@@ -14,13 +14,31 @@
     <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
     <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 14:05:40 +0800</lastBuildDate>
     
         <atom:link href="http://chendm.gitee.io/blog/cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Gradle</title>
+        <link>http://chendm.gitee.io/blog/cn/tags/gradle/</link>
+        <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        
+        <guid>http://chendm.gitee.io/blog/cn/tags/gradle/</guid>
+        <description></description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Kubectl</title>
@@ -47,6 +65,24 @@
         <author>passeam@gmail.com (Trevorch)</author>
         
         <guid>http://chendm.gitee.io/blog/cn/tags/kubectl-expose/</guid>
+        <description></description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes</title>
+        <link>http://chendm.gitee.io/blog/cn/tags/kubernetes/</link>
+        <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        
+        <guid>http://chendm.gitee.io/blog/cn/tags/kubernetes/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
