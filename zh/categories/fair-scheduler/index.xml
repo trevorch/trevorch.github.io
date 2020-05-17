@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Fair-scheduler on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/categories/fair-scheduler/</link>
+    <link>https://trevorch.github.io/zh/categories/fair-scheduler/</link>
     <description>Recent content in Fair-scheduler on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 23 Apr 2020 18:36:45 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/categories/fair-scheduler/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/categories/fair-scheduler/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>调度：公平调度器</title>
-        <link>http://chendm.gitee.io/blog/zh/post/fuchsia/kernel/fair_scheduler/</link>
+        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/fair_scheduler/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Thu, 23 Apr 2020 18:36:45 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/fuchsia/kernel/fair_scheduler/</guid>
+        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/fair_scheduler/</guid>
         <description>简介 作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。 本文讨论调度器的属性，以及如何在推出之前对其</description>
         
         <dc:creator>Trevorch</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Rights on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/categories/rights/</link>
+    <link>https://trevorch.github.io/zh/categories/rights/</link>
     <description>Recent content in Rights on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 22 Apr 2020 16:25:24 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/categories/rights/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/categories/rights/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>内核对象：权限</title>
-        <link>http://chendm.gitee.io/blog/zh/post/fuchsia/kernel/rights/</link>
+        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/rights/</link>
         <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 22 Apr 2020 16:25:24 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/fuchsia/kernel/rights/</guid>
+        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/rights/</guid>
         <description>权限与句柄相关联，并表达此句柄或句柄所引用的对象执行操作的权限。 &amp;lt;zircon/rights.h&amp;gt;头部文件定义了各种类型对象的默</description>
         
         <dc:creator>Trevorch</dc:creator>

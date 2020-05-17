@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/categories/</link>
+    <link>https://trevorch.github.io/zh/categories/</link>
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 17 May 2020 08:54:10 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Compose</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/compose/</link>
+        <link>https://trevorch.github.io/zh/categories/compose/</link>
         <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/compose/</guid>
+        <guid>https://trevorch.github.io/zh/categories/compose/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>Docker</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/docker/</link>
+        <link>https://trevorch.github.io/zh/categories/docker/</link>
         <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/docker/</guid>
+        <guid>https://trevorch.github.io/zh/categories/docker/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>Gradle</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/gradle/</link>
+        <link>https://trevorch.github.io/zh/categories/gradle/</link>
         <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/gradle/</guid>
+        <guid>https://trevorch.github.io/zh/categories/gradle/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -78,11 +78,11 @@
       
       <item>
         <title>Kubectl</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/kubectl/</link>
+        <link>https://trevorch.github.io/zh/categories/kubectl/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/kubectl/</guid>
+        <guid>https://trevorch.github.io/zh/categories/kubectl/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -96,11 +96,11 @@
       
       <item>
         <title>Kubectl-Expose</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/kubectl-expose/</link>
+        <link>https://trevorch.github.io/zh/categories/kubectl-expose/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/kubectl-expose/</guid>
+        <guid>https://trevorch.github.io/zh/categories/kubectl-expose/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -114,11 +114,11 @@
       
       <item>
         <title>Kubernetes</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/kubernetes/</link>
+        <link>https://trevorch.github.io/zh/categories/kubernetes/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/kubernetes/</guid>
+        <guid>https://trevorch.github.io/zh/categories/kubernetes/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -132,11 +132,11 @@
       
       <item>
         <title>Minikube</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/minikube/</link>
+        <link>https://trevorch.github.io/zh/categories/minikube/</link>
         <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/minikube/</guid>
+        <guid>https://trevorch.github.io/zh/categories/minikube/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -150,11 +150,11 @@
       
       <item>
         <title>Minikube-Install</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/minikube-install/</link>
+        <link>https://trevorch.github.io/zh/categories/minikube-install/</link>
         <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/minikube-install/</guid>
+        <guid>https://trevorch.github.io/zh/categories/minikube-install/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -168,11 +168,11 @@
       
       <item>
         <title>Fuchsia</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/fuchsia/</link>
+        <link>https://trevorch.github.io/zh/categories/fuchsia/</link>
         <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/fuchsia/</guid>
+        <guid>https://trevorch.github.io/zh/categories/fuchsia/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -186,11 +186,11 @@
       
       <item>
         <title>Fuchsia-Development</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/fuchsia-development/</link>
+        <link>https://trevorch.github.io/zh/categories/fuchsia-development/</link>
         <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/fuchsia-development/</guid>
+        <guid>https://trevorch.github.io/zh/categories/fuchsia-development/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -204,11 +204,11 @@
       
       <item>
         <title>Fuchsia-Download-Source-Code</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/fuchsia-download-source-code/</link>
+        <link>https://trevorch.github.io/zh/categories/fuchsia-download-source-code/</link>
         <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/fuchsia-download-source-code/</guid>
+        <guid>https://trevorch.github.io/zh/categories/fuchsia-download-source-code/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -222,11 +222,11 @@
       
       <item>
         <title>Fair-scheduler</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/fair-scheduler/</link>
+        <link>https://trevorch.github.io/zh/categories/fair-scheduler/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/fair-scheduler/</guid>
+        <guid>https://trevorch.github.io/zh/categories/fair-scheduler/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -240,11 +240,11 @@
       
       <item>
         <title>Kernel</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/kernel/</link>
+        <link>https://trevorch.github.io/zh/categories/kernel/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/kernel/</guid>
+        <guid>https://trevorch.github.io/zh/categories/kernel/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -258,11 +258,11 @@
       
       <item>
         <title>Kernel-scheduling</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/kernel-scheduling/</link>
+        <link>https://trevorch.github.io/zh/categories/kernel-scheduling/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/kernel-scheduling/</guid>
+        <guid>https://trevorch.github.io/zh/categories/kernel-scheduling/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -276,11 +276,11 @@
       
       <item>
         <title>Zircon</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/zircon/</link>
+        <link>https://trevorch.github.io/zh/categories/zircon/</link>
         <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/zircon/</guid>
+        <guid>https://trevorch.github.io/zh/categories/zircon/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -294,11 +294,11 @@
       
       <item>
         <title>Zircon-scheduling</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/zircon-scheduling/</link>
+        <link>https://trevorch.github.io/zh/categories/zircon-scheduling/</link>
         <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/zircon-scheduling/</guid>
+        <guid>https://trevorch.github.io/zh/categories/zircon-scheduling/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -312,11 +312,11 @@
       
       <item>
         <title>System-Call</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/system-call/</link>
+        <link>https://trevorch.github.io/zh/categories/system-call/</link>
         <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/system-call/</guid>
+        <guid>https://trevorch.github.io/zh/categories/system-call/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -330,11 +330,11 @@
       
       <item>
         <title>Vdso</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/vdso/</link>
+        <link>https://trevorch.github.io/zh/categories/vdso/</link>
         <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/vdso/</guid>
+        <guid>https://trevorch.github.io/zh/categories/vdso/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -348,11 +348,11 @@
       
       <item>
         <title>Kernel-Object</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/kernel-object/</link>
+        <link>https://trevorch.github.io/zh/categories/kernel-object/</link>
         <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/kernel-object/</guid>
+        <guid>https://trevorch.github.io/zh/categories/kernel-object/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -366,11 +366,11 @@
       
       <item>
         <title>Signals</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/signals/</link>
+        <link>https://trevorch.github.io/zh/categories/signals/</link>
         <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/signals/</guid>
+        <guid>https://trevorch.github.io/zh/categories/signals/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -384,11 +384,11 @@
       
       <item>
         <title>Rights</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/rights/</link>
+        <link>https://trevorch.github.io/zh/categories/rights/</link>
         <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/rights/</guid>
+        <guid>https://trevorch.github.io/zh/categories/rights/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -402,11 +402,11 @@
       
       <item>
         <title>Handle</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/handle/</link>
+        <link>https://trevorch.github.io/zh/categories/handle/</link>
         <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/handle/</guid>
+        <guid>https://trevorch.github.io/zh/categories/handle/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -420,11 +420,11 @@
       
       <item>
         <title>LK</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/lk/</link>
+        <link>https://trevorch.github.io/zh/categories/lk/</link>
         <pubDate>Wed, 22 Apr 2020 00:26:16 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/lk/</guid>
+        <guid>https://trevorch.github.io/zh/categories/lk/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -438,11 +438,11 @@
       
       <item>
         <title>Linux</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/linux/</link>
+        <link>https://trevorch.github.io/zh/categories/linux/</link>
         <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/linux/</guid>
+        <guid>https://trevorch.github.io/zh/categories/linux/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -456,11 +456,11 @@
       
       <item>
         <title>monetary-economics</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/monetary-economics/</link>
+        <link>https://trevorch.github.io/zh/categories/monetary-economics/</link>
         <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/monetary-economics/</guid>
+        <guid>https://trevorch.github.io/zh/categories/monetary-economics/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -474,11 +474,11 @@
       
       <item>
         <title>go</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/go/</link>
+        <link>https://trevorch.github.io/zh/categories/go/</link>
         <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/go/</guid>
+        <guid>https://trevorch.github.io/zh/categories/go/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -492,11 +492,11 @@
       
       <item>
         <title>manual</title>
-        <link>http://chendm.gitee.io/blog/zh/categories/manual/</link>
+        <link>https://trevorch.github.io/zh/categories/manual/</link>
         <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         
-        <guid>http://chendm.gitee.io/blog/zh/categories/manual/</guid>
+        <guid>https://trevorch.github.io/zh/categories/manual/</guid>
         <description></description>
         
         <dc:creator>Trevorch</dc:creator>

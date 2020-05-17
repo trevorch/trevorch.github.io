@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Fuchsia-Development on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/categories/fuchsia-development/</link>
+    <link>https://trevorch.github.io/zh/categories/fuchsia-development/</link>
     <description>Recent content in Fuchsia-Development on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 24 Apr 2020 01:04:24 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/categories/fuchsia-development/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/categories/fuchsia-development/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>开发：源码及编译</title>
-        <link>http://chendm.gitee.io/blog/zh/post/fuchsia/development/download-source/</link>
+        <link>https://trevorch.github.io/zh/post/fuchsia/development/download-source/</link>
         <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Fri, 24 Apr 2020 01:04:24 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/fuchsia/development/download-source/</guid>
+        <guid>https://trevorch.github.io/zh/post/fuchsia/development/download-source/</guid>
         <description>前提条件 docker-machine创建宿主机： dm create -d &amp;quot;virtualbox&amp;quot; --engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com --engine-registry-mirror http://f1361db2.m.daocloud.io --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://registry.docker-cn.com --engine-registry-mirror https://mirror.ccs.tencentyun.com --engine-registry-mirror https://dockerhub.azk8s.cn --virtualbox-cpu-count &amp;quot;4&amp;quot; --virtualbox-memory &amp;quot;8192&amp;quot; --virtualbox-disk-size &amp;quot;100000&amp;quot; --virtualbox-share-folder &amp;quot;F:\vmshare&amp;quot; --virtualbox-boot2docker-url http://localhost/tool/boot2docker-19.iso vm 创建容器 dm ssh vm docker run -it --name fuchsia-builder --cap-add NET_ADMIN -v /vmshare/share:/root/share ubuntu:latest</description>
         
         <dc:creator>Trevorch</dc:creator>
