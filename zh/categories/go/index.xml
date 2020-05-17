@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Go on Trevorch</title>
-    <link>https://trevorch.github.io/zh/categories/go/</link>
+    <link>http://chendm.gitee.io/blog/zh/categories/go/</link>
     <description>Recent content in Go on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 19 Mar 2020 19:42:17 +0800</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/zh/categories/go/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/zh/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Go 程序编译成不同平台的执行文件</title>
-        <link>https://trevorch.github.io/zh/post/go/env/compile/</link>
+        <link>http://chendm.gitee.io/blog/zh/post/go/env/compile/</link>
         <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Thu, 19 Mar 2020 19:42:17 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/go/env/compile/</guid>
+        <guid>http://chendm.gitee.io/blog/zh/post/go/env/compile/</guid>
         <description>Go程序可编译成不同平台的可执行文件 set GOARCH=amd64 set GOOS=linux go build xx.go 这样生成的文件没有任何依赖，直接运行就可以了！</description>
         
         <dc:creator>Trevorch</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Kubernetes on Trevorch</title>
-    <link>https://trevorch.github.io/zh/categories/kubernetes/</link>
+    <link>http://chendm.gitee.io/blog/zh/categories/kubernetes/</link>
     <description>Recent content in Kubernetes on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/zh/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/zh/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>kubectl expose命令</title>
-        <link>https://trevorch.github.io/zh/post/kubernetes/kubectl/expose/</link>
+        <link>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Mon, 27 Apr 2020 14:46:31 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/kubernetes/kubectl/expose/</guid>
+        <guid>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</guid>
         <description>把资源暴露为一个新的Kubernetes服务 通过名称查找【deployment】, 【service】, 【replica set】, 【repli</description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -62,11 +62,11 @@
       
       <item>
         <title>Minikube安装&amp;基本使用</title>
-        <link>https://trevorch.github.io/zh/post/kubernetes/minikube/install/</link>
+        <link>http://chendm.gitee.io/blog/zh/post/kubernetes/minikube/install/</link>
         <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Sun, 26 Apr 2020 11:39:49 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/kubernetes/minikube/install/</guid>
+        <guid>http://chendm.gitee.io/blog/zh/post/kubernetes/minikube/install/</guid>
         <description>下载kubectl &amp;amp; minikube kubectl.exe minikube-windows-amd64.exe 安装virtualbox VirtualBox-6.1.4-136177-Win.exe 设置环境变量 指定minikube集群的存储位置 MINIKUBE_HOME = F:\minikube 创建并启动kubernetes集群 minikube</description>
         
         <dc:creator>Trevorch</dc:creator>
