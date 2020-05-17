@@ -3,456 +3,471 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://trevorch.github.io/cn/about/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/java/getresource/</loc>
-    <lastmod>2020-05-13T18:39:05+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/cn/post/</loc>
-    <lastmod>2020-05-13T18:39:05+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/cn/categories/</loc>
-    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+    <loc>http://chendm.gitee.io/blog/cn/categories/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/categories/"
+                href="http://chendm.gitee.io/blog/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://trevorch.github.io/cn/categories/"
+                href="http://chendm.gitee.io/blog/cn/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/gradle/</loc>
-    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+    <loc>http://chendm.gitee.io/blog/cn/tags/compose/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/gradle/</loc>
-    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+    <loc>http://chendm.gitee.io/blog/cn/categories/compose/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/gradle/organizing-gradle-project/</loc>
-    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+    <loc>http://chendm.gitee.io/blog/cn/tags/docker/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/</loc>
-    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+    <loc>http://chendm.gitee.io/blog/cn/categories/docker/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://chendm.gitee.io/blog/cn/post/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://chendm.gitee.io/blog/cn/tags/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/tags/"
+                href="http://chendm.gitee.io/blog/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://trevorch.github.io/cn/tags/"
+                href="http://chendm.gitee.io/blog/cn/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/gradle/build-lifecycle/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/docker/compose/deploy-to-remote-docker/</loc>
+    <lastmod>2020-05-17T08:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://chendm.gitee.io/blog/cn/post/java/getresource/</loc>
+    <lastmod>2020-05-13T18:39:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://chendm.gitee.io/blog/cn/tags/gradle/</loc>
+    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://chendm.gitee.io/blog/cn/categories/gradle/</loc>
+    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://chendm.gitee.io/blog/cn/post/gradle/organizing-gradle-project/</loc>
+    <lastmod>2020-05-13T14:05:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://chendm.gitee.io/blog/cn/post/gradle/build-lifecycle/</loc>
     <lastmod>2020-05-13T13:40:58+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/portableapps/get-start/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/portableapps/get-start/</loc>
     <lastmod>2020-05-07T12:49:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/kubectl/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/kubectl/</loc>
     <lastmod>2020-04-27T14:46:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/kubectl/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/kubectl/</loc>
     <lastmod>2020-04-27T14:46:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/kubernetes/kubectl/expose/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/kubernetes/kubectl/expose/</loc>
     <lastmod>2020-04-27T14:46:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/kubectl-expose/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/kubectl-expose/</loc>
     <lastmod>2020-04-27T14:46:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/kubectl-expose/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/kubectl-expose/</loc>
     <lastmod>2020-04-27T14:46:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/kubernetes/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/kubernetes/</loc>
     <lastmod>2020-04-27T14:46:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/kubernetes/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/kubernetes/</loc>
     <lastmod>2020-04-27T14:46:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/minikube/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/minikube/</loc>
     <lastmod>2020-04-26T11:39:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/minikube/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/minikube/</loc>
     <lastmod>2020-04-26T11:39:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/minikube-install/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/minikube-install/</loc>
     <lastmod>2020-04-26T11:39:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/minikube-install/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/minikube-install/</loc>
     <lastmod>2020-04-26T11:39:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/kubernetes/minikube/install/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/kubernetes/minikube/install/</loc>
     <lastmod>2020-04-26T11:39:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/fuchsia/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/fuchsia/</loc>
     <lastmod>2020-04-24T01:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/fuchsia/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/fuchsia/</loc>
     <lastmod>2020-04-24T01:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/fuchsia-development/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/fuchsia-development/</loc>
     <lastmod>2020-04-24T01:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/fuchsia-development/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/fuchsia-development/</loc>
     <lastmod>2020-04-24T01:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/fuchsia-download-source-code/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/fuchsia-download-source-code/</loc>
     <lastmod>2020-04-24T01:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/fuchsia-download-source-code/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/fuchsia-download-source-code/</loc>
     <lastmod>2020-04-24T01:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/development/download-source/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/development/download-source/</loc>
     <lastmod>2020-04-24T01:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/fair-scheduler/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/fair-scheduler/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/fair-scheduler/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/fair-scheduler/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/kernel/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/kernel/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/kernel/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/kernel/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/kernel-scheduling/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/kernel-scheduling/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/kernel-scheduling/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/kernel-scheduling/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/zircon/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/zircon/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/zircon/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/zircon/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/fair_scheduler/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/fair_scheduler/</loc>
     <lastmod>2020-04-23T18:36:45+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/zircon-scheduling/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/zircon-scheduling/</loc>
     <lastmod>2020-04-23T17:48:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/zircon-scheduling/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/zircon-scheduling/</loc>
     <lastmod>2020-04-23T17:48:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/kernel_scheduling/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/kernel_scheduling/</loc>
     <lastmod>2020-04-23T17:48:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/system-call/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/system-call/</loc>
     <lastmod>2020-04-23T14:40:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/system-call/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/system-call/</loc>
     <lastmod>2020-04-23T14:40:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/vdso/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/vdso/</loc>
     <lastmod>2020-04-23T14:40:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/vdso/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/vdso/</loc>
     <lastmod>2020-04-23T14:40:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/vdso/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/vdso/</loc>
     <lastmod>2020-04-23T14:40:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/kernel-object/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/kernel-object/</loc>
     <lastmod>2020-04-22T17:43:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/kernel-object/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/kernel-object/</loc>
     <lastmod>2020-04-22T17:43:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/signals/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/signals/</loc>
     <lastmod>2020-04-22T17:43:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/signals/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/signals/</loc>
     <lastmod>2020-04-22T17:43:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/signals/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/signals/</loc>
     <lastmod>2020-04-22T17:43:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/rights/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/rights/</loc>
     <lastmod>2020-04-22T16:25:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/rights/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/rights/</loc>
     <lastmod>2020-04-22T16:25:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/rights/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/rights/</loc>
     <lastmod>2020-04-22T16:25:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/handle/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/handle/</loc>
     <lastmod>2020-04-22T00:42:26+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/handle/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/handle/</loc>
     <lastmod>2020-04-22T00:42:26+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/handles/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/handles/</loc>
     <lastmod>2020-04-22T00:42:26+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/lk/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/lk/</loc>
     <lastmod>2020-04-22T00:26:16+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/lk/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/lk/</loc>
     <lastmod>2020-04-22T00:26:16+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/zx_and_lk/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/zx_and_lk/</loc>
     <lastmod>2020-04-22T00:26:16+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/fuchsia/kernel/concepts/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/concepts/</loc>
     <lastmod>2020-04-20T23:47:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/archlinux/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/archlinux/</loc>
     <lastmod>2020-03-28T12:40:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/linux/archlinux/install/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/linux/archlinux/install/</loc>
     <lastmod>2020-03-28T12:40:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/linux/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/linux/</loc>
     <lastmod>2020-03-28T12:40:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/linux/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/linux/</loc>
     <lastmod>2020-03-28T12:40:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/m0/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/m0/</loc>
     <lastmod>2020-03-22T11:49:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/monetary-economics/m0-m1-m2-m3/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/monetary-economics/m0-m1-m2-m3/</loc>
     <lastmod>2020-03-22T11:49:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/m1/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/m1/</loc>
     <lastmod>2020-03-22T11:49:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/m2/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/m2/</loc>
     <lastmod>2020-03-22T11:49:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/m3/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/m3/</loc>
     <lastmod>2020-03-22T11:49:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/monetary-economics/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/monetary-economics/</loc>
     <lastmod>2020-03-22T11:49:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/go/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/go/</loc>
     <lastmod>2020-03-19T19:42:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/go/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/go/</loc>
     <lastmod>2020-03-19T19:42:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/go/env/compile/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/go/env/compile/</loc>
     <lastmod>2020-03-19T19:42:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/docker/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/docker-machine/</loc>
     <lastmod>2020-03-18T10:53:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/docker/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/docker/machine/install/</loc>
     <lastmod>2020-03-18T10:53:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/docker-machine/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/categories/manual/</loc>
     <lastmod>2020-03-18T10:53:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/post/docker/machine/install/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/tags/markdown/</loc>
     <lastmod>2020-03-18T10:53:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/categories/manual/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/post/markdown/manual/</loc>
     <lastmod>2020-03-18T10:53:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/tags/markdown/</loc>
-    <lastmod>2020-03-18T10:53:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/cn/post/markdown/manual/</loc>
-    <lastmod>2020-03-18T10:53:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://trevorch.github.io/cn/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/"
+                href="http://chendm.gitee.io/blog/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://trevorch.github.io/cn/"
+                href="http://chendm.gitee.io/blog/cn/"
                 />
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/cn/series/</loc>
+    <loc>http://chendm.gitee.io/blog/cn/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/series/"
+                href="http://chendm.gitee.io/blog/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://trevorch.github.io/cn/series/"
+                href="http://chendm.gitee.io/blog/cn/series/"
                 />
   </url>
   

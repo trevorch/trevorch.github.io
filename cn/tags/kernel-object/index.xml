@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Kernel-Object on Trevorch</title>
-    <link>https://trevorch.github.io/cn/tags/kernel-object/</link>
+    <link>http://chendm.gitee.io/blog/cn/tags/kernel-object/</link>
     <description>Recent content in Kernel-Object on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 22 Apr 2020 17:43:33 +0800</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/cn/tags/kernel-object/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/cn/tags/kernel-object/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>内核对象：Signals</title>
-        <link>https://trevorch.github.io/cn/post/fuchsia/kernel/signals/</link>
+        <link>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/signals/</link>
         <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 22 Apr 2020 17:43:33 +0800</atom:modified>
-        <guid>https://trevorch.github.io/cn/post/fuchsia/kernel/signals/</guid>
+        <guid>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/signals/</guid>
         <description>主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号可等待的内核对象向应用程序暴露的单个比特信息。 每个内核对象可暴露一个或多个信</description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -82,11 +82,11 @@
       
       <item>
         <title>内核对象：权限</title>
-        <link>https://trevorch.github.io/cn/post/fuchsia/kernel/rights/</link>
+        <link>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/rights/</link>
         <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 22 Apr 2020 16:25:24 +0800</atom:modified>
-        <guid>https://trevorch.github.io/cn/post/fuchsia/kernel/rights/</guid>
+        <guid>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/rights/</guid>
         <description>权限与句柄相关联，并表达此句柄或句柄所引用的对象执行操作的权限。 &amp;lt;zircon/rights.h&amp;gt;头部文件定义了各种类型对象的默</description>
         
         <dc:creator>Trevorch</dc:creator>
@@ -140,11 +140,11 @@
       
       <item>
         <title>内核对象：句柄</title>
-        <link>https://trevorch.github.io/cn/post/fuchsia/kernel/handles/</link>
+        <link>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/handles/</link>
         <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 22 Apr 2020 00:42:26 +0800</atom:modified>
-        <guid>https://trevorch.github.io/cn/post/fuchsia/kernel/handles/</guid>
+        <guid>http://chendm.gitee.io/blog/cn/post/fuchsia/kernel/handles/</guid>
         <description>主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对</description>
         
         <dc:creator>Trevorch</dc:creator>

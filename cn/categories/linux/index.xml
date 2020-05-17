@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Linux on Trevorch</title>
-    <link>https://trevorch.github.io/cn/categories/linux/</link>
+    <link>http://chendm.gitee.io/blog/cn/categories/linux/</link>
     <description>Recent content in Linux on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 28 Mar 2020 12:40:24 +0800</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Archlinux 安装及配置</title>
-        <link>https://trevorch.github.io/cn/post/linux/archlinux/install/</link>
+        <link>http://chendm.gitee.io/blog/cn/post/linux/archlinux/install/</link>
         <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Sat, 28 Mar 2020 12:40:24 +0800</atom:modified>
-        <guid>https://trevorch.github.io/cn/post/linux/archlinux/install/</guid>
+        <guid>http://chendm.gitee.io/blog/cn/post/linux/archlinux/install/</guid>
         <description>下载Archlinux ISO镜像 http://mirrors.163.com/archlinux/iso/2020.03.01/archlinux-2020.03.01-x86_64.iso 安装VirtualBox https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe 创建VirtualBox虚拟机，并挂载Archlinux镜像，启动虚拟机 分区 分区</description>
         
         <dc:creator>Trevorch</dc:creator>
