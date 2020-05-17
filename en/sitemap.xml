@@ -3,58 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://trevorch.github.io/en/categories/</loc>
+    <loc>http://chendm.gitee.io/blog/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://trevorch.github.io/zh/categories/"
+                href="http://chendm.gitee.io/blog/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/categories/"
+                href="http://chendm.gitee.io/blog/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/en/series/</loc>
+    <loc>http://chendm.gitee.io/blog/en/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://trevorch.github.io/zh/series/"
+                href="http://chendm.gitee.io/blog/zh/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/series/"
+                href="http://chendm.gitee.io/blog/en/series/"
                 />
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/en/tags/</loc>
+    <loc>http://chendm.gitee.io/blog/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://trevorch.github.io/zh/tags/"
+                href="http://chendm.gitee.io/blog/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/tags/"
+                href="http://chendm.gitee.io/blog/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://trevorch.github.io/en/</loc>
+    <loc>http://chendm.gitee.io/blog/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://trevorch.github.io/zh/"
+                href="http://chendm.gitee.io/blog/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://trevorch.github.io/en/"
+                href="http://chendm.gitee.io/blog/en/"
                 />
   </url>
   
