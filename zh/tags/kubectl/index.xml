@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Kubectl on Trevorch</title>
+    <link>http://chendm.gitee.io/blog/zh/tags/kubectl/</link>
+    <description>Recent content in Kubectl on Trevorch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
+    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
+    
+        <atom:link href="http://chendm.gitee.io/blog/zh/tags/kubectl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>kubectl expose命令</title>
+        <link>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</link>
+        <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        <atom:modified>Mon, 27 Apr 2020 14:46:31 +0800</atom:modified>
+        <guid>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</guid>
+        <description>把资源暴露为一个新的Kubernetes服务 通过名称查找【deployment】, 【service】, 【replica set】, 【repli</description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Kubernetes</category>
+            
+          
+            
+              <category>Kubectl</category>
+            
+          
+            
+              <category>Kubectl-Expose</category>
+            
+          
+        
+        
+          
+            
+              <category>Kubernetes</category>
+            
+          
+            
+              <category>Kubectl</category>
+            
+          
+            
+              <category>Kubectl-Expose</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
