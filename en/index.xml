@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trevorch</title>
-    <link>https://trevorch.github.io/en/</link>
+    <link>http://chendm.gitee.io/blog/en/</link>
     <description>Recent content on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-	<atom:link href="https://trevorch.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chendm.gitee.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

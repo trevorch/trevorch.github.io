@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes Minikube on Trevorch</title>
-    <link>https://trevorch.github.io/zh/tags/kubernetes-minikube/</link>
+    <link>http://chendm.gitee.io/blog/zh/tags/kubernetes-minikube/</link>
     <description>Recent content in Kubernetes Minikube on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 26 Apr 2020 11:39:49 +0800</lastBuildDate>
     
-	<atom:link href="https://trevorch.github.io/zh/tags/kubernetes-minikube/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chendm.gitee.io/blog/zh/tags/kubernetes-minikube/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Minikube安装&amp;基本使用</title>
-      <link>https://trevorch.github.io/zh/post/kubernetes/minikube/install/</link>
+      <link>http://chendm.gitee.io/blog/zh/post/kubernetes/minikube/install/</link>
       <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/post/kubernetes/minikube/install/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/post/kubernetes/minikube/install/</guid>
       <description>下载kubectl &amp;amp; minikube kubectl.exe minikube-windows-amd64.exe 安装virtualbox VirtualBox-6.1.4-136177-Win.exe 设置环境变量 指定minikube集群的存储位置 MINIKUBE_HOME = F:\minikube 创建并启动kubernetes集群 minikube</description>
     </item>
     

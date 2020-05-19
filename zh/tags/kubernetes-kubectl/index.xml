@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes kubectl on Trevorch</title>
-    <link>https://trevorch.github.io/zh/tags/kubernetes-kubectl/</link>
+    <link>http://chendm.gitee.io/blog/zh/tags/kubernetes-kubectl/</link>
     <description>Recent content in Kubernetes kubectl on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
     
-	<atom:link href="https://trevorch.github.io/zh/tags/kubernetes-kubectl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chendm.gitee.io/blog/zh/tags/kubernetes-kubectl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>kubectl expose命令</title>
-      <link>https://trevorch.github.io/zh/post/kubernetes/kubectl/expose/</link>
+      <link>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</link>
       <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/post/kubernetes/kubectl/expose/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</guid>
       <description>把资源暴露为一个新的Kubernetes服务 通过名称查找【deployment】, 【service】, 【replica set】, 【repli</description>
     </item>
     
