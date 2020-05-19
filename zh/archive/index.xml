@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archive on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/archive/</link>
+    <link>https://trevorch.github.io/zh/archive/</link>
     <description>Recent content in Archive on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
     
-	<atom:link href="http://chendm.gitee.io/blog/zh/archive/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://trevorch.github.io/zh/archive/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

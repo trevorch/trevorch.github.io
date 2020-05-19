@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Galleries on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/gallery/</link>
+    <link>https://trevorch.github.io/zh/gallery/</link>
     <description>Recent content in Galleries on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
-	<atom:link href="http://chendm.gitee.io/blog/zh/gallery/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://trevorch.github.io/zh/gallery/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cartoon</title>
-      <link>http://chendm.gitee.io/blog/zh/gallery/cartoon/</link>
+      <link>https://trevorch.github.io/zh/gallery/cartoon/</link>
       <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
       
-      <guid>http://chendm.gitee.io/blog/zh/gallery/cartoon/</guid>
+      <guid>https://trevorch.github.io/zh/gallery/cartoon/</guid>
       <description>Sample images from Pixabay</description>
     </item>
     
     <item>
       <title>Photo</title>
-      <link>http://chendm.gitee.io/blog/zh/gallery/photo/</link>
+      <link>https://trevorch.github.io/zh/gallery/photo/</link>
       <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
       
-      <guid>http://chendm.gitee.io/blog/zh/gallery/photo/</guid>
+      <guid>https://trevorch.github.io/zh/gallery/photo/</guid>
       <description>Sample images from Pixabay</description>
     </item>
     
