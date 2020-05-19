@@ -2,255 +2,255 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Trevorch</title>
-    <link>https://trevorch.github.io/zh/categories/</link>
+    <link>http://chendm.gitee.io/blog/zh/categories/</link>
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 19 May 2020 17:47:29 +0800</lastBuildDate>
     
-	<atom:link href="https://trevorch.github.io/zh/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chendm.gitee.io/blog/zh/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cpu Word Length</title>
-      <link>https://trevorch.github.io/zh/categories/cpu-word-length/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/cpu-word-length/</link>
       <pubDate>Tue, 19 May 2020 17:47:29 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/cpu-word-length/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/cpu-word-length/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JVM</title>
-      <link>https://trevorch.github.io/zh/categories/jvm/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/jvm/</link>
       <pubDate>Sun, 17 May 2020 16:39:06 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/jvm/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/jvm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JVM Class Loading Time</title>
-      <link>https://trevorch.github.io/zh/categories/jvm-class-loading-time/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/jvm-class-loading-time/</link>
       <pubDate>Sun, 17 May 2020 16:39:06 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/jvm-class-loading-time/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/jvm-class-loading-time/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://trevorch.github.io/zh/categories/docker/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/docker/</link>
       <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/docker/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker Compose</title>
-      <link>https://trevorch.github.io/zh/categories/docker-compose/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/docker-compose/</link>
       <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/docker-compose/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/docker-compose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://trevorch.github.io/zh/categories/java/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/java/</link>
       <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/java/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java ClassLoader</title>
-      <link>https://trevorch.github.io/zh/categories/java-classloader/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/java-classloader/</link>
       <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/java-classloader/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/java-classloader/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gradle</title>
-      <link>https://trevorch.github.io/zh/categories/gradle/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/gradle/</link>
       <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/gradle/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/gradle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gradle Organizing</title>
-      <link>https://trevorch.github.io/zh/categories/gradle-organizing/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/gradle-organizing/</link>
       <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/gradle-organizing/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/gradle-organizing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gradle Lifecycle</title>
-      <link>https://trevorch.github.io/zh/categories/gradle-lifecycle/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/gradle-lifecycle/</link>
       <pubDate>Wed, 13 May 2020 13:40:58 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/gradle-lifecycle/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/gradle-lifecycle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PortableApps</title>
-      <link>https://trevorch.github.io/zh/categories/portableapps/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/portableapps/</link>
       <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/portableapps/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/portableapps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PortableApps Get started</title>
-      <link>https://trevorch.github.io/zh/categories/portableapps-get-started/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/portableapps-get-started/</link>
       <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/portableapps-get-started/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/portableapps-get-started/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://trevorch.github.io/zh/categories/kubernetes/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/kubernetes/</link>
       <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/kubernetes/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes kubectl</title>
-      <link>https://trevorch.github.io/zh/categories/kubernetes-kubectl/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/kubernetes-kubectl/</link>
       <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/kubernetes-kubectl/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/kubernetes-kubectl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes Minikube</title>
-      <link>https://trevorch.github.io/zh/categories/kubernetes-minikube/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/kubernetes-minikube/</link>
       <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/kubernetes-minikube/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/kubernetes-minikube/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fuchsia</title>
-      <link>https://trevorch.github.io/zh/categories/fuchsia/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/fuchsia/</link>
       <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/fuchsia/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/fuchsia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fuchsia Development</title>
-      <link>https://trevorch.github.io/zh/categories/fuchsia-development/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/fuchsia-development/</link>
       <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/fuchsia-development/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/fuchsia-development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fuchsia Kernel</title>
-      <link>https://trevorch.github.io/zh/categories/fuchsia-kernel/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/fuchsia-kernel/</link>
       <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/fuchsia-kernel/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/fuchsia-kernel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://trevorch.github.io/zh/categories/linux/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/linux/</link>
       <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/linux/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux Archlinux</title>
-      <link>https://trevorch.github.io/zh/categories/linux-archlinux/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/linux-archlinux/</link>
       <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/linux-archlinux/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/linux-archlinux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Economics</title>
-      <link>https://trevorch.github.io/zh/categories/economics/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/economics/</link>
       <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/economics/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/economics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Economics Monetary</title>
-      <link>https://trevorch.github.io/zh/categories/economics-monetary/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/economics-monetary/</link>
       <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/economics-monetary/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/economics-monetary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>https://trevorch.github.io/zh/categories/go/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/go/</link>
       <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/go/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go env</title>
-      <link>https://trevorch.github.io/zh/categories/go-env/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/go-env/</link>
       <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/go-env/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/go-env/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker Machine</title>
-      <link>https://trevorch.github.io/zh/categories/docker-machine/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/docker-machine/</link>
       <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/docker-machine/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/docker-machine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Manual</title>
-      <link>https://trevorch.github.io/zh/categories/manual/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/manual/</link>
       <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/manual/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/manual/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Manual Markdown</title>
-      <link>https://trevorch.github.io/zh/categories/manual-markdown/</link>
+      <link>http://chendm.gitee.io/blog/zh/categories/manual-markdown/</link>
       <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/categories/manual-markdown/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/categories/manual-markdown/</guid>
       <description></description>
     </item>
     

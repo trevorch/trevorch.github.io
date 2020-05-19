@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gradle Lifecycle on Trevorch</title>
-    <link>https://trevorch.github.io/zh/categories/gradle-lifecycle/</link>
+    <link>http://chendm.gitee.io/blog/zh/categories/gradle-lifecycle/</link>
     <description>Recent content in Gradle Lifecycle on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 13 May 2020 13:40:58 +0800</lastBuildDate>
     
-	<atom:link href="https://trevorch.github.io/zh/categories/gradle-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chendm.gitee.io/blog/zh/categories/gradle-lifecycle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gradle Build Lifecycle</title>
-      <link>https://trevorch.github.io/zh/post/gradle/build-lifecycle/</link>
+      <link>http://chendm.gitee.io/blog/zh/post/gradle/build-lifecycle/</link>
       <pubDate>Wed, 13 May 2020 13:40:58 +0800</pubDate>
       
-      <guid>https://trevorch.github.io/zh/post/gradle/build-lifecycle/</guid>
+      <guid>http://chendm.gitee.io/blog/zh/post/gradle/build-lifecycle/</guid>
       <description>Gradle的核心是基于依赖的编程语言。从gradle的角度看，用户可以定义任务及任务间的依赖。Gradle保证这些任务 按照依赖顺序执行，且</description>
     </item>
     

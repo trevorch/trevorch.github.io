@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Showcase overview on Trevorch</title>
-    <link>https://trevorch.github.io/zh/showcase/</link>
+    <link>http://chendm.gitee.io/blog/zh/showcase/</link>
     <description>Recent content in Showcase overview on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 15:43:38 +0900</lastBuildDate>
     
-	<atom:link href="https://trevorch.github.io/zh/showcase/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chendm.gitee.io/blog/zh/showcase/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
