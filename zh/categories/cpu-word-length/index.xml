@@ -1,24 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Cpu Word Length on Trevorch</title>
     <link>http://chendm.gitee.io/blog/zh/categories/cpu-word-length/</link>
     <description>Recent content in Cpu Word Length on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
+    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 19 May 2020 17:47:29 +0800</lastBuildDate>
     
-	<atom:link href="http://chendm.gitee.io/blog/zh/categories/cpu-word-length/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/zh/categories/cpu-word-length/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Cpu Word Length</title>
-      <link>http://chendm.gitee.io/blog/zh/post/java/cpu-word-length/</link>
-      <pubDate>Tue, 19 May 2020 17:47:29 +0800</pubDate>
+    
+
       
-      <guid>http://chendm.gitee.io/blog/zh/post/java/cpu-word-length/</guid>
-      <description>计算机中word的正解 Buses are typically designed to transfer fixed-sized chunks of bytes known as words. The number of bytes in a word (the word size) is a fundamental system parameter that varies across systems. Most machines today have word sizes of either 4 bytes (32 bits)or8bytes(64bits). 翻译过来就是说： 总线一般被设计</description>
-    </item>
+      <item>
+        <title>关于计算机中的word</title>
+        <link>http://chendm.gitee.io/blog/zh/post/java/cpu-word-length/</link>
+        <pubDate>Tue, 19 May 2020 17:47:29 +0800</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        <atom:modified>Tue, 19 May 2020 17:47:29 +0800</atom:modified>
+        <guid>http://chendm.gitee.io/blog/zh/post/java/cpu-word-length/</guid>
+        <description>计算机中word的正解 Buses are typically designed to transfer fixed-sized chunks of bytes known as words. The number of bytes in a word (the word size) is a fundamental system parameter that varies across systems. Most machines today have word sizes of either 4 bytes (32 bits)or8bytes(64bits). 翻译过来就是说： 总线一般被设计</description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Cpu Word Length</category>
+            
+          
+        
+        
+          
+            
+              <category>Cpu Word Length</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

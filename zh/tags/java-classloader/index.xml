@@ -1,24 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Java ClassLoader on Trevorch</title>
     <link>http://chendm.gitee.io/blog/zh/tags/java-classloader/</link>
     <description>Recent content in Java ClassLoader on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
+    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 13 May 2020 18:39:05 +0800</lastBuildDate>
     
-	<atom:link href="http://chendm.gitee.io/blog/zh/tags/java-classloader/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/zh/tags/java-classloader/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Class和ClassLoader的getResource()方法的差别</title>
-      <link>http://chendm.gitee.io/blog/zh/post/java/getresource/</link>
-      <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
+    
+
       
-      <guid>http://chendm.gitee.io/blog/zh/post/java/getresource/</guid>
-      <description>从 JVM 虚拟机的角度来看，只存在两种不同的类加载器： 启动类加载器（Bootstrap ClassLoader），是虚拟机自身的一部分； 所有其他的类</description>
-    </item>
+      <item>
+        <title>Class和ClassLoader的getResource()方法的差别</title>
+        <link>http://chendm.gitee.io/blog/zh/post/java/getresource/</link>
+        <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        <atom:modified>Wed, 13 May 2020 18:39:05 +0800</atom:modified>
+        <guid>http://chendm.gitee.io/blog/zh/post/java/getresource/</guid>
+        <description>从 JVM 虚拟机的角度来看，只存在两种不同的类加载器： 启动类加载器（Bootstrap ClassLoader），是虚拟机自身的一部分； 所有其他的类</description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Java</category>
+            
+          
+            
+              <category>Java ClassLoader</category>
+            
+          
+        
+        
+          
+            
+              <category>Java</category>
+            
+          
+            
+              <category>Java ClassLoader</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

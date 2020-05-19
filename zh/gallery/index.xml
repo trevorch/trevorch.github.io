@@ -1,33 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Galleries on Trevorch</title>
     <link>http://chendm.gitee.io/blog/zh/gallery/</link>
     <description>Recent content in Galleries on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
+    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
-	<atom:link href="http://chendm.gitee.io/blog/zh/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/zh/gallery/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Cartoon</title>
-      <link>http://chendm.gitee.io/blog/zh/gallery/cartoon/</link>
-      <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+    
+
       
-      <guid>http://chendm.gitee.io/blog/zh/gallery/cartoon/</guid>
-      <description>Sample images from Pixabay</description>
-    </item>
-    
-    <item>
-      <title>Photo</title>
-      <link>http://chendm.gitee.io/blog/zh/gallery/photo/</link>
-      <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+      <item>
+        <title>Cartoon</title>
+        <link>http://chendm.gitee.io/blog/zh/gallery/cartoon/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>http://chendm.gitee.io/blog/zh/gallery/cartoon/</guid>
+        <description>Sample images from Pixabay</description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        <media:content url="http://chendm.gitee.io/blogimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>http://chendm.gitee.io/blog/zh/gallery/photo/</guid>
-      <description>Sample images from Pixabay</description>
-    </item>
+      <item>
+        <title>Photo</title>
+        <link>http://chendm.gitee.io/blog/zh/gallery/photo/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+        <author>passeam@gmail.com (Trevorch)</author>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>http://chendm.gitee.io/blog/zh/gallery/photo/</guid>
+        <description>Sample images from Pixabay</description>
+        
+        <dc:creator>Trevorch</dc:creator>
+        <media:content url="http://chendm.gitee.io/blogimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>
