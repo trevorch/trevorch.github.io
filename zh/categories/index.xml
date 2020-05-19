@@ -1,496 +1,249 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Trevorch</title>
     <link>https://trevorch.github.io/zh/categories/</link>
     <description>Recent content in Categories on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
-    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 17 May 2020 16:39:06 +0800</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/zh/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://trevorch.github.io/zh/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>JVM</title>
+      <link>https://trevorch.github.io/zh/categories/jvm/</link>
+      <pubDate>Sun, 17 May 2020 16:39:06 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/zh/categories/jvm/</guid>
+      <description></description>
+    </item>
     
-
+    <item>
+      <title>JVM Class Loading Time</title>
+      <link>https://trevorch.github.io/zh/categories/jvm-class-loading-time/</link>
+      <pubDate>Sun, 17 May 2020 16:39:06 +0800</pubDate>
       
-      <item>
-        <title>JVM</title>
-        <link>https://trevorch.github.io/zh/categories/jvm/</link>
-        <pubDate>Sun, 17 May 2020 16:39:06 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/jvm/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/jvm-class-loading-time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://trevorch.github.io/zh/categories/docker/</link>
+      <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
       
-      <item>
-        <title>JVM Class Loading Time</title>
-        <link>https://trevorch.github.io/zh/categories/jvm-class-loading-time/</link>
-        <pubDate>Sun, 17 May 2020 16:39:06 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/jvm-class-loading-time/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Compose</title>
+      <link>https://trevorch.github.io/zh/categories/docker-compose/</link>
+      <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
       
-      <item>
-        <title>Docker</title>
-        <link>https://trevorch.github.io/zh/categories/docker/</link>
-        <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/docker/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://trevorch.github.io/zh/categories/java/</link>
+      <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
       
-      <item>
-        <title>Docker Compose</title>
-        <link>https://trevorch.github.io/zh/categories/docker-compose/</link>
-        <pubDate>Sun, 17 May 2020 08:54:10 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/docker-compose/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java ClassLoader</title>
+      <link>https://trevorch.github.io/zh/categories/java-classloader/</link>
+      <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
       
-      <item>
-        <title>Java</title>
-        <link>https://trevorch.github.io/zh/categories/java/</link>
-        <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/java/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/java-classloader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gradle</title>
+      <link>https://trevorch.github.io/zh/categories/gradle/</link>
+      <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
       
-      <item>
-        <title>Java ClassLoader</title>
-        <link>https://trevorch.github.io/zh/categories/java-classloader/</link>
-        <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/java-classloader/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/gradle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gradle Organizing</title>
+      <link>https://trevorch.github.io/zh/categories/gradle-organizing/</link>
+      <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
       
-      <item>
-        <title>Gradle</title>
-        <link>https://trevorch.github.io/zh/categories/gradle/</link>
-        <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/gradle/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/gradle-organizing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gradle Lifecycle</title>
+      <link>https://trevorch.github.io/zh/categories/gradle-lifecycle/</link>
+      <pubDate>Wed, 13 May 2020 13:40:58 +0800</pubDate>
       
-      <item>
-        <title>Gradle Organizing</title>
-        <link>https://trevorch.github.io/zh/categories/gradle-organizing/</link>
-        <pubDate>Wed, 13 May 2020 14:05:40 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/gradle-organizing/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/gradle-lifecycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PortableApps</title>
+      <link>https://trevorch.github.io/zh/categories/portableapps/</link>
+      <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
       
-      <item>
-        <title>Gradle Lifecycle</title>
-        <link>https://trevorch.github.io/zh/categories/gradle-lifecycle/</link>
-        <pubDate>Wed, 13 May 2020 13:40:58 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/gradle-lifecycle/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/portableapps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PortableApps Get started</title>
+      <link>https://trevorch.github.io/zh/categories/portableapps-get-started/</link>
+      <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
       
-      <item>
-        <title>PortableApps</title>
-        <link>https://trevorch.github.io/zh/categories/portableapps/</link>
-        <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/portableapps/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/portableapps-get-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://trevorch.github.io/zh/categories/kubernetes/</link>
+      <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
       
-      <item>
-        <title>PortableApps Get started</title>
-        <link>https://trevorch.github.io/zh/categories/portableapps-get-started/</link>
-        <pubDate>Thu, 07 May 2020 12:49:33 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/portableapps-get-started/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes kubectl</title>
+      <link>https://trevorch.github.io/zh/categories/kubernetes-kubectl/</link>
+      <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
       
-      <item>
-        <title>Kubernetes</title>
-        <link>https://trevorch.github.io/zh/categories/kubernetes/</link>
-        <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/kubernetes/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/kubernetes-kubectl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Minikube</title>
+      <link>https://trevorch.github.io/zh/categories/kubernetes-minikube/</link>
+      <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
       
-      <item>
-        <title>Kubernetes kubectl</title>
-        <link>https://trevorch.github.io/zh/categories/kubernetes-kubectl/</link>
-        <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/kubernetes-kubectl/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/kubernetes-minikube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fuchsia</title>
+      <link>https://trevorch.github.io/zh/categories/fuchsia/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
       
-      <item>
-        <title>Kubernetes Minikube</title>
-        <link>https://trevorch.github.io/zh/categories/kubernetes-minikube/</link>
-        <pubDate>Sun, 26 Apr 2020 11:39:49 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/kubernetes-minikube/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/fuchsia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fuchsia Development</title>
+      <link>https://trevorch.github.io/zh/categories/fuchsia-development/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
       
-      <item>
-        <title>Fuchsia</title>
-        <link>https://trevorch.github.io/zh/categories/fuchsia/</link>
-        <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/fuchsia/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/fuchsia-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fuchsia Kernel</title>
+      <link>https://trevorch.github.io/zh/categories/fuchsia-kernel/</link>
+      <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
       
-      <item>
-        <title>Fuchsia Development</title>
-        <link>https://trevorch.github.io/zh/categories/fuchsia-development/</link>
-        <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/fuchsia-development/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/fuchsia-kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://trevorch.github.io/zh/categories/linux/</link>
+      <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
       
-      <item>
-        <title>Fuchsia Kernel</title>
-        <link>https://trevorch.github.io/zh/categories/fuchsia-kernel/</link>
-        <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/fuchsia-kernel/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux Archlinux</title>
+      <link>https://trevorch.github.io/zh/categories/linux-archlinux/</link>
+      <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
       
-      <item>
-        <title>Linux</title>
-        <link>https://trevorch.github.io/zh/categories/linux/</link>
-        <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/linux/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/linux-archlinux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economics</title>
+      <link>https://trevorch.github.io/zh/categories/economics/</link>
+      <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
       
-      <item>
-        <title>Linux Archlinux</title>
-        <link>https://trevorch.github.io/zh/categories/linux-archlinux/</link>
-        <pubDate>Sat, 28 Mar 2020 12:40:24 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/linux-archlinux/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economics Monetary</title>
+      <link>https://trevorch.github.io/zh/categories/economics-monetary/</link>
+      <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
       
-      <item>
-        <title>Economics</title>
-        <link>https://trevorch.github.io/zh/categories/economics/</link>
-        <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/economics/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/economics-monetary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://trevorch.github.io/zh/categories/go/</link>
+      <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
       
-      <item>
-        <title>Economics Monetary</title>
-        <link>https://trevorch.github.io/zh/categories/economics-monetary/</link>
-        <pubDate>Sun, 22 Mar 2020 11:49:42 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/economics-monetary/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go env</title>
+      <link>https://trevorch.github.io/zh/categories/go-env/</link>
+      <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
       
-      <item>
-        <title>Go</title>
-        <link>https://trevorch.github.io/zh/categories/go/</link>
-        <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/go/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/go-env/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Machine</title>
+      <link>https://trevorch.github.io/zh/categories/docker-machine/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
       
-      <item>
-        <title>Go env</title>
-        <link>https://trevorch.github.io/zh/categories/go-env/</link>
-        <pubDate>Thu, 19 Mar 2020 19:42:17 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/go-env/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/docker-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manual</title>
+      <link>https://trevorch.github.io/zh/categories/manual/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
       
-      <item>
-        <title>Docker Machine</title>
-        <link>https://trevorch.github.io/zh/categories/docker-machine/</link>
-        <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/docker-machine/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/categories/manual/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manual Markdown</title>
+      <link>https://trevorch.github.io/zh/categories/manual-markdown/</link>
+      <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
       
-      <item>
-        <title>Manual</title>
-        <link>https://trevorch.github.io/zh/categories/manual/</link>
-        <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/manual/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Manual Markdown</title>
-        <link>https://trevorch.github.io/zh/categories/manual-markdown/</link>
-        <pubDate>Wed, 18 Mar 2020 10:53:44 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        
-        <guid>https://trevorch.github.io/zh/categories/manual-markdown/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-
+      <guid>https://trevorch.github.io/zh/categories/manual-markdown/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

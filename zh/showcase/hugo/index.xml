@@ -1,64 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Trevorch</title>
     <link>https://trevorch.github.io/zh/showcase/hugo/</link>
     <description>Recent content in Hugo on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
-    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 21:04:11 +0900</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/zh/showcase/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://trevorch.github.io/zh/showcase/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Hugo Zzo Theme</title>
+      <link>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zzo/</link>
+      <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
+      
+      <guid>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zzo/</guid>
+      <description></description>
+    </item>
     
-
+    <item>
+      <title>Hugo zDoc Theme</title>
+      <link>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zdoc/</link>
+      <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
       
-      <item>
-        <title>Hugo Zzo Theme</title>
-        <link>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zzo/</link>
-        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zzo/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Hugo zDoc Theme</title>
-        <link>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zdoc/</link>
-        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zdoc/</guid>
-        <description></description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-
+      <guid>https://trevorch.github.io/zh/showcase/hugo/hugo-theme-zdoc/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

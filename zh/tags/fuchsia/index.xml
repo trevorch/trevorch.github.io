@@ -1,370 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fuchsia on Trevorch</title>
     <link>https://trevorch.github.io/zh/tags/fuchsia/</link>
     <description>Recent content in Fuchsia on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <managingEditor>passeam@gmail.com (Trevorch)</managingEditor>
-    <webMaster>passeam@gmail.com (Trevorch)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 24 Apr 2020 01:04:24 +0800</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/zh/tags/fuchsia/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://trevorch.github.io/zh/tags/fuchsia/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>开发：源码及编译</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/development/download-source/</link>
+      <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
+      
+      <guid>https://trevorch.github.io/zh/post/fuchsia/development/download-source/</guid>
+      <description>前提条件 docker-machine创建宿主机： dm create -d &amp;quot;virtualbox&amp;quot; --engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com --engine-registry-mirror http://f1361db2.m.daocloud.io --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://registry.docker-cn.com --engine-registry-mirror https://mirror.ccs.tencentyun.com --engine-registry-mirror https://dockerhub.azk8s.cn --virtualbox-cpu-count &amp;quot;4&amp;quot; --virtualbox-memory &amp;quot;8192&amp;quot; --virtualbox-disk-size &amp;quot;100000&amp;quot; --virtualbox-share-folder &amp;quot;F:\vmshare&amp;quot; --virtualbox-boot2docker-url http://localhost/tool/boot2docker-19.iso vm 创建容器 dm ssh vm docker run -it --name fuchsia-builder --cap-add NET_ADMIN -v /vmshare/share:/root/share ubuntu:latest</description>
+    </item>
     
-
+    <item>
+      <title>调度：公平调度器</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/fair_scheduler/</link>
+      <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
       
-      <item>
-        <title>开发：源码及编译</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/development/download-source/</link>
-        <pubDate>Fri, 24 Apr 2020 01:04:24 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Fri, 24 Apr 2020 01:04:24 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/development/download-source/</guid>
-        <description>前提条件 docker-machine创建宿主机： dm create -d &amp;quot;virtualbox&amp;quot; --engine-registry-mirror https://3laho3y3.mirror.aliyuncs.com --engine-registry-mirror http://f1361db2.m.daocloud.io --engine-registry-mirror https://reg-mirror.qiniu.com --engine-registry-mirror http://hub-mirror.c.163.com --engine-registry-mirror https://registry.docker-cn.com --engine-registry-mirror https://mirror.ccs.tencentyun.com --engine-registry-mirror https://dockerhub.azk8s.cn --virtualbox-cpu-count &amp;quot;4&amp;quot; --virtualbox-memory &amp;quot;8192&amp;quot; --virtualbox-disk-size &amp;quot;100000&amp;quot; --virtualbox-share-folder &amp;quot;F:\vmshare&amp;quot; --virtualbox-boot2docker-url http://localhost/tool/boot2docker-19.iso vm 创建容器 dm ssh vm docker run -it --name fuchsia-builder --cap-add NET_ADMIN -v /vmshare/share:/root/share ubuntu:latest</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Development</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Development</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/fair_scheduler/</guid>
+      <description>简介 作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。 本文讨论调度器的属性，以及如何在推出之前对其</description>
+    </item>
+    
+    <item>
+      <title>调度：Zircon调度</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/kernel_scheduling/</link>
+      <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
       
-      <item>
-        <title>调度：公平调度器</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/fair_scheduler/</link>
-        <pubDate>Thu, 23 Apr 2020 18:36:45 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Thu, 23 Apr 2020 18:36:45 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/fair_scheduler/</guid>
-        <description>简介 作为整个调度器开发工作的一部分，Zircon将迁移到一个新的公平调度器作为系统的主要调度器。 本文讨论调度器的属性，以及如何在推出之前对其</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/kernel_scheduling/</guid>
+      <description>背景 任何调度器的主要职责是在希望使用处理器时间的所有线程之间共享有限的处理器时间资源。 在通用操作系统中，它试图以一种公平的方式做到这一点，以</description>
+    </item>
+    
+    <item>
+      <title>系统调用：Vdso</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/vdso/</link>
+      <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
       
-      <item>
-        <title>调度：Zircon调度</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/kernel_scheduling/</link>
-        <pubDate>Thu, 23 Apr 2020 17:48:32 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Thu, 23 Apr 2020 17:48:32 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/kernel_scheduling/</guid>
-        <description>背景 任何调度器的主要职责是在希望使用处理器时间的所有线程之间共享有限的处理器时间资源。 在通用操作系统中，它试图以一种公平的方式做到这一点，以</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/vdso/</guid>
+      <description>vDSO是访问Zircon系统调用的唯一方法。vDSO表示虚拟动态共享对象。动态共享对象是ELF(Executable Linkable Format)格式中</description>
+    </item>
+    
+    <item>
+      <title>内核对象：Signals</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/signals/</link>
+      <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
       
-      <item>
-        <title>系统调用：Vdso</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/vdso/</link>
-        <pubDate>Thu, 23 Apr 2020 14:40:23 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Thu, 23 Apr 2020 14:40:23 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/vdso/</guid>
-        <description>vDSO是访问Zircon系统调用的唯一方法。vDSO表示虚拟动态共享对象。动态共享对象是ELF(Executable Linkable Format)格式中</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/signals/</guid>
+      <description>主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号可等待的内核对象向应用程序暴露的单个比特信息。 每个内核对象可暴露一个或多个信</description>
+    </item>
+    
+    <item>
+      <title>内核对象：权限</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/rights/</link>
+      <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
       
-      <item>
-        <title>内核对象：Signals</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/signals/</link>
-        <pubDate>Wed, 22 Apr 2020 17:43:33 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Wed, 22 Apr 2020 17:43:33 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/signals/</guid>
-        <description>主要内容 简介 状态、状态变更及术语 观察信号 合成信号 用户信号 简介 信号可等待的内核对象向应用程序暴露的单个比特信息。 每个内核对象可暴露一个或多个信</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/rights/</guid>
+      <description>权限与句柄相关联，并表达此句柄或句柄所引用的对象执行操作的权限。 &amp;lt;zircon/rights.h&amp;gt;头部文件定义了各种类型对象的默</description>
+    </item>
+    
+    <item>
+      <title>内核对象：句柄</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/handles/</link>
+      <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
       
-      <item>
-        <title>内核对象：权限</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/rights/</link>
-        <pubDate>Wed, 22 Apr 2020 16:25:24 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Wed, 22 Apr 2020 16:25:24 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/rights/</guid>
-        <description>权限与句柄相关联，并表达此句柄或句柄所引用的对象执行操作的权限。 &amp;lt;zircon/rights.h&amp;gt;头部文件定义了各种类型对象的默</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/handles/</guid>
+      <description>主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对</description>
+    </item>
+    
+    <item>
+      <title>Zircon 与 LK</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/zx_and_lk/</link>
+      <pubDate>Wed, 22 Apr 2020 00:26:16 +0800</pubDate>
       
-      <item>
-        <title>内核对象：句柄</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/handles/</link>
-        <pubDate>Wed, 22 Apr 2020 00:42:26 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Wed, 22 Apr 2020 00:42:26 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/handles/</guid>
-        <description>主要内容 基础 使用句柄 垃圾回收 特殊情况 无效句柄及句柄重用 基础 句柄是一种内核结构，它使得用户模式程序可以引用内核对象。句柄可以看作是到特定内核对</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/zx_and_lk/</guid>
+      <description>Zircon是LK的一个分支，它的许多内部结构都是基于LK的，而上层则是新的。例如，Zircon有进程的概念，而LK没有。 然而，Zircon</description>
+    </item>
+    
+    <item>
+      <title>Zircon 内核概念</title>
+      <link>https://trevorch.github.io/zh/post/fuchsia/kernel/concepts/</link>
+      <pubDate>Mon, 20 Apr 2020 23:47:04 +0800</pubDate>
       
-      <item>
-        <title>Zircon 与 LK</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/zx_and_lk/</link>
-        <pubDate>Wed, 22 Apr 2020 00:26:16 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Wed, 22 Apr 2020 00:26:16 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/zx_and_lk/</guid>
-        <description>Zircon是LK的一个分支，它的许多内部结构都是基于LK的，而上层则是新的。例如，Zircon有进程的概念，而LK没有。 然而，Zircon</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Zircon 内核概念</title>
-        <link>https://trevorch.github.io/zh/post/fuchsia/kernel/concepts/</link>
-        <pubDate>Mon, 20 Apr 2020 23:47:04 +0800</pubDate>
-        <author>passeam@gmail.com (Trevorch)</author>
-        <atom:modified>Mon, 20 Apr 2020 23:47:04 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/concepts/</guid>
-        <description>主要内容 简介 系统调用 句柄及权限 内核对象ID 运行中的代码:Job,Process,Thread 消息传递:Socket及Channel 对象及信号</description>
-        
-        <dc:creator>Trevorch</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Fuchsia</category>
-            
-          
-            
-              <category>Fuchsia Kernel</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://trevorch.github.io/zh/post/fuchsia/kernel/concepts/</guid>
+      <description>主要内容 简介 系统调用 句柄及权限 内核对象ID 运行中的代码:Job,Process,Thread 消息传递:Socket及Channel 对象及信号</description>
+    </item>
     
   </channel>
 </rss>
