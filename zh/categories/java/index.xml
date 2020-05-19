@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Java on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/categories/java/</link>
+    <link>https://trevorch.github.io/zh/categories/java/</link>
     <description>Recent content in Java on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 13 May 2020 18:39:05 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/categories/java/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Class和ClassLoader的getResource()方法的差别</title>
-        <link>http://chendm.gitee.io/blog/zh/post/java/getresource/</link>
+        <link>https://trevorch.github.io/zh/post/java/getresource/</link>
         <pubDate>Wed, 13 May 2020 18:39:05 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 13 May 2020 18:39:05 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/java/getresource/</guid>
+        <guid>https://trevorch.github.io/zh/post/java/getresource/</guid>
         <description>从 JVM 虚拟机的角度来看，只存在两种不同的类加载器： 启动类加载器（Bootstrap ClassLoader），是虚拟机自身的一部分； 所有其他的类</description>
         
         <dc:creator>Trevorch</dc:creator>
