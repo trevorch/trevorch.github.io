@@ -1711,7 +1711,30 @@
 它是 ClassLoader.getSystemClassLoader() 方法的默认返回值，所以也称为系统类加载器（System ClassLoader）。<br />
 它负责加载 classpath 下所指定的类库，如果应用程序没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</li>
 </ol>
-<p>源码：</p>
+<p>目录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">src/main
+    <span class="p">|</span>-java/first
+        <span class="p">|</span>-Name.java
+    <span class="p">|</span>-resources
+        <span class="p">|</span>-first
+            <span class="p">|</span>_second/second.txt
+            <span class="p">|</span>-first.txt
+        <span class="p">|</span>-root.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>源码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
