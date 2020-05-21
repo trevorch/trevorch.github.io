@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Kubernetes kubectl on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/categories/kubernetes-kubectl/</link>
+    <link>https://trevorch.github.io/zh/categories/kubernetes-kubectl/</link>
     <description>Recent content in Kubernetes kubectl on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Apr 2020 14:46:31 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/categories/kubernetes-kubectl/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/categories/kubernetes-kubectl/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>kubectl expose命令</title>
-        <link>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</link>
+        <link>https://trevorch.github.io/zh/post/kubernetes/kubectl/expose/</link>
         <pubDate>Mon, 27 Apr 2020 14:46:31 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Mon, 27 Apr 2020 14:46:31 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/kubernetes/kubectl/expose/</guid>
+        <guid>https://trevorch.github.io/zh/post/kubernetes/kubectl/expose/</guid>
         <description>把资源暴露为一个新的Kubernetes服务 通过名称查找【deployment】, 【service】, 【replica set】, 【repli</description>
         
         <dc:creator>Trevorch</dc:creator>
