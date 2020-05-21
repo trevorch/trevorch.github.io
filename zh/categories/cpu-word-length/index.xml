@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Cpu Word Length on Trevorch</title>
-    <link>https://trevorch.github.io/zh/categories/cpu-word-length/</link>
+    <link>http://chendm.gitee.io/blog/zh/categories/cpu-word-length/</link>
     <description>Recent content in Cpu Word Length on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 19 May 2020 17:47:29 +0800</lastBuildDate>
     
-        <atom:link href="https://trevorch.github.io/zh/categories/cpu-word-length/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://chendm.gitee.io/blog/zh/categories/cpu-word-length/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>关于计算机中的word</title>
-        <link>https://trevorch.github.io/zh/post/java/cpu-word-length/</link>
+        <link>http://chendm.gitee.io/blog/zh/post/java/cpu-word-length/</link>
         <pubDate>Tue, 19 May 2020 17:47:29 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Tue, 19 May 2020 17:47:29 +0800</atom:modified>
-        <guid>https://trevorch.github.io/zh/post/java/cpu-word-length/</guid>
+        <guid>http://chendm.gitee.io/blog/zh/post/java/cpu-word-length/</guid>
         <description>计算机中word的正解 Buses are typically designed to transfer fixed-sized chunks of bytes known as words. The number of bytes in a word (the word size) is a fundamental system parameter that varies across systems. Most machines today have word sizes of either 4 bytes (32 bits)or8bytes(64bits). 翻译过来就是说： 总线一般被设计</description>
         
         <dc:creator>Trevorch</dc:creator>
