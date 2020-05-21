@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Iptables on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/tags/iptables/</link>
+    <link>https://trevorch.github.io/zh/tags/iptables/</link>
     <description>Recent content in Iptables on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 21 May 2020 14:34:10 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Iptables</title>
-        <link>http://chendm.gitee.io/blog/zh/post/linux/firewall/iptables/</link>
+        <link>https://trevorch.github.io/zh/post/linux/firewall/iptables/</link>
         <pubDate>Thu, 21 May 2020 14:34:10 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Thu, 21 May 2020 14:34:10 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/linux/firewall/iptables/</guid>
+        <guid>https://trevorch.github.io/zh/post/linux/firewall/iptables/</guid>
         <description>iptables的主要作用 针对封包进行：过滤、重定向和网络地址转换(NAT) 规则概念 预定义的条件，规则一般的定义为“如果数据包头符合这样的条</description>
         
         <dc:creator>Trevorch</dc:creator>

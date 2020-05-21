@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Gradle Lifecycle on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/tags/gradle-lifecycle/</link>
+    <link>https://trevorch.github.io/zh/tags/gradle-lifecycle/</link>
     <description>Recent content in Gradle Lifecycle on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 13 May 2020 13:40:58 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/tags/gradle-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/tags/gradle-lifecycle/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Gradle Build Lifecycle</title>
-        <link>http://chendm.gitee.io/blog/zh/post/gradle/build-lifecycle/</link>
+        <link>https://trevorch.github.io/zh/post/gradle/build-lifecycle/</link>
         <pubDate>Wed, 13 May 2020 13:40:58 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Wed, 13 May 2020 13:40:58 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/gradle/build-lifecycle/</guid>
+        <guid>https://trevorch.github.io/zh/post/gradle/build-lifecycle/</guid>
         <description>Gradle的核心是基于依赖的编程语言。从gradle的角度看，用户可以定义任务及任务间的依赖。Gradle保证这些任务 按照依赖顺序执行，且</description>
         
         <dc:creator>Trevorch</dc:creator>

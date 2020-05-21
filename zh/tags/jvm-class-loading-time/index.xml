@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>JVM Class Loading Time on Trevorch</title>
-    <link>http://chendm.gitee.io/blog/zh/tags/jvm-class-loading-time/</link>
+    <link>https://trevorch.github.io/zh/tags/jvm-class-loading-time/</link>
     <description>Recent content in JVM Class Loading Time on Trevorch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 17 May 2020 16:39:06 +0800</lastBuildDate>
     
-        <atom:link href="http://chendm.gitee.io/blog/zh/tags/jvm-class-loading-time/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://trevorch.github.io/zh/tags/jvm-class-loading-time/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>类加载时机</title>
-        <link>http://chendm.gitee.io/blog/zh/post/java/class-loading-time/</link>
+        <link>https://trevorch.github.io/zh/post/java/class-loading-time/</link>
         <pubDate>Sun, 17 May 2020 16:39:06 +0800</pubDate>
         <author>passeam@gmail.com (Trevorch)</author>
         <atom:modified>Sun, 17 May 2020 16:39:06 +0800</atom:modified>
-        <guid>http://chendm.gitee.io/blog/zh/post/java/class-loading-time/</guid>
+        <guid>https://trevorch.github.io/zh/post/java/class-loading-time/</guid>
         <description>JVM在5种情况下必须加载类 遇到new/getstatic/putstatic/invokestatic四个字节码指令； 使用java.lan</description>
         
         <dc:creator>Trevorch</dc:creator>
