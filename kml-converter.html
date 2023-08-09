@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>KML Converter</title>
+    <style>
+        textarea{
+            background-color: #343333;
+            color: azure;
+            border-color: white;
+        }
+        .convertBtn,.downloadBtn,.clearTxtBtn,.modifyTourBtn,.clearTourBtn {
+            font-size: large;
+            font-weight: bold;
+            color: white;
+        }
+        .convertBtn,.modifyTourBtn{background-color: #008f0f;}
+        .downloadBtn{background-color: #037598;}
+        .clearTxtBtn,.clearTourBtn{background-color: #fc0528;}
+    </style>
+</head>
+<body style="background-color: black;color: azure;">
+    <div>
+        <label class="setting">模式:
+            <select id="altitudeMode">
+                <option value="absolute">绝对高度</option>
+                <option value="relativeToGround">相对地面</option>
+                <option value="clampToGround">贴近地面</option>
+                <option value="relativeToSeaFloor">相对海底</option>
+                <option value="clampToSeaFloor">贴近海底</option>
+            </select>
+        </label>
+        <label class="setting">海拔(米):
+            <input id="altitude" value="" style="width: 50px;"/>
+        </label>
+        <label class="setting">开始:
+            <input id="start" value="1970-01-01 00:00:00" style="width: 150px;"/>
+        </label>
+        <label class="setting">时长(分):
+            <input id="duration" value="5" style="width: 25px;"/>
+        </label>
+        <label class="setting">模型路径:
+            <input id="mpath" value="E:/Blender/Boeing/" style="width: 150px;"/>
+            放大<input id="scale" value="30" style="width: 50px;"/>倍
+            <input type="file" id="mname"/>
+        </label>
+        <button class="clearTxtBtn" onclick="clearAll()">清空所有</button>
+    </div>
+    <div>
+        <label>路径KML:<br/>
+            <textarea id="pathKML" rows="10" cols="190"></textarea>
+        </label><br/>
+    </div>
+    <div>
+        <button class="convertBtn" onclick="path2track()">↓↓↓↓</button>
+        <button class="convertBtn" onclick="track2path()">↑↑↑↑</button>
+        <button class="downloadBtn"><a id="downloadPath">下载</a></button>
+        <button class="clearTxtBtn" onclick="document.getElementById('pathKML').value='';">清空</button>
+    </div>
+    <div>
+        <label>航迹KML:<br/>
+            <textarea id="trackKML" rows="10" cols="190"></textarea>
+        </label>
+    </div>
+    <div>
+        <button class="convertBtn" onclick="track2gpx()">↓↓↓↓</button>
+        <button class="convertBtn" onclick="gpx2track()">↑↑↑↑</button>
+        <button class="downloadBtn"><a id="downloadTrack">下载</a></button>
+        <button class="clearTxtBtn" onclick="document.getElementById('trackKML').value='';">清空</button>
+    </div>
+    <div>
+        <label>航迹GPX:<br/>
+            <textarea id="trackGPX" rows="10" cols="190"></textarea>
+        </label>
+    </div>
+    <div>
+        <button class="downloadBtn"><a id="downloadGPX">下载</a></button>
+        <button class="clearTxtBtn" onclick="document.getElementById('trackGPX').value='';">清空</button>
+    </div>
+    <div>
+        <label class="setting">相机范围(米):
+            <input id="range" value="5000"/>
+        </label>
+        <label class="setting">相机倾角:
+            <input id="tilt" value="60"/>
+        </label>
+    </div>
+    <div>
+        <label>源游览KML:<br/>
+            <textarea id="srcTourKML" rows="10" cols="190"></textarea>
+        </label>
+    </div>
+    <div>
+        <button class="modifyTourBtn" onclick="modifyTour()">↓↓↓↓</button>
+        <button class="clearTourBtn" onclick="document.getElementById('srcTourKML').value='';">清空</button>
+    </div>
+    <div>
+        <label>结果游览KML:<br/>
+            <textarea id="desTourKML" rows="10" cols="190"></textarea>
+        </label>
+    </div>
+    <script>
+        function clearAll(){
+            document.getElementById("pathKML").value='';
+            document.getElementById("trackKML").value='';
+            document.getElementById("trackGPX").value='';
+        }
+        function path2track(){
+            let srcELE = document.getElementById("pathKML");
+            let srcTXT = srcELE.value.trim();
+            if(srcTXT===''){
+                alert('请输路径KML！');
+                srcELE.focus();
+                return;
+            }
+            let downloadSrcELE = document.getElementById("downloadPath");
+            downloadSrcELE.download = "路径.kml";
+            let srcBlob = new Blob([srcTXT]);
+            downloadSrcELE.href = URL.createObjectURL(srcBlob);
+
+
+            let srcDoc=new DOMParser().parseFromString(srcTXT,"text/xml");
+            let coordinateStr = srcDoc.getElementsByTagName("coordinates")[0].childNodes[0].textContent.trim();
+
+            let start = document.getElementById("start").value;
+            let duration = document.getElementById("duration").value;
+            let coordinateArr = coordinateStr.split(' ');
+
+            let altitudeMode = document.getElementById('altitudeMode').value;
+            let result = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+                '<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">\n' +
+                '<Document>\n' +
+                '\t<name>KmlFile</name>\n'+
+                '\t<StyleMap id="msn_ylw-pushpin">\n' +
+                '\t\t<Pair>\n' +
+                '\t\t\t<key>normal</key>\n' +
+                '\t\t\t<styleUrl>#sn_ylw-pushpin</styleUrl>\n' +
+                '\t\t</Pair>\n' +
+                '\t\t<Pair>\n' +
+                '\t\t\t<key>highlight</key>\n' +
+                '\t\t\t<styleUrl>#sh_ylw-pushpin</styleUrl>\n' +
+                '\t\t</Pair>\n' +
+                '\t</StyleMap>\n' +
+                '\t<Style id="sh_ylw-pushpin">\n' +
+                '\t\t<IconStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t\t<scale>1.2</scale>\n' +
+                '\t\t</IconStyle>\n' +
+                '\t\t<LabelStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</LabelStyle>\n' +
+                '\t\t<BalloonStyle>\n' +
+                '\t\t</BalloonStyle>\n' +
+                '\t</Style>\n' +
+                '\t<Style id="sn_ylw-pushpin">\n' +
+                '\t\t<IconStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</IconStyle>\n' +
+                '\t\t<LabelStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</LabelStyle>\n' +
+                '\t\t<BalloonStyle>\n' +
+                '\t\t</BalloonStyle>\n' +
+                '\t</Style>\n'+
+                '\t<Placemark>\n' +
+                '\t\t<name>航迹</name>\n' +
+                '\t\t<styleUrl>#msn_ylw-pushpin</styleUrl>\n'+
+                '\t\t<visibility>1</visibility>\n'+
+                '\t\t<gx:Track>\n' +
+                '\t\t\t<altitudeMode>'+altitudeMode+'</altitudeMode>\n';
+            let startMillis = new Date(start).getTime();
+            let step = parseInt(duration)*60*1000/coordinateArr.length;
+
+            // <when>
+            for(var i=0;i<coordinateArr.length;i++){
+                let end = new Date(startMillis+(i*step))
+                result+= '\t\t\t<when>'+end.getFullYear()+'-'
+                    +(((end.getMonth()+1)+'').length===1?'0'+(end.getMonth()+1):(end.getMonth()+1))
+                    +"-"+((end.getDate()+'').length===1?'0'+end.getDate():end.getDate())
+                    +"T"+((end.getHours()+'').length===1?'0'+end.getHours():end.getHours())
+                    +':'+((end.getMinutes()+'').length===1?'0'+end.getMinutes():end.getMinutes())
+                    +':'+((end.getSeconds()+'').length===1?'0'+end.getSeconds():end.getSeconds())
+                    +'Z</when>\n';
+            }
+            // <gx:coord>
+            let altitude = document.getElementById('altitude').value.trim();
+            for(let i=0;i<coordinateArr.length;i++){
+                let arr = coordinateArr[i].trim().split(',');
+                result += '\t\t\t<gx:coord>'+arr[0]+' '+arr[1]+' '+(altitude===''?arr[2]:altitude)+'</gx:coord>\n';
+            }
+            //<Model>
+            let file = document.getElementById("mname").files[0];
+            if(file){
+                let path = document.getElementById("mpath").value
+                    +document.getElementById("mname").files[0].name;
+                let scale = document.getElementById("scale").value
+                result += '\t\t\t<Model>\n' +
+                    '\t\t\t\t<Scale>\n' +
+                    '\t\t\t\t\t<x>'+scale+'</x>\n' +
+                    '\t\t\t\t\t<y>'+scale+'</y>\n' +
+                    '\t\t\t\t\t<z>'+scale+'</z>\n' +
+                    '\t\t\t\t</Scale>\n' +
+                    '\t\t\t\t<Link>\n' +
+                    '\t\t\t\t\t<href>'+path+'</href>\n' +
+                    '\t\t\t\t</Link>\n' +
+                    '\t\t\t</Model>\n'
+            }
+
+            result+='\t\t</gx:Track>\n' +
+                '\t</Placemark>\n' +
+                '</Document>\n' +
+                '</kml>';
+
+            let desELE = document.getElementById("trackKML");
+            desELE.value=result;
+            desELE.select(); // 选择对象
+            document.execCommand("Copy");// 执行浏览器复制命令
+
+            let downloadResELE = document.getElementById("downloadTrack");
+            downloadResELE.download = "航迹.kml";
+            let resBlob = new Blob([result]);
+            downloadResELE.href = URL.createObjectURL(resBlob);
+        }
+        function track2gpx(){
+            let srcELE = document.getElementById("trackKML");
+            let srcTXT = srcELE.value.trim();
+            if(srcTXT===''){
+                alert('请输航迹KML！');
+                srcELE.focus();
+                return;
+            }
+            let downloadSrcELE = document.getElementById("downloadTrack");
+            downloadSrcELE.download = "航迹.kml";
+            let srcBlob = new Blob([srcTXT]);
+            downloadSrcELE.href = URL.createObjectURL(srcBlob);
+
+            let srcDoc=new DOMParser().parseFromString(srcTXT,"text/xml");
+            let whenArr = srcDoc.getElementsByTagName("when");
+            let coordArr = srcDoc.getElementsByTagName("gx:coord");
+
+            let result = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+                '<gpx version="1.1" creator="GPS Track Editor" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gte="http://www.gpstrackeditor.com/xmlschemas/General/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" targetNamespace="http://www.topografix.com/GPX/1/1" elementFormDefault="qualified" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">\n' +
+                '<metadata>\n' +
+                '\t<name>航迹.gpx</name>\n' +
+                '\t<desc>从KML文件转换来</desc>\n' +
+                '</metadata>\n' +
+                '<trk>\n' +
+                '\t<name>航迹</name>\n' +
+                '\t<desc>航迹</desc>\n'+
+                '\t<trkseg>\n'
+            for(var i=0;i<whenArr.length;i++){
+                let xyzArr = coordArr[i].textContent.trim().split(" ");
+                let time = whenArr[i].textContent.trim();
+                result+='\t\t<trkpt lat="'+xyzArr[1]+'" lon="'+xyzArr[0]+'">\n' +
+                    '\t\t\t<ele>'+xyzArr[2]+'</ele>\n' +
+                    '\t\t\t<time>'+time+'</time>\n' +
+                    '\t\t</trkpt>\n'
+            }
+            result+='\t\t<extensions>\n' +
+                '\t\t\t<gte:name>#1</gte:name>\n' +
+                '\t\t\t<gte:color>#00ce00</gte:color>\n' +
+                '\t\t</extensions>\n' +
+                '\t</trkseg>\n'+
+                '</trk>\n' +
+                '</gpx>';
+
+            let desELE = document.getElementById("trackGPX");
+            desELE.value=result;
+            desELE.select(); // 选择对象
+            document.execCommand("Copy");// 执行浏览器复制命令
+
+            let downloadResELE = document.getElementById("downloadGPX");
+            downloadResELE.download = "航迹.gpx";
+            let resBlob = new Blob([result]);
+            downloadResELE.href = URL.createObjectURL(resBlob);
+        }
+
+        function gpx2track(){
+            let srcELE = document.getElementById("trackGPX");
+            let srcTXT = srcELE.value.trim();
+            if(srcTXT===''){
+                alert('请输航迹GPX！');
+                srcELE.focus();
+                return;
+            }
+            let downloadSrcELE = document.getElementById("downloadGPX");
+            downloadSrcELE.download = "航迹.gpx";
+            let srcBlob = new Blob([srcTXT]);
+            downloadSrcELE.href = URL.createObjectURL(srcBlob);
+
+            let srcDoc=new DOMParser().parseFromString(srcTXT,"text/xml");
+            let trkptArr = srcDoc.getElementsByTagName("trkpt");
+
+            let altitudeMode = document.getElementById('altitudeMode').value;
+
+            let result = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+                '<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">\n' +
+                '<Document>\n' +
+                '\t<name>KmlFile</name>\n'+
+                '\t<StyleMap id="msn_ylw-pushpin">\n' +
+                '\t\t<Pair>\n' +
+                '\t\t\t<key>normal</key>\n' +
+                '\t\t\t<styleUrl>#sn_ylw-pushpin</styleUrl>\n' +
+                '\t\t</Pair>\n' +
+                '\t\t<Pair>\n' +
+                '\t\t\t<key>highlight</key>\n' +
+                '\t\t\t<styleUrl>#sh_ylw-pushpin</styleUrl>\n' +
+                '\t\t</Pair>\n' +
+                '\t</StyleMap>\n' +
+                '\t<Style id="sh_ylw-pushpin">\n' +
+                '\t\t<IconStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t\t<scale>1.2</scale>\n' +
+                '\t\t</IconStyle>\n' +
+                '\t\t<LabelStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</LabelStyle>\n' +
+                '\t\t<BalloonStyle>\n' +
+                '\t\t</BalloonStyle>\n' +
+                '\t</Style>\n' +
+                '\t<Style id="sn_ylw-pushpin">\n' +
+                '\t\t<IconStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</IconStyle>\n' +
+                '\t\t<LabelStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</LabelStyle>\n' +
+                '\t\t<BalloonStyle>\n' +
+                '\t\t</BalloonStyle>\n' +
+                '\t</Style>\n'+
+                '\t<Placemark>\n' +
+                '\t\t<name>航迹</name>\n' +
+                '\t\t<styleUrl>#msn_ylw-pushpin</styleUrl>\n'+
+                '\t\t<visibility>1</visibility>\n'+
+                '\t\t<gx:Track>\n' +
+                '\t\t\t<altitudeMode>'+altitudeMode+'</altitudeMode>\n';
+
+            // <when>
+            let when = '';
+            let coord = '';
+            for(var i=0;i<trkptArr.length;i++){
+                let trkpt = trkptArr[i];
+                let lon = trkpt.getAttribute('lon');
+                let lat = trkpt.getAttribute('lat');
+                let att = trkpt.getElementsByTagName('ele')[0].textContent;
+                let time = trkpt.getElementsByTagName('time')[0].textContent;
+                when += '\t\t\t<when>'+time+'</when>\n';
+                coord+='\t\t\t<gx:coord>'+lon+' '+lat+' '+att+'</gx:coord>\n'
+            }
+            result+=when;
+            result+=coord;
+            //<Model>
+            let file = document.getElementById("mname").files[0];
+            if(file){
+                let path = document.getElementById("mpath").value
+                    +document.getElementById("mname").files[0].name;
+                let scale = document.getElementById("scale").value
+                result += '\t\t\t<Model>\n' +
+                    '\t\t\t\t<Scale>\n' +
+                    '\t\t\t\t\t<x>'+scale+'</x>\n' +
+                    '\t\t\t\t\t<y>'+scale+'</y>\n' +
+                    '\t\t\t\t\t<z>'+scale+'</z>\n' +
+                    '\t\t\t\t</Scale>\n' +
+                    '\t\t\t\t<Link>\n' +
+                    '\t\t\t\t\t<href>'+path+'</href>\n' +
+                    '\t\t\t\t</Link>\n' +
+                    '\t\t\t</Model>\n'
+            }
+            result+='\t\t</gx:Track>\n'+
+                '\t</Placemark>\n'+
+                '</Document>\n' +
+                '</kml>';
+
+            let desELE = document.getElementById("trackKML");
+            desELE.value=result;
+            desELE.select(); // 选择对象
+            document.execCommand("Copy");// 执行浏览器复制命令
+
+            let downloadResELE = document.getElementById("downloadTrack");
+            downloadResELE.download = "航迹.kml";
+            let resBlob = new Blob([result]);
+            downloadResELE.href = URL.createObjectURL(resBlob);
+        }
+
+        function track2path(){
+            let srcELE = document.getElementById("trackKML");
+            let srcTXT = srcELE.value.trim();
+            if(srcTXT===''){
+                alert('请输航迹KML！');
+                srcELE.focus();
+                return;
+            }
+            let downloadSrcELE = document.getElementById("downloadTrack");
+            downloadSrcELE.download = "航迹.kml";
+            let blob = new Blob([srcTXT]);
+            downloadSrcELE.href = URL.createObjectURL(blob);
+
+            let srcDoc=new DOMParser().parseFromString(srcTXT,"text/xml");
+            let coordArr = srcDoc.getElementsByTagName("gx:coord");
+
+            let result='<?xml version="1.0" encoding="UTF-8"?>\n' +
+                '<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">\n' +
+                '<Document>\n' +
+                '\t<name>KmlFile</name>\n' +
+                '\t<StyleMap id="msn_ylw-pushpin">\n' +
+                '\t\t<Pair>\n' +
+                '\t\t\t<key>normal</key>\n' +
+                '\t\t\t<styleUrl>#sn_ylw-pushpin</styleUrl>\n' +
+                '\t\t</Pair>\n' +
+                '\t\t<Pair>\n' +
+                '\t\t\t<key>highlight</key>\n' +
+                '\t\t\t<styleUrl>#sh_ylw-pushpin</styleUrl>\n' +
+                '\t\t</Pair>\n' +
+                '\t</StyleMap>\n' +
+                '\t<Style id="sh_ylw-pushpin">\n' +
+                '\t\t<IconStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t\t<scale>1.2</scale>\n' +
+                '\t\t</IconStyle>\n' +
+                '\t\t<LabelStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</LabelStyle>\n' +
+                '\t</Style>\n' +
+                '\t<Style id="sn_ylw-pushpin">\n' +
+                '\t\t<IconStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</IconStyle>\n' +
+                '\t\t<LabelStyle>\n' +
+                '\t\t\t<color>00ffffff</color>\n' +
+                '\t\t</LabelStyle>\n' +
+                '\t</Style>'+
+                '\t<Placemark>\n' +
+                '\t\t<name>路径</name>\n' +
+                '\t\t<styleUrl>#msn_ylw-pushpin</styleUrl>\n' +
+                '\t\t<LineString>\n' +
+                '\t\t\t<tessellate>1</tessellate>\n' +
+                '\t\t\t<coordinates>';
+            for(var i=0;i<coordArr.length;i++){
+                result+=coordArr[i].textContent.trim().replaceAll(' ',',')+' ';
+            }
+            result+='\t\t\t</coordinates>\n' +
+                '\t\t</LineString>\n' +
+                '\t</Placemark>\n' +
+                '</Document>\n' +
+                '</kml>';
+
+            let desELE = document.getElementById("pathKML");
+            desELE.value=result;
+            desELE.select(); // 选择对象
+            document.execCommand("Copy");// 执行浏览器复制命令
+
+            let downloadResELE = document.getElementById("downloadPath");
+            downloadResELE.download = "路径.kml";
+            let resBlob = new Blob([result]);
+            downloadResELE.href = URL.createObjectURL(resBlob);
+        }
+
+        function modifyTour(){
+            let range = document.getElementById('range').value.trim();
+            let tilt = document.getElementById('tilt').value.trim();
+            let srcTourKML = document.getElementById('srcTourKML').value.trim();
+            let result = srcTourKML.replaceAll(/<range>.*<\/range>/g, '<range>' + range + '</range>')
+                .replaceAll(/<tilt>.*<\/tilt>/g, '<tilt>' + tilt + '</tilt>');
+            let desELE = document.getElementById("desTourKML");
+            desELE.value=result;
+            desELE.select(); // 选择对象
+            document.execCommand("Copy");// 执行浏览器复制命令
+        }
+    </script>
+</body>
+</html>
